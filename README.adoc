@@ -1,0 +1,68 @@
+= README
+
+WARNING: This is just an adhoc project I am using to document api differences
+between rewrite-clj* apis.
+
+== Introduction
+
+It has been many moons since I started merging rewrite-cljs and rewrite-clj into
+rewrite-cljc.
+
+Being both careful and forgetful, I thought I'd give myself some assurance that
+rewrite-cljc has not broken rewrite-cljs and/or rewrite-clj apis in any
+unintended way.
+
+Hence this little hacky project.
+
+== Goals
+
+I'd like to compare the following apis:
+
+* rewrite-clj and rewrite-cljs - what was different before I started this work?
+* rewrite-clj clj and rewrite-cljc clj - what did I change for rewrite-clj
+  users?
+* rewrite-cljs cljs and rewrite-cljc cljs - what did I change for rewrite-cljs
+  users?
+* rewrite-cljc cljs and rewrite-cljc clj - what are differences for cljs and clj
+  users of rewrite-cljc
+
+I am pretty sure I only want to see differences in apis. I don't really care
+what is the same. I also don't care to compare filenames, line numbers or doc
+strings.
+
+I'd like to include these comparisons in the rewrite-cljc documentation, so
+generating a report to asciidoc would be ideal.
+
+=== Strategy
+
+=== Tools
+I'll get api data via https://github.com/lread/cljdoc-analyzer[cljdoc-analyzer].
+
+https://github.com/lambdaisland/deep-diff[Kaocha deep-diff] looks like it might
+give me a good start. Its pretty printer should allow me to verify during
+development.
+
+=== Changes
+I will filter to the result to show only publics that have changes in them.
+* A new/deleted ns will show the entire ns and all its publics.
+* A ns with attributes changed only at the ns level will also show the entire
+ns and all publics.
+* A ns with changed publics will show the ns with all its attributes and the
+  publics with changes in them. When there is a change in a public all values
+  (including unchanged ones) for the public will be included for context.
+
+=== Targets
+Github supports no explicit colors for asciidoc. This will make reviewing diffs
+on github a bit unpleasant. I'll likely suggest viewing the diffs on cljdoc.
+
+Note that some folks use tricks on github to render colors. One of them is to
+present text in a "diff" code block. This might be worth a few experiments as a
+diff block could be directly relevant here. May try this, may not.
+
+=== Future Possibilities
+
+I suppose this project could be generalized to work for any project, but as
+cljdoc will eventually have api diff support this might be of little value.
+
+If this project does become generalized I will take the time to remedy the many
+hacks it contains.
