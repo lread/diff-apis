@@ -1,2 +1,3 @@
 {:paths ["src"]
- :deps {lambdaisland/deep-diff {:mvn/version "0.0-47"}}}
+ :deps {cli-matic {:mvn/version "0.3.8"}
+        lambdaisland/deep-diff {:mvn/version "0.0-47"}}}
