@@ -30,7 +30,50 @@
     @diffs-found))
 
 
+;; A map can be wrapped with an insertion or deletion record
+;; a key can be wrapped with an insertion or deletion record
+(defn- diff-aware-key-get [x key]
+  (or (get x {:- key})
+      (get x {:+ key})
+      (get x key)))
+
+(defn- diff-aware-find [x key]
+  (or (find x {:- key})
+      (find x {:+ key})
+      (find x key)))
+
 (defn diff-aware-get [x key]
   (if (is-diff? x)
     (get (first (vals x)) key)
-    (get x key)))
+    (diff-aware-key-get x key)))
+
+(defn unwrap-elem [x]
+  (if (is-diff? x)
+    (val (first x))
+    x))
+
+;; we might be dealing with a wrapped map or a wrapped key
+(defn diff-aware-update [m k f]
+  (let [rm (unwrap-elem m)
+        [rk _rv] (find rm k)
+        nrm (update rm rk f)]
+    (if (= m rm)
+      nrm
+      (preserve-deep-diff-type m nrm))))
+
+
+
+
+(comment
+
+  (val {:a 1})
+
+  (unwrap-elem {:- :b})
+  (unwrap-elem :b)
+
+  (def t {:a 1
+          {:- :b} 2})
+
+  (diff-aware-get t :b)
+
+   )

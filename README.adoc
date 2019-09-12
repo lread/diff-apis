@@ -43,6 +43,10 @@ generating a report to asciidoc would be ideal.
 . implement :exclude-namespaces
 . clean up asciidoc report
 . consider hooking up to cljdoc-analyzer
+* manipulating the diff structure after the fact is downright awkward due wrapping markers
+  perhaps a better approach would be to use metadata?
+
+
 
 === Strategy
 
