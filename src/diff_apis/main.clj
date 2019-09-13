@@ -5,9 +5,10 @@
             [diff-apis.report :as report]))
 
 (defn diff-cmd
-  [{:keys [filename1 language1 filename2 language2 report-format include exclude-namespace]}]
-  (-> (diff/diff-files [filename1 language1] [filename2 language2]
-                       {:include include :exclude-namespaces exclude-namespace})
+  [{:keys [project1 version1 language1 project2 version2 language2 report-format include exclude-namespace]}]
+  (-> (diff/diff-projects {:project project1 :version version1 :lang language1}
+                          {:project project2 :version version2 :lang language2}
+                          {:include include :exclude-namespaces exclude-namespace})
       (report/report report-format)))
 
 (spec/def ::language #{"clj" "cljs"})
@@ -21,25 +22,35 @@
 
    :commands    [{:command     "diff"
                   :description "Diffs two apis"
-                  :opts [{:option  "filename1"
+                  :opts [{:option  "project1"
                           :short   0
-                          :as      "filename 1"
+                          :as      "project 1 - specify group-id/artifact-id of project 1"
+                          :type    :string
+                          :default :present}
+                         {:option  "version1"
+                          :short   1
+                          :as      "version of project 1"
                           :type    :string
                           :default :present}
                          {:option  "language1"
-                          :short   1
-                          :as      "language 1 (clj or cljs)"
+                          :short   2
+                          :as      "language for project 1 (clj or cljs)"
                           :type    :string
                           :spec    ::language
                           :default :present}
-                         {:option  "filename2"
-                          :short   2
-                          :as      "filename 2"
+                         {:option  "project2"
+                          :short   3
+                          :as      "project 2 - specify group-id/artifact-id of project 2"
+                          :type    :string
+                          :default :present}
+                         {:option  "version2"
+                          :short   4
+                          :as      "version of project 2"
                           :type    :string
                           :default :present}
                          {:option  "language2"
-                          :short   3
-                          :as      "language 2 (clj or cljs)"
+                          :short   5
+                          :as      "language for project 2 (clj or cljs)"
                           :type    :string
                           :spec    ::language
                           :default :present}
@@ -62,28 +73,3 @@
 
 (defn -main [& args]
   (climatic/run-cmd args climatic-config))
-
-
-(comment
-  (require '[diff-apis/diff :as diff-apis])
-  (require '[lambdaisland.deep-diff.diff :as deep-diff])
-
-  ;; goal 1 diff rewrite-clj against rewrite-cljs
-  (def g1 (diff-apis/diff-files ["rewrite-clj-0.6.1.edn" "clj"]
-                                ["rewrite-cljs-0.4.4.edn" "cljs"]))
-  (deep-diff/pretty-print g1)
-
-  ;; goal 2 diff rewrite-cljc clj with rewrite-cljc cljs
-  (def g2 (diff-apis/diff-files ["rewrite-cljc-1.0.0-alpha.edn" "clj"]
-                                ["rewrite-cljc-1.0.0-alpha.edn" "cljs"]))
-  (deep-diff/pretty-print g2)
-
-  ;; goal 3 diff rewrite-clj with rewrite-cljc clj
-  (def g3 (diff-apis/diff-files ["rewrite-clj-0.6.1.edn" "clj"]
-                                ["rewrite-cljc-1.0.0-alpha.edn" "clj"]))
-
-  (deep-diff/pretty-print g3)
-  (spit "g3-test.adoc" (as-asciidoc g3))
-
-
-  )

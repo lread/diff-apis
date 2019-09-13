@@ -35,18 +35,13 @@ generating a report to asciidoc would be ideal.
 
 === TODOS
 
-. compare arglists by arity - arity will be key on temporary map for diff - integer
-  or :variadic (or use max int for variadic if that helps sorting)
 . test no diff scenario
-. include options used to generated diffs in diff
 . include number of diffs, perhaps as a count of publics affected.
 . implement :exclude-namespaces
+. add color to asciidoc report
 . clean up asciidoc report
-. consider hooking up to cljdoc-analyzer
 * manipulating the diff structure after the fact is downright awkward due wrapping markers
   perhaps a better approach would be to use metadata?
-
-
 
 === Strategy
 
@@ -75,9 +70,6 @@ present text in a "diff" code block. This might be worth a few experiments as a
 diff block could be directly relevant here. May try this, may not.
 
 === Future Possibilities
-
-I suppose this project could be generalized to work for any project, but as
-cljdoc will eventually have api diff support this might be of little value.
 
 If this project does become generalized I will take the time to remedy the many
 hacks it contains.

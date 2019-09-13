@@ -1,7 +1,9 @@
 (ns diff-apis.diff
-  (:require [clojure.string :as string]
+  (:require [clojure.java.io :as io]
+            [clojure.string :as string]
             [clojure.edn :as edn]
             [clojure.walk :as walk]
+            [cljdoc-analyzer.main :as cljdoc]
             [lambdaisland.deep-diff :as deep-diff]
             [diff-apis.deep-diff-util :as deep-diff-util]))
 
@@ -155,14 +157,42 @@
        (#(if (= :changed-publics (:include opts)) (changes-only %) %))
        (sort-result))))
 
-
 (defn diff-files
   [a b opts]
   (diff-edn (apply load-api a) (apply load-api b) opts))
 
+(defn analysis-filename [coords]
+  (str "./.diff-apis/.cache/"
+       (.replace (str (:project coords) "-" (:version coords))
+                 "/" "-")
+       ".edn"))
 
+(defn analyze [coords]
+  (let [filename (analysis-filename coords)]
+    (if (.exists (io/file filename))
+      filename
+      (do (cljdoc/analyze {:project (:project coords)
+                           :version (:version coords)
+                           :output-filename (analysis-filename coords)})
+          filename))))
+
+(defn diff-projects
+  [a b opts]
+  (let [a-filename (analyze a)
+        b-filename (analyze b)
+        result (diff-files [a-filename (:lang a)]
+                           [b-filename (:lang b)]
+                           opts)]
+    {:diff result
+     :run-args {:a a
+                :b b
+                :opts opts}}))
 
 (comment
+  (diff-projects {:project "rewrite-clj" :version "0.6.1" :lang "clj"}
+                 {:project "rewrite-cljs" :version "0.4.4" :lang "cljs"}
+                 {:include :changed-publics})
+
 
   (def dal '{ :name find-next, { :- :arglists } ( [ zloc p? ] [ zloc f p? ] ), :type :var })
   (deep-diff-util/diff-aware-get dal :arglists)

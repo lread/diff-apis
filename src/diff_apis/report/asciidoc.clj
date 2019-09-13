@@ -86,6 +86,13 @@
           ""
           list-struct))
 
-(defn as-asciidoc [diff]
-  (-> (as-asciidoc-struct diff)
-      (struct-to-asciidoc)))
+(defn header [{:keys [a b opts]}]
+  (str "Diff results between apis in:\n\n"
+       "* " (asciidoc-code (:project a)) " " (asciidoc-code (:version a)) " " (asciidoc-code (:lang a)) "\n"
+       "* " (asciidoc-code (:project b)) " " (asciidoc-code (:version b)) " " (asciidoc-code (:lang b)) "\n\n"
+       "With options: " (asciidoc-code opts) "\n\n"))
+
+(defn as-asciidoc [result]
+  (str (header (:run-args result))
+       (-> (as-asciidoc-struct (:diff result))
+           (struct-to-asciidoc))))
