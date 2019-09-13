@@ -1,5 +1,6 @@
 {:paths ["src" "resources"]
- #_{:git/url "https://github.com/lread/cljdoc-analyzer" :sha "b806b79eeb1df517c46a2be2e47ef58ec0984069"}
- :deps {cljdoc/cljdoc-analyzer {:local/root "/Users/lee/other-proj/cljdoc-analyzer"}
+
+ :deps {cljdoc/cljdoc-analyzer {:git/url "https://github.com/lread/cljdoc-analyzer" :sha "02d0ca4b982c60a5920cf391b3eb8280b4aa97dd"}
+                             #_{:local/root "/Users/lee/other-proj/cljdoc-analyzer"}
         cli-matic {:mvn/version "0.3.8"}
         lambdaisland/deep-diff {:mvn/version "0.0-47"}}}
