@@ -1,98 +1,177 @@
 (ns diff-apis.report.asciidoc
   (:require [clojure.string :as string]
-            [diff-apis.deep-diff-util :as deep-diff-util]))
+            [diff-apis.deep-diff-util :as dd-util]))
 
-(defn- diff-marker-for-asciidoc [elem]
-  (if (deep-diff-util/is-diff? elem)
-    (str (when (:+ elem) "➕" )
-         (when (:- elem) "➖" ))))
+(defn- change-prefix [difftype]
+  (case difftype
+    :+ "[green]`*+*`"
+    :- "[red]`*-*`"
+    := "[black]`*=*`"
+    "[black]`*≠*`"))
 
-(defn- asciidoc-code [text]
-  (str "`+" text "+`"))
+;; consider superscript for inline change prefix
 
-(defn- elem-with-markers [elem]
-  (if (deep-diff-util/is-diff? elem)
-    (str (when (:+ elem) (str "➕" (asciidoc-code (:+ elem))))
-         (when (:- elem) (str "➖" (asciidoc-code (:- elem)))))
-    (asciidoc-code elem)))
+(defn diff-type [parent-diff-type elem]
+  (or parent-diff-type
+      (dd-util/diff-type elem)
+      (when (not (dd-util/any-diffs? elem)) :=)))
 
-(defn- attribute-to-asciidoc [m k]
-  (if-let [v (deep-diff-util/diff-aware-get m k)]
-    (str (diff-marker-for-asciidoc v) (elem-with-markers v))))
+(defn diff-type-key [parent-diff-type key-elem]
+  (or parent-diff-type
+      (dd-util/diff-type key-elem)))
 
-(defn- labeled-attribute-to-asciidoc [m k]
-  (if-let [v (attribute-to-asciidoc m k)]
-    (str (name k) " " v)))
+(defn escape-text [text]
+  (str "pass:c[" text "]"))
 
-(defn- asciidoc-arglists [depth arglists]
+(defn- change-text [difftype text]
+  (case difftype
+    :+ (str "[green]#pass:c[" text "]#")
+    :- (str "[red]#pass:c[" text "]#")
+    (str "[black]#pass:c[" text "]#")))
+
+(defn- change-code [difftype code]
+  (case difftype
+    :+ (str "[green]`+" code "+`")
+    :- (str "[red]`+" code "+`")
+    (str "[black]`+" code "+`")))
+
+(defn- code-value [parent-difftype v]
+  (if (dd-util/is-mismatch? v)
+    (str (change-prefix :-) " " (change-code :- (:- v)) " "
+         (change-prefix :+) " " (change-code :+ (:+ v)))
+    (change-code parent-difftype v)))
+
+(defn- arglist [parent-difftype al]
+  (let [difftype (diff-type parent-difftype al)]
+    (str
+     (change-text difftype "[") " "
+     (string/join " " (for [a al] (code-value difftype a)))
+     " " (change-text difftype "]"))))
+
+(defn- arglists [parent-difftype [argslist-key argslist]]
+  (into ["[unstyled]"]
+        (let [argslist-difftype (diff-type-key parent-difftype argslist-key)]
+          (for [al argslist]
+            (let [al-difftype (diff-type argslist-difftype al)
+                  al-elem (dd-util/unwrap-elem al)
+                  elem-diff-type (diff-type al-difftype al-elem)]
+              [ (str "* " (change-prefix elem-diff-type) " " (arglist al-difftype al-elem)) ])))))
+
+(defn- attributes [parent-difftype elem]
+  (into ["[unstyled]"]
+        (for [[a-name a-val] (dd-util/find-all elem [:type :deprecated :no-doc :skip-wiki :dynamic])]
+          (let [e-difftype (diff-type parent-difftype elem)
+                a-name-difftype (diff-type-key e-difftype a-name)
+                a-difftype (diff-type a-name-difftype a-val)]
+            (str "* " (change-prefix a-difftype) " "
+                 (str "*" (change-text a-difftype (dd-util/unwrap-elem a-name)) "*") " "
+                 (code-value a-difftype a-val))))))
+
+(defn as-lines [namespaces]
   (into []
-        (map (fn [als]
-               [depth (str "["
-                           (string/join " " (map #(elem-with-markers %) als))
-                           "]")])
-             arglists)))
+        (flatten ;; I've heard the mantra against flatten, but seems appropriate here :-P
+         (for [ns namespaces]
+           (let [ns-difftype (dd-util/diff-type ns)]
+             [(str "== " (change-prefix ns-difftype) " " (change-text ns-difftype (dd-util/get ns :name)))
+              ""
+              (attributes nil ns)
+              ""
+              (for [p (dd-util/get ns :publics)]
+                (let [p-difftype (diff-type ns-difftype p)]
+                  [(str "=== " (change-prefix p-difftype) "" (change-text p-difftype (dd-util/get p :name)))
+                   (let [
+                         arglists-key (first (dd-util/find p :arglists))
+                         members-key (first (dd-util/find p :members))]
+                     (cond
+                       (and arglists-key members-key)
+                       ["|==="
+                        ".2+h| attributes .2+h| arglists 3+h|members"
+                        "h|name h| arglists h| type"
 
-(defn- asciidoc-ns [ns]
-  [[1 (str (diff-marker-for-asciidoc ns) (attribute-to-asciidoc ns :name))]
-   [2 (labeled-attribute-to-asciidoc ns :no-doc)]
-   [2 (labeled-attribute-to-asciidoc ns :no-wiki)]
-   [2 (labeled-attribute-to-asciidoc ns :deprecated)]])
+                        ".999+a|"
+                        (attributes ns-difftype p)
+                        ".999+a|"
+                        (arglists p-difftype (dd-util/find p :arglists))
+                        "* *+* [green]`[` [green]`++G__2633++` [green]`]`"
+                        "|[red]#m1#"
+                        "|[red]#m2#"
+                        "|[red]#m3#"
 
-(defn- asciidoc-publics [depth p]
-  (into [[depth (str (diff-marker-for-asciidoc p) (attribute-to-asciidoc p :name))]]
-        (into
-         (asciidoc-arglists (inc depth) (deep-diff-util/diff-aware-get p :arglists))
-         [[(inc depth) (labeled-attribute-to-asciidoc p :type)]
-          [(inc depth) (labeled-attribute-to-asciidoc p :no-doc)]
-          [(inc depth) (labeled-attribute-to-asciidoc p :no-wiki)]
-          [(inc depth) (labeled-attribute-to-asciidoc p :deprecated)]])))
+                        "|[red]#m11#"
+                        "|[red]#m22#"
+                        "|[red]#m33#"
+                        "|==="]
+                       members-key
+                       ["|==="
+                        ".2+h| attributes 3+h| members"
+                        "h|name h| arglists h| type"
+                        ""
+                        ".999+a|"
+                        (attributes ns-difftype p)
+                        "|m1"
+                        "|m2"
+                        "|m3"
 
-;; TODO: I suppose, currently this is really returning a nested list report, might be a nice generalization
-(defn as-asciidoc-struct [diff]
-  (->>
-   (reduce (fn [d ns]
-             (into d
-                   (into (asciidoc-ns ns)
-                         (reduce (fn [dp p]
-                                   (into dp
-                                         (into (asciidoc-publics 2 p)
-                                               (reduce (fn [dm m]
-                                                         (into dm (asciidoc-publics 3 m)))
-                                                       []
-                                                       (deep-diff-util/diff-aware-get p :members)))))
-                                 []
-                                 (deep-diff-util/diff-aware-get ns :publics)))))
-           []
-           diff)
-   (filter #(second %))))
+                        "|m11"
+                        "|m22"
+                        "|m33"
+                        "|==="]
+
+                       arglists-key
+                       ["|==="
+                        "| attributes | arglists"
+                        ""
+                        "a|"
+                        (attributes ns-difftype p)
+                        "a|"
+                        (arglists p-difftype (dd-util/find p :arglists))
+                        "|==="]
+
+                       :else
+                       ["|==="
+                        "| attributes"
+                        ""
+                        "a|"
+                        (attributes ns-difftype p)
+                        "|==="]
+                       ))
+                   ""]))
+              ""
+              ""])))))
+
 
 (comment
-  (into []
-        (into [[1 2] [3 4]]
-              (into [[5 6] [7 8]])))
+  (def t '{:name syntax-quote-node, {:- :arglists} ([children]), :type :var})
+  (dd-util/find t :arglists)
 
-  (-> []
-      (into [[1 2] [3 4]])
-      (into [[5 6] [7 8]]))
+  (into [] flatten ((list [1 2] 3))))
 
-  )
-
-
-(defn struct-to-asciidoc [list-struct]
-  (reduce (fn [t [depth text]]
-            (str t
-                 (apply str (repeat depth "*"))
-                 " " text "\n"))
-          ""
-          list-struct))
+(defn to-asciidoc [lines]
+  (string/join "\n" lines))
 
 (defn header [{:keys [a b opts]}]
-  (str "Diff results between apis in:\n\n"
-       "* " (asciidoc-code (:project a)) " " (asciidoc-code (:version a)) " " (asciidoc-code (:lang a)) "\n"
-       "* " (asciidoc-code (:project b)) " " (asciidoc-code (:version b)) " " (asciidoc-code (:lang b)) "\n\n"
-       "With options: " (asciidoc-code opts) "\n\n"))
+  (str "// This file was autogenerated by diff-apis, best not to edit\n"
+       "= Diff of ++" (:project a) " " (:version a) " " (:lang a)
+       " & " (:project b) " " (:version b) " " (:lang b) "++\n"
+       ":toc: macro\n"
+       ":toclevels: 5\n"
+       ":!toc-title:\n\n"
+
+       "**Diff of apis in:**\n\n"
+       "A. `+" (:project a) "+` `+" (:version a) "+` `+" (:lang a) "+`\n"
+       "B. `+" (:project b) "+` `+" (:version b) "+` `+" (:lang b) "+`\n\n"
+       "With options: `+" opts "+`\n\n"
+
+       "**Legend:**\n\n"
+       "* " (change-prefix :-) " " (change-text :- "A only ") "\n"
+       "* " (change-prefix :+) " " (change-text :+ "B only") "\n"
+       "* " (change-prefix :-) " " (change-text :- "A is" ) " " (change-prefix :+) " " (change-text :+ "different from B") "\n"
+       "* " (change-prefix nil) " " (change-text nil "changes within A and B") "\n"
+       "* " (change-prefix :=) " " (change-text := "equal")"\n\n"
+
+       "toc::[]\n\n"))
 
 (defn as-asciidoc [result]
   (str (header (:run-args result))
-       (-> (as-asciidoc-struct (:diff result))
-           (struct-to-asciidoc))))
+       (-> (as-lines (:diff result))
+           (to-asciidoc))))

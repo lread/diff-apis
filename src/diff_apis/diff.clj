@@ -5,7 +5,7 @@
             [clojure.walk :as walk]
             [cljdoc-analyzer.main :as cljdoc]
             [lambdaisland.deep-diff :as deep-diff]
-            [diff-apis.deep-diff-util :as deep-diff-util]))
+            [diff-apis.deep-diff-util :as dd-util]))
 
 (defn in?
   "true if coll contains elm"
@@ -50,21 +50,20 @@
        x))
    api))
 
-
 (defn- lower-arglist-arity-map [raised-arity-map]
   (map (fn [[k v]]
          (with-meta
-           (if (deep-diff-util/is-diff? k)
-             (deep-diff-util/preserve-deep-diff-type k v)
+           (if (dd-util/is-diff? k)
+             (dd-util/preserve-deep-diff-type k v)
              v)
-           {:diff-apis.diff/arity (deep-diff-util/unwrap-elem k)}))
+           {:diff-apis.diff/arity (dd-util/unwrap-elem k)}))
        raised-arity-map))
 
 (defn- lower-arglists-arities [diff]
   (walk/postwalk
    (fn [x]
-     (if (and (map? x) (:arglists x))
-       (update x :arglists lower-arglist-arity-map)
+     (if (and (map? x) (map? (second (dd-util/find x :arglists))))
+       (dd-util/update x :arglists lower-arglist-arity-map)
        x))
    diff))
 
@@ -87,7 +86,7 @@
   (map (fn [[k v]]
          ;; TODO: check if it is a diff
          (if (and (map? k))
-           (deep-diff-util/preserve-deep-diff-type k v)
+           (dd-util/preserve-deep-diff-type k v)
            v))
        raised-name-map))
 
@@ -108,11 +107,11 @@
   This includes all publics for ns when any change has been made to ns level attributes."
   [diff]
   (->> (map (fn [ns]
-              (if (or (deep-diff-util/is-diff? ns) (deep-diff-util/any-diffs? (dissoc ns :publics)))
+              (if (or (dd-util/is-diff? ns) (dd-util/any-diffs? (dissoc ns :publics)))
                 ns
-                (update ns :publics #(filter deep-diff-util/any-diffs? %))))
+                (update ns :publics #(filter dd-util/any-diffs? %))))
             diff)
-       (filter #(or (deep-diff-util/is-diff? %) (seq (:publics %))))))
+       (filter #(or (dd-util/is-diff? %) (seq (:publics %))))))
 
 (defn- case-insensitive-comparator [a b]
   (let [la (and a (string/lower-case a))
@@ -131,17 +130,37 @@
   (clojure.walk/postwalk (fn [x]
                            (cond
                              ;; :name is always present so no need to worry about deletion or insertions on :name
-                             (and (coll? x) (deep-diff-util/diff-aware-get (first x) :name))
-                             (sort-by #(deep-diff-util/diff-aware-get % :name) case-insensitive-comparator x)
+                             (and (coll? x) (dd-util/get (first x) :name))
+                             (sort-by #(dd-util/get % :name) case-insensitive-comparator x)
 
                              ;; arglists can be present or not so we need to update carefully
-                             (and (map? x) (deep-diff-util/diff-aware-get  x :arglists))
-                             (deep-diff-util/diff-aware-update x :arglists
-                                                               #(sort-by
-                                                                 (fn [al] (:diff-apis.diff/arity (meta al)))
-                                                                 arity-comparator %))
+                             (and (map? x) (dd-util/get  x :arglists))
+                             (dd-util/update x :arglists
+                                             #(sort-by
+                                               (fn [al] (:diff-apis.diff/arity (meta al)))
+                                               arity-comparator %))
                              :else x))
                          namespaces))
+(comment
+  (def t {:arglists '([a c & boo]
+                      [a]
+                      [a b])})
+
+  (def r (raise-arglists-arity-as-keys t))
+  (def l (lower-arglists-arities r))
+  (sort-result l)
+
+  )
+
+(defn- raise-for-diff [api]
+  (-> api
+      raise-name-as-key
+      raise-arglists-arity-as-keys))
+
+(defn- lower-after-diff [diff]
+  (-> diff
+      lower-names
+      lower-arglists-arities))
 
 (defn diff-edn
   "Returns deep-diff of api `a` and api `b`.
@@ -152,8 +171,8 @@
   ([a b]
    (diff-edn a b {:include :changed-publics}))
   ([a b opts]
-   (-> (deep-diff/diff (raise-name-as-key a) (raise-name-as-key b))
-       (lower-names)
+   (-> (deep-diff/diff (raise-for-diff a) (raise-for-diff b))
+       (lower-after-diff)
        (#(if (= :changed-publics (:include opts)) (changes-only %) %))
        (sort-result))))
 
@@ -195,10 +214,10 @@
 
 
   (def dal '{ :name find-next, { :- :arglists } ( [ zloc p? ] [ zloc f p? ] ), :type :var })
-  (deep-diff-util/diff-aware-get dal :arglists)
+  (dd-util/get dal :arglists)
 
   (int? 3)
-  (multitest "hi" "there" "joe" "blow" "go")
+
   (compare "smoke" :bork)
   (sort arity-comparator [1 11 13 2 :z :a ])
   (def alist '[[1 2 3]
@@ -216,7 +235,7 @@
            arity-comparator alist)
 
   (def x {:arglists alist})
-  (update x :arglists sort-by #(if (deep-diff-util/is-diff? %)
+  (update x :arglists sort-by #(if (dd-util/is-diff? %)
                                  (val %)
                                  %)
           arity-comparator)
