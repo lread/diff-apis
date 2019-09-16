@@ -140,12 +140,6 @@
               ""])))))
 
 
-(comment
-  (def t '{:name syntax-quote-node, {:- :arglists} ([children]), :type :var})
-  (dd-util/find t :arglists)
-
-  (into [] flatten ((list [1 2] 3))))
-
 (defn to-asciidoc [lines]
   (string/join "\n" lines))
 

@@ -13,8 +13,7 @@
   (some #(= elm %) coll))
 
 (defn- api-essentials
-  "Load api for signature comparison. We also include metadata of interest.
-  What am I excluding really? :doc :file :line"
+  "Load api for signature comparison. We only include metadata of interest, effectively excluding :doc, :file :line."
   [m lang]
   (walk/postwalk #(if (map? %)
                     (select-keys % [:name :arglists :members :type :dynamic :publics :deprecated :no-doc :skip-wiki])
@@ -62,7 +61,8 @@
 (defn- lower-arglists-arities [diff]
   (walk/postwalk
    (fn [x]
-     (if (and (map? x) (map? (second (dd-util/find x :arglists))))
+     (if (and (dd-util/has-key? x :arglists)
+              (map? (second (dd-util/find x :arglists))))
        (dd-util/update x :arglists lower-arglist-arity-map)
        x))
    diff))
@@ -130,27 +130,17 @@
   (clojure.walk/postwalk (fn [x]
                            (cond
                              ;; :name is always present so no need to worry about deletion or insertions on :name
-                             (and (coll? x) (dd-util/get (first x) :name))
+                             (and (coll? x) (dd-util/has-key? (first x) :name))
                              (sort-by #(dd-util/get % :name) case-insensitive-comparator x)
 
-                             ;; arglists can be present or not so we need to update carefully
-                             (and (map? x) (dd-util/get  x :arglists))
+                             ;; arglists can be present or not
+                             (and (dd-util/has-key? x :arglists))
                              (dd-util/update x :arglists
                                              #(sort-by
                                                (fn [al] (:diff-apis.diff/arity (meta al)))
                                                arity-comparator %))
                              :else x))
                          namespaces))
-(comment
-  (def t {:arglists '([a c & boo]
-                      [a]
-                      [a b])})
-
-  (def r (raise-arglists-arity-as-keys t))
-  (def l (lower-arglists-arities r))
-  (sort-result l)
-
-  )
 
 (defn- raise-for-diff [api]
   (-> api
@@ -206,41 +196,3 @@
      :run-args {:a a
                 :b b
                 :opts opts}}))
-
-(comment
-  (diff-projects {:project "rewrite-clj" :version "0.6.1" :lang "clj"}
-                 {:project "rewrite-cljs" :version "0.4.4" :lang "cljs"}
-                 {:include :changed-publics})
-
-
-  (def dal '{ :name find-next, { :- :arglists } ( [ zloc p? ] [ zloc f p? ] ), :type :var })
-  (dd-util/get dal :arglists)
-
-  (int? 3)
-
-  (compare "smoke" :bork)
-  (sort arity-comparator [1 11 13 2 :z :a ])
-  (def alist '[[1 2 3]
-               [4 5 & 6]
-               [1 2]
-               []])
-
-  (def api {:a :b :arglists alist})
-
-  (raise-arglist-arity-as-key alist)
-  (lower-arglists-arities (raise-arglists-arity-as-keys api))
-  ()
-
-  (sort-by identity
-           arity-comparator alist)
-
-  (def x {:arglists alist})
-  (update x :arglists sort-by #(if (dd-util/is-diff? %)
-                                 (val %)
-                                 %)
-          arity-comparator)
-  (update x :arglists #(sort-by identity arity-comparator %))
-  (diff-files ["rewrite-cljc-1.0.0-alpha.edn" "clj"] ["rewrite-cljc-1.0.0-alpha.edn" "cljs"] {:include :changed-publics})
-  (diff-files ["rewrite-clj-0.6.1.edn" "clj"] ["rewrite-cljs-0.4.4.edn" "cljs"] {:include :changed-publics})
-
-  )

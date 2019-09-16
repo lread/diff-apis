@@ -3,103 +3,92 @@
   (:require [clojure.walk :as walk]
             [lambdaisland.deep-diff.diff :as deep-diff]))
 
+(defn is-insert? [x]
+  (= (type x) lambdaisland.deep_diff.diff.Insertion))
+
+(defn is-delete? [x]
+  (= (type x) lambdaisland.deep_diff.diff.Deletion) )
+
+(defn is-unary-diff? [x]
+  (or (is-insert? x) (is-delete? x)))
+
+(defn is-mismatch? [x]
+  (= (type x) lambdaisland.deep_diff.diff.Mismatch))
+
 (defn preserve-deep-diff-type
   "Preserving the deep-diff type keeps pretty printing with deep-diff pretty wrt insertions an deletions."
   [from-elem new-elem]
   (cond
-    (= (type from-elem) lambdaisland.deep_diff.diff.Deletion) (deep-diff/->Deletion new-elem)
-    (= (type from-elem) lambdaisland.deep_diff.diff.Insertion) (deep-diff/->Insertion new-elem)
+    (is-delete? from-elem) (deep-diff/->Deletion new-elem)
+    (is-insert? from-elem) (deep-diff/->Insertion new-elem)
     :else (throw (ex-info (str "was expecting lambdaisland deep diff deletion or insertion but got:" from-elem) {}))))
 
 (defn is-diff?
   "Returns true if `x` is a deep-diff marker."
   [x]
-  ;; TODO use deep-diff types, wrote this before I realized they were present
-  (and (map? x) (or (:+ x) (:- x))))
+  (or (is-insert? x) (is-delete? x) (is-mismatch? x)))
 
 (defn any-diffs?
   "Returns true if any deep-diff markers occur anywhere in `x`."
   [x]
-  ;; TODO: maybe using atom not the most elegant way?
-  (let [diffs-found (atom false)]
-    (walk/postwalk
-     (fn [n]
-       (when (and (is-diff? n) (= false @diffs-found))
-         (reset! diffs-found true))
-       n)
-     x)
-    @diffs-found))
+  (->> x
+       (tree-seq #(or (map? %) (sequential? %)) seq)
+       (some is-diff?)
+       (some?)))
 
-(defn is-mismatch?
-  [elem]
-  (= (type elem) lambdaisland.deep_diff.diff.Mismatch))
+(defn diff-type [x]
+  (when (is-diff? x)
+    (if (is-mismatch? x) (throw (ex-info "programming error: diff-type of mismatch unexpected" {})))
+    (ffirst x)))
 
-;; A map can be wrapped with an insertion or deletion record
-;; a key can be wrapped with an insertion or deletion record
-;; TODO: key-get... badly named.
-(defn key-get [x key]
-  (or (clojure.core/get x {:- key})
-      (clojure.core/get x {:+ key})
-      (clojure.core/get x key)))
-
-;; for insertions and deletions only
 (defn unwrap-elem [x]
-  (if (is-diff? x)
+  (cond
+    (is-unary-diff? x)
     (val (first x))
-    x))
 
-(defn find [x key]
+    (is-mismatch? x)
+    (throw (ex-info "programming error: cannot unwrap mismatch" {}))
+
+    :else x))
+
+(defn has-key? [m k]
+  (and (map? m)
+       (or (contains? m k)
+           (contains? m (deep-diff/->Deletion k))
+           (contains? m (deep-diff/->Insertion k)))))
+
+(defn find
+  "Returns k v pair matching `key` in map `m` with matching for unary diffs. Returned k, when wrapped, will remain wrapped."
+  [x key]
   (let [x (unwrap-elem x)]
     (and (or (map? x) nil)
          (or (clojure.core/find x (deep-diff/->Deletion key))
              (clojure.core/find x (deep-diff/->Insertion key))
              (clojure.core/find x key)))))
 
-(defn find-all [elem keys]
+(defn find-all
+  "Return vector of all k v pairs matching `keys` in `m` in same order as `keys`. See `find` for find behavior."
+  [m keys]
   (reduce (fn [acc k]
-            (if-let [found (find elem k)]
+            (if-let [found (find m k)]
               (into acc [found])
               acc))
           []
           keys))
 
-(comment
-  (or (map? {:a 1}) nil)
-  (or (map? 1) nil)
-
-  )
-
-;; for insertions and deletions only
-(defn get [x key]
-  (if (is-diff? x)
-    (clojure.core/get (first (vals x)) key)
-    (key-get x key)))
+(defn get
+  "Return value in `m` for `k` unwrapping any diffs."
+  [m k]
+  (if-let [[_rk rv] (find m k)]
+    (unwrap-elem rv)))
 
 
-
-;; for insertions and deletions only
-(defn diff-type [x]
-  (when (is-diff? x)
-    (ffirst x)))
-
-;; we might be dealing with a wrapped map or a wrapped key
-(defn update [m k f]
+(defn update
+  "Diff aware update. Handles wrapped keys and wrapped values. Preserves diff wrapper on m/key if present."
+  [m k f]
   (let [rm (unwrap-elem m)
         [rk _rv] (find rm k)
         nrm (clojure.core/update rm rk f)]
     (if (= m rm)
       nrm
       (preserve-deep-diff-type m nrm))))
-
-(comment
-  (def t {(deep-diff/->Deletion :arglists) '([a b c])})
-  (:- (first (find t :arglists)))
-
-  ()
-  )
-(comment
-  (map? (second (find '{:name throw-reader, :arglists {:variadic [reader fmt & data]}, :type :var} :arglists)))
-  (find (deep-diff/->Deletion :arglists)  :arglists)
-  (any-diffs? [[(deep-diff/->Deletion :booya)]])
-  (is-mismatch? (deep-diff/->Mismatch "old" "new"))
-  )
