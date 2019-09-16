@@ -35,13 +35,20 @@ generating a report to asciidoc would be ideal.
 
 === TODOS
 
+. consider a more unique namespace for this project
+. support specifying cljdoc-analyzer cache files directly from command line
 . test no diff scenario
-. include number of diffs, perhaps as a count of publics affected.
+. include number of diffs, perhaps as a count of publics affected, would be nice
+  to highlight potentially breaking changes:
+.. deleted things
+.. changed things
 . implement :exclude-namespaces
-. add color to asciidoc report
-. clean up asciidoc report
-* manipulating the diff structure after the fact is downright awkward due wrapping markers
-  perhaps a better approach would be to use metadata?
+. flesh out some more unit tests for diffings and asciidoc rendering but sleep
+  on approach first, something simpler is in order.
+. clean up
+.. clean up asciidoc report - overly complicated/fragile right now.
+.. manipulating the diff structure after the fact is downright awkward due wrapping markers
+   perhaps a better approach would be to use metadata?
 
 === Strategy
 
@@ -60,6 +67,8 @@ ns and all publics.
 * A ns with changed publics will show the ns with all its attributes and the
   publics with changes in them. When there is a change in a public all values
   (including unchanged ones) for the public will be included for context.
+* arglists will be compared with arity keys
+* namespaces, publics and members will be compared on key of :name
 
 === Targets
 Github supports no explicit colors for asciidoc. This will make reviewing diffs
