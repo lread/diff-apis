@@ -9,7 +9,12 @@
     := "[black]`*=*`"
     "[black]`*≠*`"))
 
-;; consider superscript for inline change prefix
+(defn- inline-change-prefix [difftype]
+  (case difftype
+    :+ "[green]`^*+*^`"
+    :- "[red]`^*-*^`"
+    := "[black]`^*=*^`"
+    "[black]`^*≠*^`"))
 
 (defn diff-type [parent-diff-type elem]
   (or parent-diff-type
@@ -37,8 +42,8 @@
 
 (defn- code-value [parent-difftype v]
   (if (dd-util/is-mismatch? v)
-    (str (change-prefix :-) " " (change-code :- (:- v)) " "
-         (change-prefix :+) " " (change-code :+ (:+ v)))
+    (str (inline-change-prefix :-) " " (change-code :- (:- v)) " "
+         (inline-change-prefix :+) " " (change-code :+ (:+ v)))
     (change-code parent-difftype v)))
 
 (defn- arglist [parent-difftype al]
@@ -61,11 +66,24 @@
   (into ["[unstyled]"]
         (for [[a-name a-val] (dd-util/find-all elem [:type :deprecated :no-doc :skip-wiki :dynamic])]
           (let [e-difftype (diff-type parent-difftype elem)
-                a-name-difftype (diff-type-key e-difftype a-name)
-                a-difftype (diff-type a-name-difftype a-val)]
-            (str "* " (change-prefix a-difftype) " "
-                 (str "*" (change-text a-difftype (dd-util/unwrap-elem a-name)) "*") " "
-                 (code-value a-difftype a-val))))))
+                a-name-difftype (diff-type-key e-difftype a-name)]
+            (str "* " (change-prefix a-name-difftype) " "
+                 (str "*" (change-text a-name-difftype (dd-util/unwrap-elem a-name)) "*") " "
+                 (code-value a-name-difftype a-val))))))
+
+(defn- members [parent-difftype [members-key members]]
+  (let [members-difftype (diff-type-key parent-difftype members-key)]
+    (for [m members]
+      (let [member-difftype (diff-type members-difftype m)
+            mname (dd-util/get m :name)
+            mname-difftype (diff-type member-difftype mname)]
+        ["a|"
+         (str (change-prefix mname-difftype) " " (change-code mname-difftype (dd-util/get m :name)))
+         "a|"
+         (arglists member-difftype (dd-util/find m :arglists))
+         "a|"
+         (attributes member-difftype m)
+         ""]))))
 
 (defn as-lines [namespaces]
   (into []
@@ -92,14 +110,7 @@
                         (attributes ns-difftype p)
                         ".999+a|"
                         (arglists p-difftype (dd-util/find p :arglists))
-                        "* *+* [green]`[` [green]`++G__2633++` [green]`]`"
-                        "|[red]#m1#"
-                        "|[red]#m2#"
-                        "|[red]#m3#"
-
-                        "|[red]#m11#"
-                        "|[red]#m22#"
-                        "|[red]#m33#"
+                        (members p-difftype (dd-util/find p :members))
                         "|==="]
                        members-key
                        ["|==="
@@ -108,13 +119,7 @@
                         ""
                         ".999+a|"
                         (attributes ns-difftype p)
-                        "|m1"
-                        "|m2"
-                        "|m3"
-
-                        "|m11"
-                        "|m22"
-                        "|m33"
+                        (members p-difftype (dd-util/find p :members))
                         "|==="]
 
                        arglists-key
