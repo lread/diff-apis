@@ -34,7 +34,7 @@ I'd like to include these comparisons in the rewrite-cljc documentation, so
 generating a report to asciidoc would be ideal.
 
 === TODOS
-. add license
+
 . add circleci
 . handle arglists regex case, eg https://github.com/cljdoc/cljdoc/issues/143, and example:
 +
@@ -126,7 +126,7 @@ https://github.com/lambdaisland/deep-diff[Kaocha deep-diff] looks like it might
 give me a good start. Its pretty printer should allow me to verify during
 development.
 
-=== Changes
+=== Diffs
 I will filter to the result to show only publics that have changes in them.
 
 * A new/deleted ns will show the entire ns and all its publics.
@@ -150,3 +150,7 @@ diff block could be directly relevant here. May try this, may not.
 
 If this project does become generalized I will take the time to remedy the many
 hacks it contains.
+
+== License
+
+`EPL-2.0` see `LICENSE`
