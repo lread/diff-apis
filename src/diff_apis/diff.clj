@@ -157,6 +157,19 @@
   {:a (project-summary a)
    :b (project-summary b)})
 
+
+;; TODO: implement
+(defn diff-stats [diff]
+  {:insertions {:namespaces -1
+                :publics -2
+                :arglists -3}
+   :deletions {:namespaces -4
+               :publics -5
+               :arglists -6}
+   :mismatches {:namespaces -7
+                :publics -8
+                :arglists -9}})
+
 (defn diff-edn
   "Returns deep-diff of api `a` and api `b`.
   Use opts to:
@@ -165,11 +178,13 @@
   - `:exlude-namespaces` a vector of namespaces to exclude"
   ([a b opts]
    (let [a-api (api-essentials (:analysis a) (:lang a))
-         b-api (api-essentials (:analysis b) (:lang b))]
-     {:diff (-> (deep-diff/diff (raise-for-diff a-api) (raise-for-diff b-api))
-                (lower-after-diff)
-                (#(if (= :changed-publics (:include opts)) (changes-only %) %))
-                (sort-result))
+         b-api (api-essentials (:analysis b) (:lang b))
+         result (-> (deep-diff/diff (raise-for-diff a-api) (raise-for-diff b-api))
+                    (lower-after-diff)
+                    (#(if (= :changed-publics (:include opts)) (changes-only %) %))
+                    (sort-result))]
+     {:diff result
+      :stats (diff-stats result)
       :projects (projects-summary a b)})))
 
 (defn *diff-files
