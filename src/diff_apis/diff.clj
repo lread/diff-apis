@@ -15,15 +15,13 @@
 (defn- api-essentials
   "Load api for signature comparison. We only include metadata of interest, effectively excluding :doc, :file :line."
   [m lang]
-  (walk/postwalk #(if (map? %)
-                    (select-keys % [:name :arglists :members :type :dynamic :publics :deprecated :no-doc :skip-wiki])
-                    %)
-                 (get-in m [:codox lang])))
+  (->> (get-in m [:codox lang])
+       (walk/postwalk #(if (map? %)
+                         (select-keys % [:name :arglists :members :type :dynamic :publics :deprecated :no-doc :skip-wiki])
+                         %))))
 
-(defn- load-api
-  "Load cljdoc-analyzer generated edn from `edn-filename` for `lang` where `lang` is \"clj\" or \"cljs\"."
-  [edn-filename lang]
-  (api-essentials (edn/read-string (slurp edn-filename)) lang))
+(defn- load-analyzer-file [edn-filename]
+  (edn/read-string (slurp edn-filename)))
 
 (defn arity-comparator [a b]
   (let [a (if (and (keyword? a) (int? b)) Integer/MAX_VALUE a)
@@ -152,23 +150,32 @@
       lower-names
       lower-arglists-arities))
 
+(defn project-summary [{:keys [analysis lang]}]
+ {:project (str (:group-id analysis) "/" (:artifact-id analysis)) :version (:version analysis) :lang lang})
+
+(defn projects-summary [a b]
+  {:a (project-summary a)
+   :b (project-summary b)})
+
 (defn diff-edn
   "Returns deep-diff of api `a` and api `b`.
   Use opts to:
-  - `:include` `:all` or just `:changed-publics`, defaults to `:changed-publics`
+  - `:include` `:all` or just `:changed-publics`
   TODO: implement exclude, will use it to exclude potemkin, I think
-  - `:exlude-namespaces` `:none` or a vector of namespaces to exclude, defaults to `:none`"
-  ([a b]
-   (diff-edn a b {:include :changed-publics}))
+  - `:exlude-namespaces` a vector of namespaces to exclude"
   ([a b opts]
-   (-> (deep-diff/diff (raise-for-diff a) (raise-for-diff b))
-       (lower-after-diff)
-       (#(if (= :changed-publics (:include opts)) (changes-only %) %))
-       (sort-result))))
+   (let [a-api (api-essentials (:analysis a) (:lang a))
+         b-api (api-essentials (:analysis b) (:lang b))]
+     {:diff (-> (deep-diff/diff (raise-for-diff a-api) (raise-for-diff b-api))
+                (lower-after-diff)
+                (#(if (= :changed-publics (:include opts)) (changes-only %) %))
+                (sort-result))
+      :projects (projects-summary a b)})))
 
-(defn diff-files
+(defn *diff-files
   [a b opts]
-  (diff-edn (apply load-api a) (apply load-api b) opts))
+  (diff-edn {:analysis (load-analyzer-file (:filename a)) :lang (:lang a)}
+            {:analysis (load-analyzer-file (:filename b)) :lang (:lang b)} opts))
 
 (defn analysis-filename [coords]
   (str "./.diff-apis/.cache/"
@@ -189,10 +196,27 @@
   [a b opts]
   (let [a-filename (analyze a)
         b-filename (analyze b)
-        result (diff-files [a-filename (:lang a)]
-                           [b-filename (:lang b)]
-                           opts)]
-    {:diff result
-     :run-args {:a a
-                :b b
-                :opts opts}}))
+        result (*diff-files {:filename a-filename :lang (:lang a)}
+                            {:filename b-filename :lang (:lang b)}
+                            opts)]
+    (assoc result :run-args {:diff-type :projects
+                             :opts opts
+                             :a a
+                             :b b})))
+
+(defn diff-files
+  [a b opts]
+  (let [result (*diff-files a b opts)]
+    (assoc result :run-args {:diff-type :files
+                             :opts opts
+                             :a a
+                             :b b})))
+
+(comment
+  (diff-files {:filename "rewrite-clj-0.6.1.pretty.edn", :lang "clj"}
+              {:filename "rewrite-cljs-0.4.4.pretty.edn", :lang "cljs"}
+              {:include :changed-publics, :exclude-namespaces nil})
+
+  (load-analyzer-file "rewrite-clj-0.6.1.pretty.edn")
+  (edn/read-string (slurp "rewrite-clj-0.6.1.pretty.edn"))
+  )

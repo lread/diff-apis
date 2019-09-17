@@ -34,9 +34,19 @@ I'd like to include these comparisons in the rewrite-cljc documentation, so
 generating a report to asciidoc would be ideal.
 
 === TODOS
-
+. add license
+. add circleci
+. handle arglists regex case, eg https://github.com/cljdoc/cljdoc/issues/143, and example:
++
+----
+([{:keys [mappify keyify header transform-header remove-comments comment-re comment-char structs cast-fns cast-exception-handler cast-only]
+     :or   {mappify         true
+            keyify          true
+            remove-comments true
+            comment-re      #"^\#"}
+----
+I don't need this for my purposes, but worth handling for completeness, I think.
 . consider a more unique namespace for this project
-. support specifying cljdoc-analyzer cache files directly from command line
 . test no diff scenario
 . include number of diffs, perhaps as a count of publics affected, would be nice
   to highlight potentially breaking changes:
@@ -50,6 +60,63 @@ generating a report to asciidoc would be ideal.
 .. manipulating the diff structure after the fact is downright awkward due wrapping markers
    perhaps a better approach would be to use metadata?
 
+=== Usage
+
+I currently work from the root dir of this repo.
+
+In brief:
+
+* Specify project and language (clj or cljs) for each api
+* Api diff is written to stdout
+* Logs are written to `./log` dir
+* cljdoc-analyzer api files are cached to `./.diff-apis/.cache`, delete this dir to wipe the cache
+
+==== comparing projects from maven repos
+
+[source,shell]
+----
+clojure -m diff-apis.main \
+  projects \
+  rewrite-clj 0.6.1 clj \
+  rewrite-cljs 0.4.4 cljs
+----
+
+==== comparing projects from files
+
+The files are expected to be in cljdoc-analyzer format.
+
+[source,shell]
+----
+clojure -m diff-apis.main \
+  files \
+  rewrite-clj-0.6.1.pretty.edn clj \
+  rewrite-cljs-0.4.4.pretty.edn cljs
+----
+
+==== options
+
+* `--include` Either `:all` or `:changed-publics`, defaults to `:changed-publics`.
+  I am not interested in namespaces where nothing has changed so I used `:changed-publics`
+* `--exclude-namespace` Fully qualified namespace to exclude, repeat option for multiple
+* `--report-format` Either `:asciidoc` or `:deep-diff`, defaults to `:deep-diff`
+** `:deep-diff` a nice ANSI colorized diff of apis in edn.  I use this for quick checks and debugging
+** `:asccidoc` an asciidoc version of api diffs. Tries to look ok-ish on github and good on cljdoc.
+   I will include these in rewrite-cljc historical docs.
+
+Example using options:
+
+[source,shell]
+----
+clojure -m diff-apis.main \
+  projects \
+  rewrite-clj 0.6.1 clj \
+  rewrite-cljs 0.4.4 cljs \
+  --include :changed-publics \
+  --exclude-namespace rewrite-clj.potemkin \
+  --exclude-namepsace rewrite-clj.parser.utils \
+  --report-format :asciidoc
+----
+
 === Strategy
 
 === Tools
@@ -61,6 +128,7 @@ development.
 
 === Changes
 I will filter to the result to show only publics that have changes in them.
+
 * A new/deleted ns will show the entire ns and all its publics.
 * A ns with attributes changed only at the ns level will also show the entire
 ns and all publics.
