@@ -3,3 +3,4 @@
 .clj-kondo/.cache/
 .diff-apis
 log/
+target/

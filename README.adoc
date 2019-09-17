@@ -35,7 +35,6 @@ generating a report to asciidoc would be ideal.
 
 === TODOS
 
-. add circleci
 . handle arglists regex case, eg https://github.com/cljdoc/cljdoc/issues/143, and example:
 +
 ----

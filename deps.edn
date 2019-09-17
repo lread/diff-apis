@@ -1,7 +1,9 @@
 {:paths ["src" "resources"]
- :deps {cljdoc/cljdoc-analyzer {:git/url "https://github.com/lread/cljdoc-analyzer" :sha "02d0ca4b982c60a5920cf391b3eb8280b4aa97dd"}
+ :deps {cljdoc/cljdoc-analyzer {:git/url "https://github.com/lread/cljdoc-analyzer"
+                                :sha "02d0ca4b982c60a5920cf391b3eb8280b4aa97dd"}
         cli-matic {:mvn/version "0.3.8"}
         lambdaisland/deep-diff {:mvn/version "0.0-47"}}
  :aliases
- {:test {:extra-deps {lambdaisland/kaocha {:mvn/version "0.0-541"}}
+ {:test {:extra-deps {lambdaisland/kaocha {:mvn/version "0.0-541"}
+                      lambdaisland/kaocha-junit-xml {:mvn/version "0.0-70"}}
          :main-opts ["-m" "kaocha.runner"]}}}
