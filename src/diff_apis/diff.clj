@@ -5,12 +5,8 @@
             [clojure.walk :as walk]
             [cljdoc-analyzer.main :as cljdoc]
             [lambdaisland.deep-diff :as deep-diff]
-            [diff-apis.deep-diff-util :as dd-util]))
-
-(defn in?
-  "true if coll contains elm"
-  [coll elm]
-  (some #(= elm %) coll))
+            [diff-apis.deep-diff-util :as dd-util]
+            [diff-apis.stats :as stats]))
 
 (defn- api-essentials
   "Load api for signature comparison. We only include metadata of interest, effectively excluding :doc, :file :line."
@@ -20,6 +16,7 @@
                          (select-keys % [:name :arglists :members :type :dynamic :publics :deprecated :no-doc :skip-wiki])
                          %))))
 
+;; TODO: handle regex in arglists
 (defn- load-analyzer-file [edn-filename]
   (edn/read-string (slurp edn-filename)))
 
@@ -50,8 +47,8 @@
 (defn- lower-arglist-arity-map [raised-arity-map]
   (map (fn [[k v]]
          (with-meta
-           (if (dd-util/is-diff? k)
-             (dd-util/preserve-deep-diff-type k v)
+           (if (dd-util/diff? k)
+             (dd-util/move-diff k v)
              v)
            {:diff-apis.diff/arity (dd-util/unwrap-elem k)}))
        raised-arity-map))
@@ -84,7 +81,7 @@
   (map (fn [[k v]]
          ;; TODO: check if it is a diff
          (if (and (map? k))
-           (dd-util/preserve-deep-diff-type k v)
+           (dd-util/move-diff k v)
            v))
        raised-name-map))
 
@@ -105,11 +102,11 @@
   This includes all publics for ns when any change has been made to ns level attributes."
   [diff]
   (->> (map (fn [ns]
-              (if (or (dd-util/is-diff? ns) (dd-util/any-diffs? (dissoc ns :publics)))
+              (if (or (dd-util/diff? ns) (dd-util/any-diffs? (dissoc ns :publics)))
                 ns
                 (update ns :publics #(filter dd-util/any-diffs? %))))
             diff)
-       (filter #(or (dd-util/is-diff? %) (seq (:publics %))))))
+       (filter #(or (dd-util/diff? %) (seq (:publics %))))))
 
 (defn- case-insensitive-comparator [a b]
   (let [la (and a (string/lower-case a))
@@ -150,25 +147,13 @@
       lower-names
       lower-arglists-arities))
 
-(defn project-summary [{:keys [analysis lang]}]
+(defn- project-summary [{:keys [analysis lang]}]
  {:project (str (:group-id analysis) "/" (:artifact-id analysis)) :version (:version analysis) :lang lang})
 
-(defn projects-summary [a b]
+(defn- projects-summary [a b]
   {:a (project-summary a)
    :b (project-summary b)})
 
-
-;; TODO: implement
-(defn diff-stats [diff]
-  {:insertions {:namespaces -1
-                :publics -2
-                :arglists -3}
-   :deletions {:namespaces -4
-               :publics -5
-               :arglists -6}
-   :mismatches {:namespaces -7
-                :publics -8
-                :arglists -9}})
 
 (defn diff-edn
   "Returns deep-diff of api `a` and api `b`.
@@ -184,7 +169,7 @@
                     (#(if (= :changed-publics (:include opts)) (changes-only %) %))
                     (sort-result))]
      {:diff result
-      :stats (diff-stats result)
+      :stats (stats/count-diffs result)
       :projects (projects-summary a b)})))
 
 (defn *diff-files
@@ -228,10 +213,17 @@
                              :b b})))
 
 (comment
-  (diff-files {:filename "rewrite-clj-0.6.1.pretty.edn", :lang "clj"}
-              {:filename "rewrite-cljs-0.4.4.pretty.edn", :lang "cljs"}
-              {:include :changed-publics, :exclude-namespaces nil})
+  (def d
+    (diff-files {:filename "rewrite-clj-0.6.1.pretty.edn", :lang "clj"}
+                {:filename "rewrite-cljs-0.4.4.pretty.edn", :lang "cljs"}
+                {:include :changed-publics, :exclude-namespaces nil}))
+
+  (def d
+    (diff-files {:filename "rewrite-cljc-1.0.0-alpha.pretty.edn" :lang "cljs"}
+                {:filename "rewrite-cljc-1.0.0-alpha.pretty.edn" :lang "clj"}
+                {:include :changed-publics, :exclude-namespaces nil}))
+
+
 
   (load-analyzer-file "rewrite-clj-0.6.1.pretty.edn")
-  (edn/read-string (slurp "rewrite-clj-0.6.1.pretty.edn"))
-  )
+  (edn/read-string (slurp "rewrite-clj-0.6.1.pretty.edn")))

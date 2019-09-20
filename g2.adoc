@@ -13,16 +13,39 @@ With run-args:
 ----
 {:diff-type :projects, :opts {:include :changed-publics, :exclude-namespaces nil}, :a {:project "rewrite-clj", :version "0.6.1", :lang "clj"}, :b {:project "lread/rewrite-cljs-playground", :version "1.0.0-alpha", :lang "clj"}}
 ----
+
 **Legend:**
 
-* [red]`*-*` [red]#pass:c[A only ]#
-* [green]`*+*` [green]#pass:c[B only]#
-* [red]`*-*` [red]#pass:c[A is]# [green]`*+*` [green]#pass:c[different from B]#
-* [black]`*≠*` [black]#pass:c[changes within A and B]#
-* [black]`*=*` [black]#pass:c[equal]#
+* [red]`*-*`[red]#pass:c[A only]#
+* [green]`*+*`[green]#pass:c[B only]#
+* [red]`*-*`[red]#pass:c[A is]#[green]`*+*`[green]#pass:c[different from B]#
+* [black]`*≠*`[black]#pass:c[changes within A and B]#
+* [black]`*=*`[black]#pass:c[equal]#
+
+**Stats:**
+
+|===
+| Element | Have changes within | Deleted | Inserted
+
+| arglists
+| 62
+| 13
+| 112
+
+| publics
+| 60
+| 9
+| 94
+
+| namespaces
+| 14
+| 2
+| 15
+
+|===
+**Table of diffs:**
 
 toc::[]
-
 == [green]`*+*` [green]#pass:c[rewrite-clj]#
 
 [unstyled]

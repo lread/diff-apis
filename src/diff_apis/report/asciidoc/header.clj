@@ -41,21 +41,20 @@
    (str "* " (render/change-prefix :=)  (render/change-text := "equal"))
    ""])
 
-(defn- stat-row [stats k]
-  [(str "| " (name k))
-   (str "| " (get-in stats [:deletions k]))
-   (str "| " (get-in stats [:mismatches k]))
-   (str "| " (get-in stats [:insertions k]))
+(defn- stat-row [stat]
+  [(str "| " (name (:type stat)))
+   (str "| " (:changed stat))
+   (str "| " (:deleted stat))
+   (str "| " (:inserted stat))
    ""])
 
 (defn- stats [{:keys [stats]}]
-  (-> ["**Stats:**"
-       ""
-       "|==="
-       "| Element | Deletions | Mismatches | Insertions"
-       ""]
-      (into (flatten (for [k [:namespaces :publics :arglists]]
-                       (stat-row stats k))))
+  (-> (into ["**Stats:**"
+             ""
+             "|==="
+             "| Element | Have changes within | Deleted | Inserted"
+             ""])
+      (into (flatten (map stat-row stats)))
       (into ["|==="])))
 
 (defn header [result]

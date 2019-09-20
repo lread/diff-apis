@@ -47,7 +47,7 @@ generating a report to asciidoc would be ideal.
 I don't need this for my purposes, but worth handling for completeness, I think.
 . consider a more unique namespace for this project
 . test no diff scenario
-. include number of diffs, perhaps as a count of publics affected, would be nice
+. would be nice
   to highlight potentially breaking changes:
 .. deleted things
 .. changed things
@@ -56,8 +56,6 @@ I don't need this for my purposes, but worth handling for completeness, I think.
   on approach first, something simpler is in order.
 . clean up
 .. clean up asciidoc report - overly complicated/fragile right now.
-.. manipulating the diff structure after the fact is downright awkward due wrapping markers
-   perhaps a better approach would be to use metadata?
 
 === Usage
 

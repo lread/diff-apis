@@ -3,53 +3,59 @@
   (:require [clojure.walk :as walk]
             [lambdaisland.deep-diff.diff :as deep-diff]))
 
-(defn is-insert? [x]
+(defn inserted? [x]
   (= (type x) lambdaisland.deep_diff.diff.Insertion))
 
-(defn is-delete? [x]
+(defn deleted? [x]
   (= (type x) lambdaisland.deep_diff.diff.Deletion) )
 
-(defn is-unary-diff? [x]
-  (or (is-insert? x) (is-delete? x)))
+(defn unary-diff? [x]
+  (or (inserted? x) (deleted? x)))
 
-(defn is-mismatch? [x]
+(defn mismatch? [x]
   (= (type x) lambdaisland.deep_diff.diff.Mismatch))
 
-(defn preserve-deep-diff-type
+(defn move-diff
   "Preserving the deep-diff type keeps pretty printing with deep-diff pretty wrt insertions an deletions."
   [from-elem new-elem]
   (cond
-    (is-delete? from-elem) (deep-diff/->Deletion new-elem)
-    (is-insert? from-elem) (deep-diff/->Insertion new-elem)
+    (deleted? from-elem) (deep-diff/->Deletion new-elem)
+    (inserted? from-elem) (deep-diff/->Insertion new-elem)
     :else (throw (ex-info (str "was expecting lambdaisland deep diff deletion or insertion but got:" from-elem) {}))))
 
-(defn is-diff?
+(defn diff?
   "Returns true if `x` is a deep-diff marker."
   [x]
-  (or (is-insert? x) (is-delete? x) (is-mismatch? x)))
+  (or (inserted? x) (deleted? x) (mismatch? x)))
 
 (defn any-diffs?
-  "Returns true if any deep-diff markers occur anywhere in `x`."
+  "Returns true if any deep-diff markers occur anywhere in `x` or its children."
   [x]
   (->> x
        (tree-seq #(or (map? %) (sequential? %)) seq)
-       (some is-diff?)
+       (some diff?)
        (some?)))
 
+(defn changed?
+  "Returns true if `x` is not a diff but a diff occurs somewhere in children of `x`."
+  [x]
+  (and (not (diff? x)) (any-diffs? x)))
+
 (defn diff-type [x]
-  (when (is-diff? x)
-    (if (is-mismatch? x) (throw (ex-info "programming error: diff-type of mismatch unexpected" {})))
+  (when (diff? x)
+    (if (mismatch? x) (throw (ex-info "programming error: diff-type of mismatch unexpected" {})))
     (ffirst x)))
 
 (defn unwrap-elem [x]
   (cond
-    (is-unary-diff? x)
+    (unary-diff? x)
     (val (first x))
 
-    (is-mismatch? x)
+    (mismatch? x)
     (throw (ex-info "programming error: cannot unwrap mismatch" {}))
 
     :else x))
+
 
 (defn has-key? [m k]
   (and (map? m)
@@ -91,4 +97,4 @@
         nrm (clojure.core/update rm rk f)]
     (if (= m rm)
       nrm
-      (preserve-deep-diff-type m nrm))))
+      (move-diff m nrm))))

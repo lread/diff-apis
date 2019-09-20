@@ -14,7 +14,7 @@
       (dd-util/diff-type key-elem)))
 
 (defn- code-value [parent-difftype v]
-  (if (dd-util/is-mismatch? v)
+  (if (dd-util/mismatch? v)
     (str (render/inline-change-prefix :-) " " (render/change-code :- (:- v)) " "
          (render/inline-change-prefix :+) " " (render/change-code :+ (:+ v)))
     (render/change-code parent-difftype v)))

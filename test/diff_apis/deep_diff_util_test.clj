@@ -3,11 +3,11 @@
             [lambdaisland.deep-diff.diff :as deep-diff]
             [diff-apis.deep-diff-util :as dd-util]))
 
-(t/deftest is-diff?-test
-  (t/is (= false (dd-util/is-diff? {:a 1})))
-  (t/is (= true (dd-util/is-diff? (deep-diff/->Insertion "i a new"))))
-  (t/is (= true (dd-util/is-diff? (deep-diff/->Deletion "i am gone"))))
-  (t/is (= true (dd-util/is-diff? (deep-diff/->Mismatch "old" "new")))))
+(t/deftest diff?-test
+  (t/is (= false (dd-util/diff? {:a 1})))
+  (t/is (= true (dd-util/diff? (deep-diff/->Insertion "i a new"))))
+  (t/is (= true (dd-util/diff? (deep-diff/->Deletion "i am gone"))))
+  (t/is (= true (dd-util/diff? (deep-diff/->Mismatch "old" "new")))))
 
 (t/deftest any-diffs?-test
   (t/is (= false (dd-util/any-diffs? [{:name "ns-test"
