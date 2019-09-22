@@ -4,15 +4,6 @@
             [diff-apis.report.asciidoc.header :as header]
             [diff-apis.deep-diff-util :as dd-util]))
 
-(defn diff-type [parent-diff-type elem]
-  (or parent-diff-type
-      (dd-util/diff-type elem)
-      (when (not (dd-util/any-diffs? elem)) :=)))
-
-(defn diff-type-key [parent-diff-type key-elem]
-  (or parent-diff-type
-      (dd-util/diff-type key-elem)))
-
 (defn- code-value [parent-difftype v]
   (if (dd-util/mismatch? v)
     (str (render/inline-change-prefix :-) " " (render/change-code :- (:- v)) " "
@@ -20,36 +11,40 @@
     (render/change-code parent-difftype v)))
 
 (defn- arglist [parent-difftype al]
-  (let [difftype (diff-type parent-difftype al)]
+  (let [difftype (dd-util/calc-diff-type parent-difftype al)]
     (str
      (render/change-text difftype "[") " "
      (string/join " " (for [a al] (code-value difftype a)))
      " " (render/change-text difftype "]"))))
 
-(defn- arglists [parent-difftype [argslist-key argslist]]
+(defn- attributes
+  "returns lines for attributes for `elem` which will be, for our purposes, one of namespace, public member"
+  [parent-difftype elem]
   (into ["[unstyled]"]
-        (let [argslist-difftype (diff-type-key parent-difftype argslist-key)]
+        (for [a-entry (dd-util/find-all elem [:type :deprecated :no-doc :skip-wiki :dynamic])]
+          (let [[a-name a-val] a-entry
+                a-difftype (dd-util/calc-diff-type parent-difftype a-entry)]
+            (str "* "
+                 (str "*" (render/escape-text (dd-util/unwrap-elem a-name)) "*") " "
+                 (render/change-prefix a-difftype) " "
+                 (code-value a-difftype a-val))))))
+
+(defn- arglists [parent-difftype argslist-entry]
+  (into ["[unstyled]"]
+        (let [argslist-difftype (dd-util/calc-diff-type parent-difftype argslist-entry)
+              argslist (dd-util/unwrap-elem (val argslist-entry))]
           (for [al argslist]
-            (let [al-difftype (diff-type argslist-difftype al)
+            (let [al-difftype (dd-util/calc-diff-type argslist-difftype al)
                   al-elem (dd-util/unwrap-elem al)
-                  elem-diff-type (diff-type al-difftype al-elem)]
+                  elem-diff-type (dd-util/calc-diff-type al-difftype al-elem)]
               [ (str "* " (render/change-prefix elem-diff-type) " " (arglist al-difftype al-elem)) ])))))
 
-(defn- attributes [parent-difftype elem]
-  (into ["[unstyled]"]
-        (for [[a-name a-val] (dd-util/find-all elem [:type :deprecated :no-doc :skip-wiki :dynamic])]
-          (let [e-difftype (diff-type parent-difftype elem)
-                a-name-difftype (diff-type-key e-difftype a-name)]
-            (str "* " (render/change-prefix a-name-difftype) " "
-                 (str "*" (render/change-text a-name-difftype (dd-util/unwrap-elem a-name)) "*") " "
-                 (code-value a-name-difftype a-val))))))
-
-(defn- members [parent-difftype [members-key members]]
-  (let [members-difftype (diff-type-key parent-difftype members-key)]
+(defn- members [parent-difftype members-entry]
+  (let [members-difftype (dd-util/calc-diff-type parent-difftype members-entry)
+        members (dd-util/unwrap-elem (val members-entry))]
     (for [m members]
-      (let [member-difftype (diff-type members-difftype m)
-            mname (dd-util/get m :name)
-            mname-difftype (diff-type member-difftype mname)]
+      (let [member-difftype (dd-util/calc-diff-type members-difftype m)
+            mname-difftype (dd-util/calc-diff-type member-difftype (dd-util/find m :name))]
         ["a|"
          (str (render/change-prefix mname-difftype) " " (render/change-code mname-difftype (dd-util/get m :name)))
          "a|"
@@ -58,64 +53,77 @@
          (attributes member-difftype m)
          ""]))))
 
-(defn as-lines [namespaces]
+(defn- publics [parent-difftype publics-entry]
+  (let [publics-difftype (dd-util/calc-diff-type parent-difftype publics-entry)
+        publics (dd-util/unwrap-elem (val publics-entry))]
+    (for [p publics]
+      (let [p-difftype (dd-util/calc-diff-type publics-difftype p)]
+        [(str "=== " (render/change-prefix p-difftype) "" (render/change-text p-difftype (dd-util/get p :name)))
+         (let [arglists-entry (dd-util/find p :arglists)
+               members-entry (dd-util/find p :members)
+               attributes-lines (attributes p-difftype p)
+               arglists-lines (and arglists-entry (arglists p-difftype arglists-entry))
+               members-lines (and members-entry (members p-difftype members-entry))]
+           (cond
+             (and arglists-lines members-lines)
+             ["|==="
+              ".2+h| attributes .2+h| arglists 3+h|members"
+              "h|name h| arglists h| attributes"
+
+              ".999+a|"
+              attributes-lines
+              ".999+a|"
+              arglists-lines
+              members-lines
+              "|==="]
+             members-lines
+             ["|==="
+              ".2+h| attributes 3+h| members"
+              "h|name h| arglists h| attributes"
+              ""
+              ".999+a|"
+              attributes-lines
+              members-lines
+              "|==="]
+
+             arglists-lines
+             ["|==="
+              "| attributes | arglists"
+              ""
+              "a|"
+              attributes-lines
+              "a|"
+              arglists-lines
+              "|==="]
+
+             :else
+             ["|==="
+              "| attributes"
+              ""
+              "a|"
+              attributes-lines
+              "|==="]))
+         ""]))))
+
+
+(defn namespaces [namespaces]
+  (let [nses-diff-type (dd-util/calc-diff-type nil namespaces)]
+    (for [ns namespaces]
+      (let [ns-difftype (dd-util/calc-diff-type nses-diff-type ns)]
+        [(str "== "
+              (render/change-prefix ns-difftype) " "
+              (render/change-text ns-difftype (dd-util/get ns :name)))
+         ""
+         (attributes nil ns)
+         ""
+         (publics ns-difftype (dd-util/find ns :publics))
+         ""
+         ""]))))
+
+(defn as-lines [diff]
   (into []
-        (flatten ;; I've heard the mantra against flatten, but seems appropriate here :-P
-         (for [ns namespaces]
-           (let [ns-difftype (dd-util/diff-type ns)]
-             [(str "== " (render/change-prefix ns-difftype) " " (render/change-text ns-difftype (dd-util/get ns :name)))
-              ""
-              (attributes nil ns)
-              ""
-              (for [p (dd-util/get ns :publics)]
-                (let [p-difftype (diff-type ns-difftype p)]
-                  [(str "=== " (render/change-prefix p-difftype) "" (render/change-text p-difftype (dd-util/get p :name)))
-                   (let [
-                         arglists-key (first (dd-util/find p :arglists))
-                         members-key (first (dd-util/find p :members))]
-                     (cond
-                       (and arglists-key members-key)
-                       ["|==="
-                        ".2+h| attributes .2+h| arglists 3+h|members"
-                        "h|name h| arglists h| type"
-
-                        ".999+a|"
-                        (attributes ns-difftype p)
-                        ".999+a|"
-                        (arglists p-difftype (dd-util/find p :arglists))
-                        (members p-difftype (dd-util/find p :members))
-                        "|==="]
-                       members-key
-                       ["|==="
-                        ".2+h| attributes 3+h| members"
-                        "h|name h| arglists h| type"
-                        ""
-                        ".999+a|"
-                        (attributes ns-difftype p)
-                        (members p-difftype (dd-util/find p :members))
-                        "|==="]
-
-                       arglists-key
-                       ["|==="
-                        "| attributes | arglists"
-                        ""
-                        "a|"
-                        (attributes ns-difftype p)
-                        "a|"
-                        (arglists p-difftype (dd-util/find p :arglists))
-                        "|==="]
-
-                       :else
-                       ["|==="
-                        "| attributes"
-                        ""
-                        "a|"
-                        (attributes ns-difftype p)
-                        "|==="]
-                       ))
-                   ""]))
-              ""
-              ""])))))
+        ;; I've heard the mantra against flatten, but seems appropriate here :-P
+        (flatten (namespaces diff))))
 
 (defn to-asciidoc [lines]
   (string/join "\n" lines))

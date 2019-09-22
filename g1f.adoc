@@ -56,7 +56,7 @@ toc::[]
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+G__2700+` [red]`+G__2701+` [red]#pass:c[]]#
@@ -68,7 +68,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+G__2633+` [red]#pass:c[]]#
@@ -80,7 +80,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+G__2636+` [red]#pass:c[]]#
@@ -92,8 +92,8 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
-* [red]`*-*` *[red]#pass:c[:no-doc]#* [red]`+true+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
+* *pass:c[:no-doc]* [red]`*-*` [red]`+true+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+root+` [red]#pass:c[]]#
@@ -105,8 +105,8 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
-* [red]`*-*` *[red]#pass:c[:no-doc]#* [red]`+true+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
+* *pass:c[:no-doc]* [red]`*-*` [red]`+true+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+value+` [red]#pass:c[]]#
@@ -118,7 +118,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+G__2646+` [red]#pass:c[]]#
@@ -130,7 +130,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+loc+` [red]`+f+` [red]`+&+` [red]`+args+` [red]#pass:c[]]#
@@ -142,7 +142,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+G__2715+` [red]#pass:c[]]#
@@ -154,7 +154,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+G__2697+` [red]`+G__2698+` [red]#pass:c[]]#
@@ -166,7 +166,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+G__2685+` [red]`+G__2686+` [red]#pass:c[]]#
@@ -178,7 +178,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+G__2689+` [red]`+G__2690+` [red]#pass:c[]]#
@@ -190,7 +190,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+G__2671+` [red]#pass:c[]]#
@@ -202,7 +202,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+G__2678+` [red]#pass:c[]]#
@@ -214,7 +214,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+G__2644+` [red]#pass:c[]]#
@@ -226,8 +226,8 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
-* [red]`*-*` *[red]#pass:c[:no-doc]#* [red]`+true+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
+* *pass:c[:no-doc]* [red]`*-*` [red]`+true+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+G__2639+` [red]`+G__2640+` [red]`+G__2641+` [red]#pass:c[]]#
@@ -239,7 +239,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+G__2703+` [red]#pass:c[]]#
@@ -251,7 +251,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+G__2630+` [red]#pass:c[]]#
@@ -263,7 +263,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+loc+` [red]#pass:c[]]#
@@ -275,7 +275,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+G__2710+` [red]#pass:c[]]#
@@ -287,7 +287,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+G__2717+` [red]#pass:c[]]#
@@ -299,7 +299,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+G__2693+` [red]`+G__2694+` [red]#pass:c[]]#
@@ -311,7 +311,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+G__2661+` [red]#pass:c[]]#
@@ -323,7 +323,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+G__2668+` [red]#pass:c[]]#
@@ -335,7 +335,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+G__2658+` [red]#pass:c[]]#
@@ -347,7 +347,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+G__2655+` [red]#pass:c[]]#
@@ -359,8 +359,8 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
-* [red]`*-*` *[red]#pass:c[:no-doc]#* [red]`+true+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
+* *pass:c[:no-doc]* [red]`*-*` [red]`+true+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+root+` [red]#pass:c[]]#
@@ -371,7 +371,7 @@ a|
 == [red]`*-*` [red]#pass:c[rewrite-clj.custom-zipper.utils]#
 
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:no-doc]#* [red]`+true+`
+* *pass:c[:no-doc]* [black]`*=*` [black]`+true+`
 
 === [red]`*-*`[red]#pass:c[remove-and-move-left]#
 |===
@@ -379,7 +379,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+loc+` [red]#pass:c[]]#
@@ -391,7 +391,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+loc+` [red]#pass:c[]]#
@@ -403,7 +403,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+loc+` [red]#pass:c[]]#
@@ -415,7 +415,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+p?+` [red]#pass:c[]]#
@@ -427,7 +427,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+loc+` [red]#pass:c[]]#
@@ -439,7 +439,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+p?+` [red]#pass:c[]]#
@@ -457,7 +457,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+node+` [red]#pass:c[]]#
@@ -469,7 +469,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+_+` [red]#pass:c[]]#
@@ -481,7 +481,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+_+` [red]#pass:c[]]#
@@ -493,7 +493,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+s+` [red]#pass:c[]]#
@@ -505,7 +505,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+nodes+` [red]#pass:c[]]#
@@ -517,7 +517,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+node+` [red]#pass:c[]]#
@@ -529,7 +529,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+s+` [red]#pass:c[]]#
@@ -541,7 +541,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+node+` [red]#pass:c[]]#
@@ -553,8 +553,8 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
-* [red]`*-*` *[red]#pass:c[:no-doc]#* [red]`+true+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
+* *pass:c[:no-doc]* [red]`*-*` [red]`+true+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+nodes+` [red]#pass:c[]]#
@@ -566,7 +566,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+children+` [red]#pass:c[]]#
@@ -578,7 +578,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+children+` [red]#pass:c[]]#
@@ -590,7 +590,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+children+` [red]#pass:c[]]#
@@ -602,7 +602,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+children+` [red]#pass:c[]]#
@@ -614,7 +614,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+_+` [red]#pass:c[]]#
@@ -626,7 +626,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+value+` [red]#pass:c[]]#
@@ -639,7 +639,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+k+` [red]`+&+` [red]`+[namespaced?]+` [red]#pass:c[]]#
@@ -651,7 +651,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+_+` [red]#pass:c[]]#
@@ -663,7 +663,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+_+` [red]#pass:c[]]#
@@ -675,7 +675,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+nodes+` [red]#pass:c[]]#
@@ -687,7 +687,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+node+` [red]#pass:c[]]#
@@ -699,7 +699,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+children+` [red]#pass:c[]]#
@@ -711,7 +711,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+children+` [red]#pass:c[]]#
@@ -723,7 +723,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+children+` [red]#pass:c[]]#
@@ -736,7 +736,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+children+` [red]#pass:c[]]#
@@ -748,7 +748,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+s+` [red]#pass:c[]]#
@@ -760,7 +760,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+n+` [red]#pass:c[]]#
@@ -772,7 +772,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+_+` [red]#pass:c[]]#
@@ -784,7 +784,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+children+` [red]#pass:c[]]#
@@ -796,7 +796,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+children+` [red]#pass:c[]]#
@@ -809,7 +809,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+children+` [red]#pass:c[]]#
@@ -822,7 +822,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+pattern-string+` [red]#pass:c[]]#
@@ -834,7 +834,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+_+` [red]`+children+` [red]#pass:c[]]#
@@ -846,7 +846,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+children+` [red]#pass:c[]]#
@@ -858,7 +858,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+_+` [red]#pass:c[]]#
@@ -870,7 +870,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+nodes+` [red]#pass:c[]]#
@@ -882,7 +882,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+n+` [red]#pass:c[]]#
@@ -894,7 +894,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+_+` [red]#pass:c[]]#
@@ -906,7 +906,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+lines+` [red]#pass:c[]]#
@@ -918,7 +918,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+children+` [red]#pass:c[]]#
@@ -930,7 +930,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+_+` [red]#pass:c[]]#
@@ -942,7 +942,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+value+` [red]`+&+` [red]`+[string-value]+` [red]#pass:c[]]#
@@ -954,7 +954,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+children+` [red]#pass:c[]]#
@@ -966,7 +966,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+children+` [red]#pass:c[]]#
@@ -978,7 +978,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+children+` [red]#pass:c[]]#
@@ -990,8 +990,8 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
-* [red]`*-*` *[red]#pass:c[:deprecated]#* [red]`+0.4.0+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
+* *pass:c[:deprecated]* [red]`*-*` [red]`+0.4.0+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+node+` [red]#pass:c[]]#
@@ -1003,7 +1003,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+children+` [red]#pass:c[]]#
@@ -1015,7 +1015,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+children+` [red]#pass:c[]]#
@@ -1027,7 +1027,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+s+` [red]#pass:c[]]#
@@ -1039,7 +1039,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+s+` [red]#pass:c[]]#
@@ -1051,7 +1051,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+node+` [red]#pass:c[]]#
@@ -1062,7 +1062,7 @@ a|
 == [red]`*-*` [red]#pass:c[rewrite-clj.node.coerce]#
 
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:no-doc]#* [red]`+true+`
+* *pass:c[:no-doc]* [black]`*=*` [black]`+true+`
 
 
 
@@ -1076,7 +1076,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+n+` [green]`+value+` [green]#pass:c[]]#
@@ -1088,7 +1088,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+f+` [green]`+sq+` [green]#pass:c[]]#
@@ -1099,7 +1099,7 @@ a|
 == [black]`*≠*` [black]#pass:c[rewrite-clj.node.comment]#
 
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:no-doc]#* [red]`+true+`
+* *pass:c[:no-doc]* [red]`*-*` [red]`+true+`
 
 === [black]`*=*`[black]#pass:c[comment-node]#
 |===
@@ -1107,7 +1107,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+s+` [black]#pass:c[]]#
@@ -1119,7 +1119,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+node+` [black]#pass:c[]]#
@@ -1131,7 +1131,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 
@@ -1139,7 +1139,7 @@ a|
 == [black]`*≠*` [black]#pass:c[rewrite-clj.node.forms]#
 
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:no-doc]#* [red]`+true+`
+* *pass:c[:no-doc]* [red]`*-*` [red]`+true+`
 
 === [black]`*=*`[black]#pass:c[forms-node]#
 |===
@@ -1147,7 +1147,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+children+` [black]#pass:c[]]#
@@ -1159,7 +1159,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 
@@ -1167,7 +1167,7 @@ a|
 == [red]`*-*` [red]#pass:c[rewrite-clj.node.indent]#
 
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:no-doc]#* [red]`+true+`
+* *pass:c[:no-doc]* [black]`*=*` [black]`+true+`
 
 === [red]`*-*`[red]#pass:c[indent-spaces]#
 |===
@@ -1175,7 +1175,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+node+` [red]`+n+` [red]#pass:c[]]#
@@ -1187,7 +1187,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+node+` [red]`+n+` [red]#pass:c[]]#
@@ -1199,7 +1199,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 |===
 
 === [red]`*-*`[red]#pass:c[prefix-lines]#
@@ -1208,7 +1208,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+node+` [red]`+prefix+` [red]#pass:c[]]#
@@ -1219,7 +1219,7 @@ a|
 == [red]`*-*` [red]#pass:c[rewrite-clj.node.integer]#
 
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:no-doc]#* [red]`+true+`
+* *pass:c[:no-doc]* [black]`*=*` [black]`+true+`
 
 === [red]`*-*`[red]#pass:c[integer-node]#
 |===
@@ -1227,7 +1227,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+value+` [red]#pass:c[]]#
@@ -1240,7 +1240,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 |===
 
 
@@ -1248,7 +1248,7 @@ a|
 == [black]`*≠*` [black]#pass:c[rewrite-clj.node.keyword]#
 
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:no-doc]#* [red]`+true+`
+* *pass:c[:no-doc]* [red]`*-*` [red]`+true+`
 
 === [black]`*=*`[black]#pass:c[keyword-node]#
 |===
@@ -1256,7 +1256,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+k+` [black]`+&+` [black]`+[namespaced?]+` [black]#pass:c[]]#
@@ -1268,7 +1268,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 
@@ -1276,7 +1276,7 @@ a|
 == [black]`*≠*` [black]#pass:c[rewrite-clj.node.meta]#
 
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:no-doc]#* [red]`+true+`
+* *pass:c[:no-doc]* [red]`*-*` [red]`+true+`
 
 === [black]`*=*`[black]#pass:c[meta-node]#
 |===
@@ -1284,7 +1284,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+children+` [black]#pass:c[]]#
@@ -1297,7 +1297,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 === [black]`*=*`[black]#pass:c[raw-meta-node]#
@@ -1306,7 +1306,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+children+` [black]#pass:c[]]#
@@ -1325,8 +1325,8 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
-* [red]`*-*` *[red]#pass:c[:no-doc]#* [red]`+true+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
+* *pass:c[:no-doc]* [red]`*-*` [red]`+true+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+node+` [red]#pass:c[]]#
@@ -1338,8 +1338,8 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:macro+`
-* [red]`*-*` *[red]#pass:c[:no-doc]#* [red]`+true+`
+* *pass:c[:type]* [red]`*-*` [red]`+:macro+`
+* *pass:c[:no-doc]* [red]`*-*` [red]`+true+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+class+` [red]#pass:c[]]#
@@ -1351,8 +1351,8 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
-* [red]`*-*` *[red]#pass:c[:no-doc]#* [red]`+true+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
+* *pass:c[:no-doc]* [red]`*-*` [red]`+true+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+writer+` [red]`+node+` [red]#pass:c[]]#
@@ -1361,11 +1361,11 @@ a|
 === [black]`*≠*`[black]#pass:c[InnerNode]#
 |===
 .2+h| attributes 3+h| members
-h|name h| arglists h| type
+h|name h| arglists h| attributes
 
 .999+a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:protocol+`
+* *pass:c[:type]* [black]`*=*` [black]`+:protocol+`
 a|
 [black]`*=*` [black]`+children+`
 a|
@@ -1373,7 +1373,7 @@ a|
 * [black]`*=*` [black]#pass:c[[]# [black]`+_+` [black]#pass:c[]]#
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 
 a|
 [black]`*=*` [black]`+inner?+`
@@ -1382,7 +1382,7 @@ a|
 * [black]`*=*` [black]#pass:c[[]# [black]`+_+` [black]#pass:c[]]#
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 
 a|
 [red]`*-*` [red]`+leader-length+`
@@ -1391,7 +1391,7 @@ a|
 * [red]`*-*` [red]#pass:c[[]# [red]`+_+` [red]#pass:c[]]#
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 
 a|
 [black]`*=*` [black]`+replace-children+`
@@ -1400,7 +1400,7 @@ a|
 * [black]`*=*` [black]#pass:c[[]# [black]`+_+` [black]`+children+` [black]#pass:c[]]#
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 
 |===
 
@@ -1410,8 +1410,8 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
-* [red]`*-*` *[red]#pass:c[:no-doc]#* [red]`+true+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
+* *pass:c[:no-doc]* [red]`*-*` [red]`+true+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+[row col]+` [red]`+[row-extent col-extent]+` [red]#pass:c[]]#
@@ -1423,8 +1423,8 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
-* [red]`*-*` *[red]#pass:c[:no-doc]#* [red]`+true+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* *pass:c[:no-doc]* [red]`*-*` [red]`+true+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+nodes+` [black]#pass:c[]]#
@@ -1436,8 +1436,8 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
-* [red]`*-*` *[red]#pass:c[:no-doc]#* [red]`+true+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* *pass:c[:no-doc]* [red]`*-*` [red]`+true+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+nodes+` [black]`+c+` [black]#pass:c[]]#
@@ -1449,8 +1449,8 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
-* [red]`*-*` *[red]#pass:c[:no-doc]#* [red]`+true+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* *pass:c[:no-doc]* [red]`*-*` [red]`+true+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+nodes+` [black]#pass:c[]]#
@@ -1462,8 +1462,8 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
-* [red]`*-*` *[red]#pass:c[:no-doc]#* [red]`+true+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* *pass:c[:no-doc]* [red]`*-*` [red]`+true+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+nodes+` [black]#pass:c[]]#
@@ -1474,7 +1474,7 @@ a|
 == [red]`*-*` [red]#pass:c[rewrite-clj.node.regex]#
 
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:no-doc]#* [red]`+true+`
+* *pass:c[:no-doc]* [black]`*=*` [black]`+true+`
 
 === [red]`*-*`[red]#pass:c[regex-node]#
 |===
@@ -1482,7 +1482,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+pattern-string+` [red]#pass:c[]]#
@@ -1494,7 +1494,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 |===
 
 
@@ -1502,7 +1502,7 @@ a|
 == [black]`*≠*` [black]#pass:c[rewrite-clj.node.seq]#
 
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:no-doc]#* [red]`+true+`
+* *pass:c[:no-doc]* [red]`*-*` [red]`+true+`
 
 === [black]`*=*`[black]#pass:c[list-node]#
 |===
@@ -1510,7 +1510,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+children+` [black]#pass:c[]]#
@@ -1522,7 +1522,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+children+` [black]#pass:c[]]#
@@ -1534,7 +1534,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+children+` [red]#pass:c[]]#
@@ -1546,7 +1546,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 |===
 
 === [black]`*=*`[black]#pass:c[SeqNode]#
@@ -1555,7 +1555,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 === [black]`*=*`[black]#pass:c[set-node]#
@@ -1564,7 +1564,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+children+` [black]#pass:c[]]#
@@ -1576,7 +1576,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+children+` [black]#pass:c[]]#
@@ -1588,7 +1588,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+s+` [green]#pass:c[]]#
@@ -1600,7 +1600,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+s+` [green]#pass:c[]]#
@@ -1612,7 +1612,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+s+` [green]#pass:c[]]#
@@ -1624,7 +1624,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+s+` [green]#pass:c[]]#
@@ -1635,7 +1635,7 @@ a|
 == [red]`*-*` [red]#pass:c[rewrite-clj.node.string]#
 
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:no-doc]#* [red]`+true+`
+* *pass:c[:no-doc]* [black]`*=*` [black]`+true+`
 
 === [red]`*-*`[red]#pass:c[string-node]#
 |===
@@ -1643,7 +1643,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+lines+` [red]#pass:c[]]#
@@ -1655,7 +1655,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 |===
 
 
@@ -1670,7 +1670,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+lines+` [green]#pass:c[]]#
@@ -1682,7 +1682,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 
@@ -1690,7 +1690,7 @@ a|
 == [black]`*≠*` [black]#pass:c[rewrite-clj.node.token]#
 
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:no-doc]#* [red]`+true+`
+* *pass:c[:no-doc]* [red]`*-*` [red]`+true+`
 
 === [black]`*≠*`[black]#pass:c[token-node]#
 |===
@@ -1698,7 +1698,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+value+` [green]#pass:c[]]#
@@ -1712,7 +1712,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 
@@ -1720,7 +1720,7 @@ a|
 == [black]`*≠*` [black]#pass:c[rewrite-clj.node.whitespace]#
 
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:no-doc]#* [red]`+true+`
+* *pass:c[:no-doc]* [red]`*-*` [red]`+true+`
 
 === [black]`*=*`[black]#pass:c[*count-fn*]#
 |===
@@ -1728,8 +1728,8 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
-* [black]`*=*` *[black]#pass:c[:dynamic]#* [black]`+true+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* *pass:c[:dynamic]* [black]`*=*` [black]`+true+`
 |===
 
 === [black]`*=*`[black]#pass:c[*newline-fn*]#
@@ -1738,8 +1738,8 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
-* [black]`*=*` *[black]#pass:c[:dynamic]#* [black]`+true+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* *pass:c[:dynamic]* [black]`*=*` [black]`+true+`
 |===
 
 === [red]`*-*`[red]#pass:c[comma-node]#
@@ -1748,7 +1748,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+s+` [red]#pass:c[]]#
@@ -1760,7 +1760,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+nodes+` [black]#pass:c[]]#
@@ -1772,7 +1772,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+node+` [red]#pass:c[]]#
@@ -1784,7 +1784,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 |===
 
 === [black]`*=*`[black]#pass:c[line-separated]#
@@ -1793,7 +1793,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+nodes+` [black]#pass:c[]]#
@@ -1805,7 +1805,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+node+` [black]#pass:c[]]#
@@ -1817,7 +1817,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+s+` [black]#pass:c[]]#
@@ -1829,7 +1829,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 === [black]`*=*`[black]#pass:c[newlines]#
@@ -1838,7 +1838,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+n+` [black]#pass:c[]]#
@@ -1850,7 +1850,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+nodes+` [black]#pass:c[]]#
@@ -1862,7 +1862,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+n+` [black]#pass:c[]]#
@@ -1874,7 +1874,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+s+` [black]#pass:c[]]#
@@ -1886,7 +1886,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+s+` [black]#pass:c[]]#
@@ -1898,7 +1898,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+node+` [black]#pass:c[]]#
@@ -1910,7 +1910,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 === [red]`*-*`[red]#pass:c[with-count-fn]#
@@ -1919,7 +1919,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:macro+`
+* *pass:c[:type]* [red]`*-*` [red]`+:macro+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+f+` [red]`+&+` [red]`+body+` [red]#pass:c[]]#
@@ -1931,7 +1931,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:macro+`
+* *pass:c[:type]* [red]`*-*` [red]`+:macro+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+f+` [red]`+&+` [red]`+body+` [red]#pass:c[]]#
@@ -1949,7 +1949,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
@@ -1961,7 +1961,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
@@ -1973,7 +1973,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
@@ -1985,7 +1985,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
@@ -1997,7 +1997,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+pos+` [green]#pass:c[]]#
@@ -2009,7 +2009,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+pos+` [green]#pass:c[]]#
@@ -2021,8 +2021,8 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
-* [green]`*+*` *[green]#pass:c[:no-doc]#* [green]`+true+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* *pass:c[:no-doc]* [green]`*+*` [green]`+true+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+loc+` [green]`+f+` [green]`+n+` [green]#pass:c[]]#
@@ -2034,7 +2034,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
@@ -2046,7 +2046,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
@@ -2058,7 +2058,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
@@ -2070,7 +2070,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
@@ -2082,7 +2082,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
@@ -2094,7 +2094,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
@@ -2106,7 +2106,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[splice-killing-backward]#
@@ -2115,7 +2115,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
@@ -2127,7 +2127,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
@@ -2139,7 +2139,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
@@ -2151,7 +2151,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+pos+` [green]#pass:c[]]#
@@ -2163,7 +2163,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+t+` [green]#pass:c[]]#
@@ -2175,7 +2175,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+t+` [green]#pass:c[]]#
@@ -2193,7 +2193,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+f+` [red]#pass:c[]]#
@@ -2205,7 +2205,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+f+` [red]#pass:c[]]#
@@ -2216,7 +2216,7 @@ a|
 == [black]`*≠*` [black]#pass:c[rewrite-clj.parser.core]#
 
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:no-doc]#* [red]`+true+`
+* *pass:c[:no-doc]* [red]`*-*` [red]`+true+`
 
 === [black]`*≠*`[black]#pass:c[parse-next]#
 |===
@@ -2224,7 +2224,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+reader+` [green]`^*+*^` [green]`+rdr+` [black]#pass:c[]]#
@@ -2235,7 +2235,7 @@ a|
 == [black]`*≠*` [black]#pass:c[rewrite-clj.parser.keyword]#
 
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:no-doc]#* [red]`+true+`
+* *pass:c[:no-doc]* [red]`*-*` [red]`+true+`
 
 === [black]`*=*`[black]#pass:c[parse-keyword]#
 |===
@@ -2243,7 +2243,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+reader+` [black]#pass:c[]]#
@@ -2254,7 +2254,7 @@ a|
 == [black]`*≠*` [black]#pass:c[rewrite-clj.parser.string]#
 
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:no-doc]#* [red]`+true+`
+* *pass:c[:no-doc]* [red]`*-*` [red]`+true+`
 
 === [black]`*=*`[black]#pass:c[parse-regex]#
 |===
@@ -2262,7 +2262,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+reader+` [black]#pass:c[]]#
@@ -2274,7 +2274,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+reader+` [black]#pass:c[]]#
@@ -2285,7 +2285,7 @@ a|
 == [black]`*≠*` [black]#pass:c[rewrite-clj.parser.token]#
 
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:no-doc]#* [red]`+true+`
+* *pass:c[:no-doc]* [red]`*-*` [red]`+true+`
 
 === [black]`*=*`[black]#pass:c[parse-token]#
 |===
@@ -2293,7 +2293,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+reader+` [black]#pass:c[]]#
@@ -2304,7 +2304,7 @@ a|
 == [red]`*-*` [red]#pass:c[rewrite-clj.parser.utils]#
 
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:no-doc]#* [red]`+true+`
+* *pass:c[:no-doc]* [black]`*=*` [black]`+true+`
 
 === [red]`*-*`[red]#pass:c[ignore]#
 |===
@@ -2312,7 +2312,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+reader+` [red]#pass:c[]]#
@@ -2324,7 +2324,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+c+` [red]#pass:c[]]#
@@ -2336,7 +2336,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+reader+` [red]#pass:c[]]#
@@ -2348,7 +2348,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+c+` [red]#pass:c[]]#
@@ -2360,7 +2360,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+reader+` [red]`+&+` [red]`+msg+` [red]#pass:c[]]#
@@ -2372,7 +2372,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+c+` [red]#pass:c[]]#
@@ -2383,7 +2383,7 @@ a|
 == [black]`*≠*` [black]#pass:c[rewrite-clj.parser.whitespace]#
 
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:no-doc]#* [red]`+true+`
+* *pass:c[:no-doc]* [red]`*-*` [red]`+true+`
 
 === [black]`*=*`[black]#pass:c[parse-whitespace]#
 |===
@@ -2391,7 +2391,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+reader+` [black]#pass:c[]]#
@@ -2402,7 +2402,7 @@ a|
 == [red]`*-*` [red]#pass:c[rewrite-clj.potemkin]#
 
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:no-doc]#* [red]`+true+`
+* *pass:c[:no-doc]* [black]`*=*` [black]`+true+`
 
 === [red]`*-*`[red]#pass:c[defprotocol+]#
 |===
@@ -2410,7 +2410,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:macro+`
+* *pass:c[:type]* [red]`*-*` [red]`+:macro+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+name+` [red]`+&+` [red]`+body+` [red]#pass:c[]]#
@@ -2422,7 +2422,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:macro+`
+* *pass:c[:type]* [red]`*-*` [red]`+:macro+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+sym+` [red]#pass:c[]]#
@@ -2435,7 +2435,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:macro+`
+* *pass:c[:type]* [red]`*-*` [red]`+:macro+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+sym+` [red]#pass:c[]]#
@@ -2448,7 +2448,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:macro+`
+* *pass:c[:type]* [red]`*-*` [red]`+:macro+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+sym+` [red]#pass:c[]]#
@@ -2461,7 +2461,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:macro+`
+* *pass:c[:type]* [red]`*-*` [red]`+:macro+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+&+` [red]`+syms+` [red]#pass:c[]]#
@@ -2473,7 +2473,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+src+` [red]`+dst+` [red]#pass:c[]]#
@@ -2484,7 +2484,7 @@ a|
 == [black]`*≠*` [black]#pass:c[rewrite-clj.reader]#
 
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:no-doc]#* [red]`+true+`
+* *pass:c[:no-doc]* [red]`*-*` [red]`+true+`
 
 === [black]`*=*`[black]#pass:c[boundary?]#
 |===
@@ -2492,7 +2492,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+c+` [black]#pass:c[]]#
@@ -2504,7 +2504,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [red]`*-*`[red]#pass:c[comma?]#
@@ -2513,7 +2513,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+c+` [red]#pass:c[]]#
@@ -2525,7 +2525,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+f+` [red]#pass:c[]]#
@@ -2537,7 +2537,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[get-line-number]#
@@ -2546,7 +2546,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [black]`*=*`[black]#pass:c[ignore]#
@@ -2555,7 +2555,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+reader+` [black]#pass:c[]]#
@@ -2567,7 +2567,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [black]`*=*`[black]#pass:c[linebreak?]#
@@ -2576,7 +2576,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+c+` [black]#pass:c[]]#
@@ -2588,7 +2588,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+reader+` [black]#pass:c[]]#
@@ -2600,7 +2600,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+reader+` [black]#pass:c[]]#
@@ -2612,7 +2612,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [red]`*-*`[red]#pass:c[position]#
@@ -2621,7 +2621,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+reader+` [red]`+row-k+` [red]`+col-k+` [red]#pass:c[]]#
@@ -2633,7 +2633,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [black]`*=*`[black]#pass:c[read-include-linebreak]#
@@ -2642,7 +2642,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+reader+` [black]#pass:c[]]#
@@ -2654,7 +2654,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+reader+` [green]`+initch+` [green]#pass:c[]]#
@@ -2666,7 +2666,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+reader+` [black]`+node-tag+` [black]`+read-fn+` [black]`+p?+` [black]`+n+` [black]#pass:c[]]#
@@ -2678,7 +2678,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+reader+` [black]`+read-fn+` [black]#pass:c[]]#
@@ -2690,7 +2690,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [black]`*=*`[black]#pass:c[read-until]#
@@ -2699,7 +2699,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+reader+` [black]`+p?+` [black]#pass:c[]]#
@@ -2711,7 +2711,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+reader+` [green]`+p?+` [green]#pass:c[]]#
@@ -2725,7 +2725,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+reader+` [black]`+read-fn+` [black]#pass:c[]]#
@@ -2737,7 +2737,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+c+` [black]#pass:c[]]#
@@ -2749,7 +2749,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+s+` [black]#pass:c[]]#
@@ -2761,7 +2761,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+s+` [red]#pass:c[]]#
@@ -2773,7 +2773,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+reader+` [black]`+fmt+` [black]`+&+` [black]`+data+` [black]#pass:c[]]#
@@ -2785,7 +2785,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+reader+` [red]`+ch+` [red]#pass:c[]]#
@@ -2797,7 +2797,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+c+` [black]#pass:c[]]#
@@ -2809,7 +2809,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+c+` [red]#pass:c[]]#
@@ -2827,8 +2827,8 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
-* [red]`*-*` *[red]#pass:c[:deprecated]#* [red]`+0.4.0+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
+* *pass:c[:deprecated]* [red]`*-*` [red]`+0.4.0+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]#pass:c[]]#
@@ -2840,8 +2840,8 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
-* [red]`*-*` *[red]#pass:c[:deprecated]#* [red]`+0.4.0+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
+* *pass:c[:deprecated]* [red]`*-*` [red]`+0.4.0+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]#pass:c[]]#
@@ -2853,7 +2853,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+item+` [red]#pass:c[]]#
@@ -2865,8 +2865,8 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
-* [red]`*-*` *[red]#pass:c[:deprecated]#* [red]`+0.5.0+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
+* *pass:c[:deprecated]* [red]`*-*` [red]`+0.5.0+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+&+` [red]`+[n]+` [red]#pass:c[]]#
@@ -2878,8 +2878,8 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
-* [red]`*-*` *[red]#pass:c[:deprecated]#* [red]`+0.5.0+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
+* *pass:c[:deprecated]* [red]`*-*` [red]`+0.5.0+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+&+` [red]`+[n]+` [red]#pass:c[]]#
@@ -2891,7 +2891,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+k+` [red]`+v+` [red]#pass:c[]]#
@@ -2903,7 +2903,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]#pass:c[]]#
@@ -2915,7 +2915,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]#pass:c[]]#
@@ -2927,7 +2927,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+G__2646+` [red]#pass:c[]]#
@@ -2939,7 +2939,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+f+` [red]`+&+` [red]`+args+` [red]#pass:c[]]#
@@ -2951,7 +2951,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+loc+` [red]`+f+` [red]`+&+` [red]`+args+` [red]#pass:c[]]#
@@ -2963,7 +2963,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:macro+`
+* *pass:c[:type]* [red]`*-*` [red]`+:macro+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+&+` [red]`+body+` [red]#pass:c[]]#
@@ -2975,7 +2975,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:macro+`
+* *pass:c[:type]* [red]`*-*` [red]`+:macro+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+&+` [red]`+body+` [red]#pass:c[]]#
@@ -2987,7 +2987,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+f+` [red]#pass:c[]]#
@@ -2999,7 +2999,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+node+` [red]#pass:c[]]#
@@ -3012,7 +3012,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+node+` [red]#pass:c[]]#
@@ -3025,7 +3025,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]#pass:c[]]#
@@ -3037,7 +3037,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+p?+` [red]#pass:c[]]#
@@ -3050,7 +3050,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+p?+` [red]#pass:c[]]#
@@ -3062,7 +3062,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [black]`*≠*`[black]#pass:c[find-next]#
@@ -3071,7 +3071,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+p?+` [red]#pass:c[]]#
@@ -3084,7 +3084,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+p?+` [red]#pass:c[]]#
@@ -3096,7 +3096,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+t+` [red]#pass:c[]]#
@@ -3109,7 +3109,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+p?+` [red]#pass:c[]]#
@@ -3122,7 +3122,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+v+` [red]#pass:c[]]#
@@ -3135,7 +3135,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+t+` [red]#pass:c[]]#
@@ -3148,7 +3148,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [black]`*≠*`[black]#pass:c[find-token]#
@@ -3157,7 +3157,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+p?+` [red]#pass:c[]]#
@@ -3170,7 +3170,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+v+` [red]#pass:c[]]#
@@ -3183,7 +3183,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+k+` [red]#pass:c[]]#
@@ -3195,7 +3195,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+item+` [red]#pass:c[]]#
@@ -3207,7 +3207,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+item+` [red]#pass:c[]]#
@@ -3219,7 +3219,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+G__2685+` [red]`+G__2686+` [red]#pass:c[]]#
@@ -3231,7 +3231,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+item+` [red]#pass:c[]]#
@@ -3243,7 +3243,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+G__2689+` [red]`+G__2690+` [red]#pass:c[]]#
@@ -3255,7 +3255,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]#pass:c[]]#
@@ -3267,7 +3267,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+G__2671+` [red]#pass:c[]]#
@@ -3279,7 +3279,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]#pass:c[]]#
@@ -3291,7 +3291,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+G__2678+` [red]#pass:c[]]#
@@ -3303,7 +3303,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]#pass:c[]]#
@@ -3315,7 +3315,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]#pass:c[]]#
@@ -3327,7 +3327,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]#pass:c[]]#
@@ -3339,7 +3339,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]#pass:c[]]#
@@ -3351,7 +3351,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+f+` [red]`+zloc+` [red]#pass:c[]]#
@@ -3363,7 +3363,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+f+` [red]`+zloc+` [red]#pass:c[]]#
@@ -3375,7 +3375,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+f+` [red]`+zloc+` [red]#pass:c[]]#
@@ -3387,7 +3387,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]#pass:c[]]#
@@ -3399,7 +3399,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]#pass:c[]]#
@@ -3411,7 +3411,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+G__2703+` [red]#pass:c[]]#
@@ -3423,7 +3423,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+G__2630+` [red]#pass:c[]]#
@@ -3435,7 +3435,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+f+` [red]#pass:c[]]#
@@ -3448,7 +3448,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+s+` [red]#pass:c[]]#
@@ -3461,7 +3461,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+loc+` [red]#pass:c[]]#
@@ -3473,7 +3473,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+f+` [red]#pass:c[]]#
@@ -3486,7 +3486,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+s+` [red]#pass:c[]]#
@@ -3498,8 +3498,8 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
-* [red]`*-*` *[red]#pass:c[:deprecated]#* [red]`+0.5.0+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
+* *pass:c[:deprecated]* [red]`*-*` [red]`+0.5.0+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+&+` [red]`+[n]+` [red]#pass:c[]]#
@@ -3511,8 +3511,8 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
-* [red]`*-*` *[red]#pass:c[:deprecated]#* [red]`+0.5.0+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
+* *pass:c[:deprecated]* [red]`*-*` [red]`+0.5.0+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+&+` [red]`+[n]+` [red]#pass:c[]]#
@@ -3524,7 +3524,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]#pass:c[]]#
@@ -3536,7 +3536,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+G__2710+` [red]#pass:c[]]#
@@ -3548,7 +3548,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+f+` [red]#pass:c[]]#
@@ -3561,7 +3561,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+&+` [red]`+[writer]+` [red]#pass:c[]]#
@@ -3573,7 +3573,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+&+` [red]`+[writer]+` [red]#pass:c[]]#
@@ -3585,7 +3585,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]#pass:c[]]#
@@ -3597,7 +3597,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+G__2717+` [red]#pass:c[]]#
@@ -3609,7 +3609,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [black]`*≠*`[black]#pass:c[replace]#
@@ -3618,7 +3618,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+value+` [red]#pass:c[]]#
@@ -3630,7 +3630,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+G__2693+` [red]`+G__2694+` [red]#pass:c[]]#
@@ -3642,7 +3642,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]#pass:c[]]#
@@ -3654,7 +3654,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+G__2661+` [red]#pass:c[]]#
@@ -3666,7 +3666,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]#pass:c[]]#
@@ -3678,7 +3678,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+G__2668+` [red]#pass:c[]]#
@@ -3690,7 +3690,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]#pass:c[]]#
@@ -3702,7 +3702,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+G__2658+` [red]#pass:c[]]#
@@ -3714,7 +3714,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]#pass:c[]]#
@@ -3726,7 +3726,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]#pass:c[]]#
@@ -3738,7 +3738,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]#pass:c[]]#
@@ -3750,7 +3750,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]#pass:c[]]#
@@ -3762,7 +3762,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+f+` [red]`+p?+` [red]`+zloc+` [red]#pass:c[]]#
@@ -3774,7 +3774,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]#pass:c[]]#
@@ -3787,7 +3787,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]#pass:c[]]#
@@ -3799,7 +3799,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]#pass:c[]]#
@@ -3811,7 +3811,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]#pass:c[]]#
@@ -3823,7 +3823,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:macro+`
+* *pass:c[:type]* [red]`*-*` [red]`+:macro+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+&+` [red]`+body+` [red]#pass:c[]]#
@@ -3835,7 +3835,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:macro+`
+* *pass:c[:type]* [red]`*-*` [red]`+:macro+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+&+` [red]`+body+` [red]#pass:c[]]#
@@ -3847,7 +3847,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+f+` [red]#pass:c[]]#
@@ -3859,7 +3859,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+s+` [red]#pass:c[]]#
@@ -3871,7 +3871,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]#pass:c[]]#
@@ -3883,7 +3883,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]#pass:c[]]#
@@ -3895,7 +3895,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+G__2655+` [red]#pass:c[]]#
@@ -3907,8 +3907,8 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
-* [red]`*-*` *[red]#pass:c[:deprecated]#* [red]`+0.4.0+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
+* *pass:c[:deprecated]* [red]`*-*` [red]`+0.4.0+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]#pass:c[]]#
@@ -3920,7 +3920,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]#pass:c[]]#
@@ -3932,7 +3932,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]#pass:c[]]#
@@ -3944,7 +3944,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]#pass:c[]]#
@@ -3955,7 +3955,7 @@ a|
 == [black]`*≠*` [black]#pass:c[rewrite-clj.zip.base]#
 
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:no-doc]#* [red]`+true+`
+* *pass:c[:no-doc]* [red]`*-*` [red]`+true+`
 
 === [black]`*=*`[black]#pass:c[child-sexprs]#
 |===
@@ -3963,7 +3963,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+zloc+` [black]#pass:c[]]#
@@ -3975,7 +3975,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+node+` [black]#pass:c[]]#
@@ -3988,7 +3988,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+node+` [black]#pass:c[]]#
@@ -4001,7 +4001,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+zloc+` [black]#pass:c[]]#
@@ -4013,7 +4013,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+f+` [red]#pass:c[]]#
@@ -4026,7 +4026,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+s+` [black]#pass:c[]]#
@@ -4039,7 +4039,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+&+` [red]`+[writer]+` [red]#pass:c[]]#
@@ -4051,7 +4051,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+&+` [red]`+[writer]+` [red]#pass:c[]]#
@@ -4063,7 +4063,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+zloc+` [black]#pass:c[]]#
@@ -4075,7 +4075,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+zloc+` [black]#pass:c[]]#
@@ -4087,7 +4087,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+zloc+` [black]#pass:c[]]#
@@ -4099,7 +4099,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+zloc+` [black]#pass:c[]]#
@@ -4111,8 +4111,8 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
-* [red]`*-*` *[red]#pass:c[:deprecated]#* [red]`+0.4.0+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
+* *pass:c[:deprecated]* [red]`*-*` [red]`+0.4.0+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]#pass:c[]]#
@@ -4123,7 +4123,7 @@ a|
 == [red]`*-*` [red]#pass:c[rewrite-clj.zip.edit]#
 
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:no-doc]#* [red]`+true+`
+* *pass:c[:no-doc]* [black]`*=*` [black]`+true+`
 
 === [red]`*-*`[red]#pass:c[edit]#
 |===
@@ -4131,7 +4131,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+f+` [red]`+&+` [red]`+args+` [red]#pass:c[]]#
@@ -4143,7 +4143,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+s+` [red]#pass:c[]]#
@@ -4155,7 +4155,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+value+` [red]#pass:c[]]#
@@ -4167,7 +4167,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]#pass:c[]]#
@@ -4179,7 +4179,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+s+` [red]#pass:c[]]#
@@ -4197,7 +4197,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+f+` [green]`+&+` [green]`+args+` [green]#pass:c[]]#
@@ -4209,7 +4209,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+s+` [green]#pass:c[]]#
@@ -4221,7 +4221,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+value+` [green]#pass:c[]]#
@@ -4233,7 +4233,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
@@ -4245,7 +4245,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+s+` [green]#pass:c[]]#
@@ -4256,7 +4256,7 @@ a|
 == [red]`*-*` [red]#pass:c[rewrite-clj.zip.find]#
 
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:no-doc]#* [red]`+true+`
+* *pass:c[:no-doc]* [black]`*=*` [black]`+true+`
 
 === [red]`*-*`[red]#pass:c[find]#
 |===
@@ -4264,7 +4264,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+p?+` [red]#pass:c[]]#
@@ -4277,7 +4277,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+p?+` [red]#pass:c[]]#
@@ -4289,7 +4289,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+p?+` [red]#pass:c[]]#
@@ -4302,7 +4302,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+p?+` [red]#pass:c[]]#
@@ -4314,7 +4314,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+t+` [red]#pass:c[]]#
@@ -4327,7 +4327,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+p?+` [red]#pass:c[]]#
@@ -4340,7 +4340,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+v+` [red]#pass:c[]]#
@@ -4353,7 +4353,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+t+` [red]#pass:c[]]#
@@ -4366,7 +4366,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+p?+` [red]#pass:c[]]#
@@ -4379,7 +4379,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+v+` [red]#pass:c[]]#
@@ -4398,7 +4398,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+p?+` [green]#pass:c[]]#
@@ -4411,7 +4411,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+p?+` [green]#pass:c[]]#
@@ -4423,7 +4423,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+pos+` [green]#pass:c[]]#
@@ -4436,7 +4436,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+p?+` [green]#pass:c[]]#
@@ -4449,7 +4449,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+p?+` [green]#pass:c[]]#
@@ -4461,7 +4461,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+t+` [green]#pass:c[]]#
@@ -4474,7 +4474,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+p?+` [green]#pass:c[]]#
@@ -4487,7 +4487,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+v+` [green]#pass:c[]]#
@@ -4500,7 +4500,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+t+` [green]#pass:c[]]#
@@ -4513,7 +4513,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+pos+` [green]`+t+` [green]#pass:c[]]#
@@ -4525,7 +4525,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+p?+` [green]#pass:c[]]#
@@ -4538,7 +4538,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+v+` [green]#pass:c[]]#
@@ -4551,7 +4551,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+{}+` [green]`+{}+` [green]#pass:c[]]#
@@ -4562,7 +4562,7 @@ a|
 == [black]`*≠*` [black]#pass:c[rewrite-clj.zip.move]#
 
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:no-doc]#* [red]`+true+`
+* *pass:c[:no-doc]* [red]`*-*` [red]`+true+`
 
 === [black]`*=*`[black]#pass:c[down]#
 |===
@@ -4570,7 +4570,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+zloc+` [black]#pass:c[]]#
@@ -4582,7 +4582,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+zloc+` [black]#pass:c[]]#
@@ -4594,7 +4594,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+zloc+` [black]#pass:c[]]#
@@ -4606,7 +4606,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+zloc+` [black]#pass:c[]]#
@@ -4618,7 +4618,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+zloc+` [black]#pass:c[]]#
@@ -4630,7 +4630,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+zloc+` [black]#pass:c[]]#
@@ -4642,7 +4642,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+zloc+` [black]#pass:c[]]#
@@ -4654,7 +4654,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+zloc+` [black]#pass:c[]]#
@@ -4666,7 +4666,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+zloc+` [black]#pass:c[]]#
@@ -4678,7 +4678,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+zloc+` [black]#pass:c[]]#
@@ -4690,7 +4690,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+zloc+` [black]#pass:c[]]#
@@ -4701,7 +4701,7 @@ a|
 == [red]`*-*` [red]#pass:c[rewrite-clj.zip.remove]#
 
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:no-doc]#* [red]`+true+`
+* *pass:c[:no-doc]* [black]`*=*` [black]`+true+`
 
 === [red]`*-*`[red]#pass:c[remove]#
 |===
@@ -4709,7 +4709,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]#pass:c[]]#
@@ -4727,7 +4727,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
@@ -4739,7 +4739,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
@@ -4750,7 +4750,7 @@ a|
 == [red]`*-*` [red]#pass:c[rewrite-clj.zip.seq]#
 
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:no-doc]#* [red]`+true+`
+* *pass:c[:no-doc]* [black]`*=*` [black]`+true+`
 
 === [red]`*-*`[red]#pass:c[assoc]#
 |===
@@ -4758,7 +4758,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+k+` [red]`+v+` [red]#pass:c[]]#
@@ -4770,7 +4770,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+k+` [red]#pass:c[]]#
@@ -4782,7 +4782,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]#pass:c[]]#
@@ -4794,7 +4794,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+f+` [red]`+zloc+` [red]#pass:c[]]#
@@ -4806,7 +4806,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+f+` [red]`+zloc+` [red]#pass:c[]]#
@@ -4818,7 +4818,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+f+` [red]`+zloc+` [red]#pass:c[]]#
@@ -4830,7 +4830,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]#pass:c[]]#
@@ -4842,7 +4842,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]#pass:c[]]#
@@ -4854,7 +4854,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]#pass:c[]]#
@@ -4866,7 +4866,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]#pass:c[]]#
@@ -4884,7 +4884,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+k+` [green]`+v+` [green]#pass:c[]]#
@@ -4896,7 +4896,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+k+` [green]#pass:c[]]#
@@ -4908,7 +4908,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
@@ -4920,7 +4920,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+f+` [green]`+zloc+` [green]#pass:c[]]#
@@ -4932,7 +4932,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+f+` [green]`+zloc+` [green]#pass:c[]]#
@@ -4944,7 +4944,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+f+` [green]`+zloc+` [green]#pass:c[]]#
@@ -4956,7 +4956,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
@@ -4968,7 +4968,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
@@ -4980,7 +4980,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
@@ -4992,7 +4992,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
@@ -5003,7 +5003,7 @@ a|
 == [red]`*-*` [red]#pass:c[rewrite-clj.zip.subedit]#
 
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:no-doc]#* [red]`+true+`
+* *pass:c[:no-doc]* [black]`*=*` [black]`+true+`
 
 === [red]`*-*`[red]#pass:c[edit->]#
 |===
@@ -5011,7 +5011,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:macro+`
+* *pass:c[:type]* [red]`*-*` [red]`+:macro+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+&+` [red]`+body+` [red]#pass:c[]]#
@@ -5023,7 +5023,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:macro+`
+* *pass:c[:type]* [red]`*-*` [red]`+:macro+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+&+` [red]`+body+` [red]#pass:c[]]#
@@ -5035,7 +5035,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+f+` [red]#pass:c[]]#
@@ -5047,7 +5047,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:macro+`
+* *pass:c[:type]* [red]`*-*` [red]`+:macro+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+&+` [red]`+body+` [red]#pass:c[]]#
@@ -5059,7 +5059,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:macro+`
+* *pass:c[:type]* [red]`*-*` [red]`+:macro+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+&+` [red]`+body+` [red]#pass:c[]]#
@@ -5071,7 +5071,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+f+` [red]#pass:c[]]#
@@ -5083,7 +5083,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]#pass:c[]]#
@@ -5094,7 +5094,7 @@ a|
 == [green]`*+*` [green]#pass:c[rewrite-clj.zip.utils]#
 
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:no-doc]#* [green]`+true+`
+* *pass:c[:no-doc]* [black]`*=*` [black]`+true+`
 
 === [green]`*+*`[green]#pass:c[remove-and-move-left]#
 |===
@@ -5102,7 +5102,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+[_ {} :as loc]+` [green]#pass:c[]]#
@@ -5114,7 +5114,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+[_ {} :as loc]+` [green]#pass:c[]]#
@@ -5126,7 +5126,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+loc+` [green]#pass:c[]]#
@@ -5138,7 +5138,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+loc+` [green]#pass:c[]]#
@@ -5150,7 +5150,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+p?+` [green]#pass:c[]]#
@@ -5162,7 +5162,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+loc+` [green]#pass:c[]]#
@@ -5174,7 +5174,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+p?+` [green]#pass:c[]]#
@@ -5186,7 +5186,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+p?+` [green]#pass:c[]]#
@@ -5197,7 +5197,7 @@ a|
 == [red]`*-*` [red]#pass:c[rewrite-clj.zip.walk]#
 
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:no-doc]#* [red]`+true+`
+* *pass:c[:no-doc]* [black]`*=*` [black]`+true+`
 
 === [red]`*-*`[red]#pass:c[postwalk]#
 |===
@@ -5205,7 +5205,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+f+` [red]#pass:c[]]#
@@ -5218,7 +5218,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+p?+` [red]`+f+` [red]`+loc+` [red]#pass:c[]]#
@@ -5230,7 +5230,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]`+f+` [red]#pass:c[]]#
@@ -5242,7 +5242,7 @@ a|
 == [black]`*≠*` [black]#pass:c[rewrite-clj.zip.whitespace]#
 
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:no-doc]#* [red]`+true+`
+* *pass:c[:no-doc]* [red]`*-*` [red]`+true+`
 
 === [black]`*≠*`[black]#pass:c[append-newline]#
 |===
@@ -5250,8 +5250,8 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
-* [red]`*-*` *[red]#pass:c[:deprecated]#* [red]`+0.5.0+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* *pass:c[:deprecated]* [red]`*-*` [red]`+0.5.0+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
@@ -5265,8 +5265,8 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
-* [red]`*-*` *[red]#pass:c[:deprecated]#* [red]`+0.5.0+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* *pass:c[:deprecated]* [red]`*-*` [red]`+0.5.0+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
@@ -5280,7 +5280,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
@@ -5292,7 +5292,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]#pass:c[]]#
@@ -5305,7 +5305,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]#pass:c[]]#
@@ -5318,7 +5318,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]#pass:c[]]#
@@ -5331,7 +5331,7 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+zloc+` [red]#pass:c[]]#
@@ -5344,7 +5344,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+zloc+` [black]#pass:c[]]#
@@ -5356,8 +5356,8 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
-* [red]`*-*` *[red]#pass:c[:deprecated]#* [red]`+0.5.0+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* *pass:c[:deprecated]* [red]`*-*` [red]`+0.5.0+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
@@ -5371,8 +5371,8 @@ a|
 
 a|
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:type]#* [black]`+:var+`
-* [red]`*-*` *[red]#pass:c[:deprecated]#* [red]`+0.5.0+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* *pass:c[:deprecated]* [red]`*-*` [red]`+0.5.0+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
@@ -5386,7 +5386,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+f+` [black]`+p?+` [black]`+zloc+` [black]#pass:c[]]#
@@ -5398,7 +5398,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+zloc+` [black]#pass:c[]]#
@@ -5411,7 +5411,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+zloc+` [black]#pass:c[]]#
@@ -5423,7 +5423,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
@@ -5435,7 +5435,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+zloc+` [black]#pass:c[]]#
@@ -5447,7 +5447,7 @@ a|
 
 a|
 [unstyled]
-* [black]`*=*` *[black]#pass:c[:type]#* [black]`+:var+`
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+zloc+` [black]#pass:c[]]#

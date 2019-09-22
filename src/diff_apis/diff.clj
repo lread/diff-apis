@@ -223,7 +223,5 @@
                 {:filename "rewrite-cljc-1.0.0-alpha.pretty.edn" :lang "clj"}
                 {:include :changed-publics, :exclude-namespaces nil}))
 
-
-
   (load-analyzer-file "rewrite-clj-0.6.1.pretty.edn")
   (edn/read-string (slurp "rewrite-clj-0.6.1.pretty.edn")))

@@ -1,7 +1,6 @@
 (ns ^:no-doc diff-apis.deep-diff-util
   (:refer-clojure :exclude [get find update])
-  (:require [clojure.walk :as walk]
-            [lambdaisland.deep-diff.diff :as deep-diff]))
+  (:require [lambdaisland.deep-diff.diff :as deep-diff]))
 
 (defn inserted? [x]
   (= (type x) lambdaisland.deep_diff.diff.Insertion))
@@ -41,10 +40,7 @@
   [x]
   (and (not (diff? x)) (any-diffs? x)))
 
-(defn diff-type [x]
-  (when (diff? x)
-    (if (mismatch? x) (throw (ex-info "programming error: diff-type of mismatch unexpected" {})))
-    (ffirst x)))
+
 
 (defn unwrap-elem [x]
   (cond
@@ -98,3 +94,44 @@
     (if (= m rm)
       nrm
       (move-diff m nrm))))
+
+(defn- diff-type [x]
+  (when (diff? x)
+    (if (mismatch? x)
+      :!=
+      (ffirst x))))
+
+(defn calc-diff-type
+  "Return diff-type for `elem` inheriting from `parent-diff-type`.
+
+  `:-` deletion
+  `:+` insertion
+  `:=` no differences within
+  `:!=`differences within
+
+  A parent-difftype of `:!=` will can eventually be overriden by `:+` or `:-`.
+
+  deep-diff wraps a key to indicate value is insertion or deletion so we treat it as the parent of the value. "
+  [parent-difftype elem]
+  (or (when-not (= parent-difftype :!=) parent-difftype)
+      (if (map-entry? elem)
+        (or
+         (diff-type (key elem))
+         (diff-type (val elem)))
+        (diff-type elem))
+      (if (any-diffs? (if (map-entry? elem)
+                        (val elem)
+                        elem)) :!= :=)))
+
+(comment
+
+  (calc-diff-type nil (deep-diff/->Deletion "booya"))
+  (calc-diff-type nil (deep-diff/->Insertion "booya"))
+
+  (calc-diff-type nil (first {(deep-diff/->Insertion :booya) [{:name 1}]}))
+  (calc-diff-type nil (first { :booya (deep-diff/->Insertion [{:name 1}])}))
+
+  (calc-diff-type nil {:a 1})
+
+  (first {:a 1})
+  )

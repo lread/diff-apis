@@ -49,7 +49,7 @@ toc::[]
 == [black]`*≠*` [black]#pass:c[rewrite-clj.node.protocols]#
 
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:no-doc]#* [black]`+true+`
+* *pass:c[:no-doc]* [black]`*=*` [black]`+true+`
 
 === [green]`*+*`[green]#pass:c[make-printable-clj!]#
 |===
@@ -57,8 +57,8 @@ toc::[]
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:macro+`
-* [green]`*+*` *[green]#pass:c[:no-doc]#* [green]`+true+`
+* *pass:c[:type]* [green]`*+*` [green]`+:macro+`
+* *pass:c[:no-doc]* [green]`*+*` [green]`+true+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+class+` [green]#pass:c[]]#
@@ -70,8 +70,8 @@ a|
 
 a|
 [unstyled]
-* [red]`*-*` *[red]#pass:c[:type]#* [red]`+:var+`
-* [red]`*-*` *[red]#pass:c[:no-doc]#* [red]`+true+`
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
+* *pass:c[:no-doc]* [red]`*-*` [red]`+true+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+obj+` [red]#pass:c[]]#
@@ -83,8 +83,8 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
-* [green]`*+*` *[green]#pass:c[:no-doc]#* [green]`+true+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* *pass:c[:no-doc]* [green]`*+*` [green]`+true+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+writer+` [green]`+node+` [green]#pass:c[]]#
@@ -95,7 +95,7 @@ a|
 == [green]`*+*` [green]#pass:c[rewrite-clj.node.string]#
 
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:no-doc]#* [green]`+true+`
+* *pass:c[:no-doc]* [black]`*=*` [black]`+true+`
 
 === [green]`*+*`[green]#pass:c[string-node]#
 |===
@@ -103,7 +103,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+lines+` [green]#pass:c[]]#
@@ -121,7 +121,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+f+` [green]#pass:c[]]#
@@ -133,7 +133,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+f+` [green]#pass:c[]]#
@@ -144,7 +144,7 @@ a|
 == [green]`*+*` [green]#pass:c[rewrite-clj.potemkin.clojure]#
 
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:no-doc]#* [green]`+true+`
+* *pass:c[:no-doc]* [black]`*=*` [black]`+true+`
 
 === [green]`*+*`[green]#pass:c[defprotocol+]#
 |===
@@ -152,7 +152,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:macro+`
+* *pass:c[:type]* [green]`*+*` [green]`+:macro+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+name+` [green]`+&+` [green]`+body+` [green]#pass:c[]]#
@@ -164,7 +164,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:macro+`
+* *pass:c[:type]* [green]`*+*` [green]`+:macro+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+src-sym+` [green]`+target-name+` [green]`+target-meta+` [green]#pass:c[]]#
@@ -176,7 +176,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:macro+`
+* *pass:c[:type]* [green]`*+*` [green]`+:macro+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+src-sym+` [green]`+target-name+` [green]`+target-meta+` [green]#pass:c[]]#
@@ -188,7 +188,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:macro+`
+* *pass:c[:type]* [green]`*+*` [green]`+:macro+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+src-sym+` [green]`+target-name+` [green]`+target-meta+` [green]#pass:c[]]#
@@ -200,7 +200,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:macro+`
+* *pass:c[:type]* [green]`*+*` [green]`+:macro+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+&+` [green]`+raw-syms+` [green]#pass:c[]]#
@@ -211,7 +211,7 @@ a|
 == [black]`*≠*` [black]#pass:c[rewrite-clj.reader]#
 
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:no-doc]#* [black]`+true+`
+* *pass:c[:no-doc]* [black]`*=*` [black]`+true+`
 
 === [green]`*+*`[green]#pass:c[file-reader]#
 |===
@@ -219,7 +219,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+f+` [green]#pass:c[]]#
@@ -237,7 +237,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+f+` [green]#pass:c[]]#
@@ -249,7 +249,7 @@ a|
 == [black]`*≠*` [black]#pass:c[rewrite-clj.zip.base]#
 
 [unstyled]
-* [black]`*≠*` *[black]#pass:c[:no-doc]#* [black]`+true+`
+* *pass:c[:no-doc]* [black]`*=*` [black]`+true+`
 
 === [green]`*+*`[green]#pass:c[of-file]#
 |===
@@ -257,7 +257,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+f+` [green]#pass:c[]]#
@@ -269,7 +269,7 @@ a|
 == [green]`*+*` [green]#pass:c[rewrite-clj.zip.edit]#
 
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:no-doc]#* [green]`+true+`
+* *pass:c[:no-doc]* [black]`*=*` [black]`+true+`
 
 === [green]`*+*`[green]#pass:c[edit]#
 |===
@@ -277,7 +277,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+f+` [green]`+&+` [green]`+args+` [green]#pass:c[]]#
@@ -289,7 +289,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+s+` [green]#pass:c[]]#
@@ -301,7 +301,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+value+` [green]#pass:c[]]#
@@ -313,7 +313,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
@@ -325,7 +325,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+s+` [green]#pass:c[]]#
@@ -336,7 +336,7 @@ a|
 == [green]`*+*` [green]#pass:c[rewrite-clj.zip.find]#
 
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:no-doc]#* [green]`+true+`
+* *pass:c[:no-doc]* [black]`*=*` [black]`+true+`
 
 === [green]`*+*`[green]#pass:c[find]#
 |===
@@ -344,7 +344,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+p?+` [green]#pass:c[]]#
@@ -357,7 +357,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+p?+` [green]#pass:c[]]#
@@ -369,7 +369,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+pos+` [green]#pass:c[]]#
@@ -382,7 +382,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+p?+` [green]#pass:c[]]#
@@ -395,7 +395,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+p?+` [green]#pass:c[]]#
@@ -407,7 +407,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+t+` [green]#pass:c[]]#
@@ -420,7 +420,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+p?+` [green]#pass:c[]]#
@@ -433,7 +433,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+v+` [green]#pass:c[]]#
@@ -446,7 +446,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+t+` [green]#pass:c[]]#
@@ -459,7 +459,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+pos+` [green]`+t+` [green]#pass:c[]]#
@@ -471,7 +471,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+p?+` [green]#pass:c[]]#
@@ -484,7 +484,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+v+` [green]#pass:c[]]#
@@ -496,7 +496,7 @@ a|
 == [green]`*+*` [green]#pass:c[rewrite-clj.zip.remove]#
 
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:no-doc]#* [green]`+true+`
+* *pass:c[:no-doc]* [black]`*=*` [black]`+true+`
 
 === [green]`*+*`[green]#pass:c[remove]#
 |===
@@ -504,7 +504,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
@@ -516,7 +516,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
@@ -527,7 +527,7 @@ a|
 == [green]`*+*` [green]#pass:c[rewrite-clj.zip.seq]#
 
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:no-doc]#* [green]`+true+`
+* *pass:c[:no-doc]* [black]`*=*` [black]`+true+`
 
 === [green]`*+*`[green]#pass:c[assoc]#
 |===
@@ -535,7 +535,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+k+` [green]`+v+` [green]#pass:c[]]#
@@ -547,7 +547,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+k+` [green]#pass:c[]]#
@@ -559,7 +559,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
@@ -571,7 +571,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+f+` [green]`+zloc+` [green]#pass:c[]]#
@@ -583,7 +583,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+f+` [green]`+zloc+` [green]#pass:c[]]#
@@ -595,7 +595,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+f+` [green]`+zloc+` [green]#pass:c[]]#
@@ -607,7 +607,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
@@ -619,7 +619,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
@@ -631,7 +631,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
@@ -643,7 +643,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` *[green]#pass:c[:type]#* [green]`+:var+`
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
