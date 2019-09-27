@@ -11,7 +11,7 @@
 (defn- api-essentials
   "Load api for signature comparison. We only include metadata of interest, effectively excluding :doc, :file :line."
   [m lang]
-  (->> (get-in m [:codox lang])
+  (->> (get-in m [:analysis lang])
        (walk/postwalk #(if (map? %)
                          (select-keys % [:name :arglists :members :type :dynamic :publics :deprecated :no-doc :skip-wiki])
                          %))))
@@ -98,6 +98,7 @@
    diff))
 
 (defn- changes-only
+  ;; TODO: be careful.. sequences/vectors we are iterating over could be diffs?
   "Returns only publics with changes in `diff` result.
   This includes all publics for ns when any change has been made to ns level attributes."
   [diff]
