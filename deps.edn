@@ -2,7 +2,8 @@
  :deps {cljdoc/cljdoc-analyzer {:git/url "https://github.com/lread/cljdoc-analyzer"
                                 :sha "81b233c5101faa654412a0583f4b13635dca5991"}
         cli-matic {:mvn/version "0.3.8"}
-        lambdaisland/deep-diff {:mvn/version "0.0-47"}}
+        lambdaisland/deep-diff {:git/url "https://github.com/lread/deep-diff"
+                                :sha "7ea7bcac08a5d4a1dc4b4a6cf999ad481a424d29"}}
  :aliases
  {:test {:extra-deps {lambdaisland/kaocha {:mvn/version "0.0-541"}
                       lambdaisland/kaocha-junit-xml {:mvn/version "0.0-70"}}
