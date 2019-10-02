@@ -1,6 +1,6 @@
 {:paths ["src" "resources"]
  :deps {cljdoc/cljdoc-analyzer {:git/url "https://github.com/lread/cljdoc-analyzer"
-                                :sha "e0e79a42f97ed65f4d976d841ca8a4549aa81ce7"}
+                                :sha "81b233c5101faa654412a0583f4b13635dca5991"}
         cli-matic {:mvn/version "0.3.8"}
         lambdaisland/deep-diff {:mvn/version "0.0-47"}}
  :aliases
