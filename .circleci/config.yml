@@ -24,6 +24,10 @@ jobs:
           command: clojure -Spath
 
       - run:
+          name: Lint
+          command: script/lint
+
+      - run:
           name: Run unit tests
           command: >
             clojure -Atest

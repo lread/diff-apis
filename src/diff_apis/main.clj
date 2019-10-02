@@ -12,7 +12,7 @@
       (report/report report-format)))
 
 (defn diff-api-files-cmd
-  [{:keys [filename1 language1 filename2 language2 report-format include exclude-namespace] :as args}]
+  [{:keys [filename1 language1 filename2 language2 report-format include exclude-namespace]}]
   (-> (diff/diff-files {:filename filename1 :lang language1}
                        {:filename filename2 :lang language2}
                        {:include include :exclude-namespaces exclude-namespace})
