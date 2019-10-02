@@ -5,6 +5,6 @@
         lambdaisland/deep-diff {:git/url "https://github.com/lread/deep-diff"
                                 :sha "7ea7bcac08a5d4a1dc4b4a6cf999ad481a424d29"}}
  :aliases
- {:test {:extra-deps {lambdaisland/kaocha {:mvn/version "0.0-541"}
+ {:test {:extra-deps {lambdaisland/kaocha {:mvn/version "0.0-554"}
                       lambdaisland/kaocha-junit-xml {:mvn/version "0.0-70"}}
          :main-opts ["-m" "kaocha.runner"]}}}
