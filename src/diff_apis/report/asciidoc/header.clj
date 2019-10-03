@@ -24,11 +24,16 @@
    ""])
 
 (defn- run-args [{:keys [run-args]}]
-  ["With run-args:"
-   "----"
-   run-args
-   "----"
-   ""])
+  (-> (into ["**Options**:"
+             ""
+             "|==="
+             "| Option | Value"
+             ""])
+      (into (flatten (map (fn [[k v]]
+                            [[(str "l|" k)]
+                             [(str "l|" v)]])
+                          (:opts run-args))))
+      (into [ "|==="])))
 
 (defn- legend []
   ["**Legend:**"
