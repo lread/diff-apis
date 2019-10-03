@@ -60,13 +60,13 @@
            (contains? m (deep-diff/->Insertion k)))))
 
 (defn find
-  "Returns k v pair matching `key` in map `m` with matching for unary diffs. Returned k, when wrapped, will remain wrapped."
-  [x key]
-  (let [x (unwrap-elem x)]
-    (and (or (map? x) nil)
-         (or (clojure.core/find x (deep-diff/->Deletion key))
-             (clojure.core/find x (deep-diff/->Insertion key))
-             (clojure.core/find x key)))))
+  "Returns k v pair matching key `k` in map `m` with matching for unary diffs. Returned k, when wrapped, will remain wrapped."
+  [m k]
+  (let [m (unwrap-elem m)]
+    (and (or (map? m) nil)
+         (or (clojure.core/find m (deep-diff/->Deletion k))
+             (clojure.core/find m (deep-diff/->Insertion k))
+             (clojure.core/find m k)))))
 
 (defn find-all
   "Return vector of all k v pairs matching `keys` in `m` in same order as `keys`. See `find` for find behavior."
@@ -123,8 +123,25 @@
                         (val elem)
                         elem)) :!= :=)))
 
-(comment
+(defn changes-only
+  "Returns only publics with changes in `diff` result.
+  This includes all publics for ns when any change has been made to ns level attributes, the idea
+  being a change in attribute to a ns can affect the publics (ex deprecated, no-doc , etc)."
+  [diff]
+  (if (diff? diff)
+    diff
+    (->> (map (fn [ns]
+                (let [[pubs-key pubs] (find ns :publics)]
+                  (if (or (diff? ns)
+                          (diff? pubs-key)
+                          (diff? pubs)
+                          (any-diffs? (dissoc ns :publics)))
+                    ns
+                    (update ns :publics #(filter any-diffs? %)))))
+              diff)
+         (filter #(any-diffs? %)))))
 
+(comment
   (calc-diff-type nil (deep-diff/->Deletion "booya"))
   (calc-diff-type nil (deep-diff/->Insertion "booya"))
 

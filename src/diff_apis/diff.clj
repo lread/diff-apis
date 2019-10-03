@@ -97,17 +97,7 @@
        x))
    diff))
 
-(defn- changes-only
-  ;; TODO: be careful.. sequences/vectors we are iterating over could be diffs?
-  "Returns only publics with changes in `diff` result.
-  This includes all publics for ns when any change has been made to ns level attributes."
-  [diff]
-  (->> (map (fn [ns]
-              (if (or (dd-util/diff? ns) (dd-util/any-diffs? (dissoc ns :publics)))
-                ns
-                (update ns :publics #(filter dd-util/any-diffs? %))))
-            diff)
-       (filter #(or (dd-util/diff? %) (seq (:publics %))))))
+
 
 (defn- case-insensitive-comparator [a b]
   (let [la (and a (string/lower-case a))
@@ -167,7 +157,7 @@
          b-api (api-essentials (:analysis b) (:lang b))
          result (-> (deep-diff/diff (raise-for-diff a-api) (raise-for-diff b-api))
                     (lower-after-diff)
-                    (#(if (= :changed-publics (:include opts)) (changes-only %) %))
+                    (#(if (= :changed-publics (:include opts)) (dd-util/changes-only %) %))
                     (sort-result))]
      {:diff result
       :stats (stats/count-diffs result)

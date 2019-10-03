@@ -79,3 +79,87 @@
   (t/is (dd-util/has-key? {:akey "aval"} :akey))
   (t/is (not (dd-util/has-key? {:akey "aval"} :nope)))
   (t/is (dd-util/has-key? {(deep-diff/->Insertion :ikey) "ival"} :ikey)))
+
+
+(t/deftest changes-only-test
+  (t/testing "when no diffs, empty"
+    (t/is (= [] (dd-util/changes-only [{:name "ns-test"
+                                        :publics [{:name "p-test"
+                                                   :members [{:name "mtest"
+                                                              :argslist '[[a b c]]}]}]}]))))
+
+  (t/testing "when all namespaces new, return entire diff"
+    (let [all-is-new (deep-diff/->Insertion [{:name "ns-test"
+                                              :publics [{:name "p-test"
+                                                         :members [{:name "mtest"
+                                                                    :argslist '[[a b c]]}]}]}])]
+      (t/is (= all-is-new (dd-util/changes-only all-is-new)))))
+
+  (t/testing "return ns when its publics are entirely missing"
+    (t/is (= [{:name "ns2"
+               (deep-diff/->Deletion :publics)
+               [{:name "ns2-p1"
+                 :members [{:name "ns2-p1-m1"
+                            :argslist '[[a b c]]}]}]}]
+             (dd-util/changes-only [{:name "ns1"
+                                     :publics
+                                     [{:name "ns1-p1"
+                                       :members [{:name "ns1-p1-m1"
+                                                  :argslist '[[a b c]]}]}]}
+                                    {:name "ns2"
+                                     (deep-diff/->Deletion :publics)
+                                     [{:name "ns2-p1"
+                                       :members [{:name "ns2-p1-m1"
+                                                  :argslist '[[a b c]]}]}]} ]))))
+
+  (t/testing "return entire ns when only ns attribute has changed"
+    (t/is (= [{:name "ns1"
+               :deprecated (deep-diff/->Insertion "1.1.2")
+               :publics
+               [{:name "ns1-p1"
+                 :members [{:name "ns1-p1-m1"
+                            :argslist '[[a b c]]}]}]}]
+             (dd-util/changes-only [{:name "ns1"
+                                     :deprecated (deep-diff/->Insertion "1.1.2")
+                                     :publics
+                                     [{:name "ns1-p1"
+                                       :members [{:name "ns1-p1-m1"
+                                                  :argslist '[[a b c]]}]}]}
+                                    {:name "ns2"
+                                     :publics
+                                     [{:name "ns2-p1"
+                                       :members [{:name "ns2-p1-m1"
+                                                  :argslist '[[a b c]]}]}]} ]))))
+
+  (t/testing "return only publics with changes"
+    (t/is (= [{:name "ns1"
+               :publics
+               [{:name "ns1-p3"
+                 :members [{:name "ns1-p1-m1"
+                            :argslist [['a (deep-diff/->Mismatch 'a 'x) 'c]]}]} ]}
+              {:name "ns3"
+               :publics
+               [{:name "ns3-p1"
+                 :argslist '[[]]
+                 (deep-diff/->Insertion :deprecated)  "1.2.3"}]}]
+             (dd-util/changes-only [{:name "ns1"
+                                     :publics
+                                     [{:name "ns1-p1"
+                                       :members [{:name "ns1-p1-m1"
+                                                  :argslist '[[a b c]]}]}
+                                      {:name "ns1-p2"
+                                       :members [{:name "ns1-p1-m1"
+                                                  :argslist '[[a b c]]}]}
+                                      {:name "ns1-p3"
+                                       :members [{:name "ns1-p1-m1"
+                                                  :argslist [['a (deep-diff/->Mismatch 'a 'x) 'c]]}]} ]}
+                                    {:name "ns2"
+                                     :publics
+                                     [{:name "ns2-p1"
+                                       :members [{:name "ns2-p1-m1"
+                                                  :argslist '[[a b c]]}]}]}
+                                    {:name "ns3"
+                                     :publics
+                                     [{:name "ns3-p1"
+                                       :argslist '[[]]
+                                       (deep-diff/->Insertion :deprecated)  "1.2.3"}]}])))))
