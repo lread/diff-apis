@@ -1,5 +1,5 @@
 {:paths ["src" "resources"]
- :deps {cljdoc/cljdoc-analyzer {:git/url "https://github.com/lread/cljdoc-analyzer"
+ :deps {cljdoc/cljdoc-analyzer {:git/url "https://github.com/cljdoc/cljdoc-analyzer"
                                 :sha "81b233c5101faa654412a0583f4b13635dca5991"}
         cli-matic {:mvn/version "0.3.8"}
         lambdaisland/deep-diff {:git/url "https://github.com/lread/deep-diff"
@@ -10,5 +10,5 @@
          :main-opts ["-m" "kaocha.runner"]}
 
   :clj-kondo
-  {:extra-deps {clj-kondo {:mvn/version "2019.09.22-alpha"}}
+  {:extra-deps {clj-kondo {:mvn/version "2019.10.11-alpha"}}
    :main-opts ["-m" "clj-kondo.main"]}}}
