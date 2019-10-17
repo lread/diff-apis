@@ -5,18 +5,18 @@
             [diff-apis.report :as report]))
 
 (defn diff-api-projects-cmd
-  [{:keys [project1 version1 language1 project2 version2 language2 report-format include exclude-namespace]}]
+  [{:keys [project1 version1 language1 project2 version2 language2 report-format include exclude-namespace notes]}]
   (-> (diff/diff-projects {:project project1 :version version1 :lang language1}
                           {:project project2 :version version2 :lang language2}
                           {:include include :exclude-namespaces exclude-namespace})
-      (report/report report-format)))
+      (report/report report-format notes)))
 
 (defn diff-api-files-cmd
-  [{:keys [filename1 language1 filename2 language2 report-format include exclude-namespace]}]
+  [{:keys [filename1 language1 filename2 language2 report-format include exclude-namespace notes]}]
   (-> (diff/diff-files {:filename filename1 :lang language1}
                        {:filename filename2 :lang language2}
                        {:include include :exclude-namespaces exclude-namespace})
-      (report/report report-format)))
+      (report/report report-format notes)))
 
 (spec/def ::language #{"clj" "cljs"})
 (spec/def ::include #{:all :changed-publics})
@@ -37,7 +37,10 @@
     :as      "Either :asciidoc or :deep-diff, defaults to :deep-diff"
     :type    :keyword
     :spec    ::report-format
-    :default :deep-diff}] )
+    :default :deep-diff}
+   {:option  "notes"
+    :as      "Filename containing notes to include in :asciidoc report"
+    :type    :slurplines}] )
 
 (def climatic-config
   {:app         {:command     "diff-api"

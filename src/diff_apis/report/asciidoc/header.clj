@@ -57,18 +57,30 @@
   (-> (into ["**Stats:**"
              ""
              "|==="
-             "| Element | Have changes within | Deleted | Inserted"
+             (str "| Element "
+                  "| Have " (render/change-text :- "changes") " " (render/change-text :+ "within") " "
+                  "| " (render/change-text :- "In A Only") " "
+                  "| " (render/change-text :+ "In B Only"))
              ""])
       (into (flatten (map stat-row stats)))
       (into ["|==="])))
 
-(defn header [result]
+(defn- notes [notes-content]
+  (if notes-content
+    (-> (into ["**Notes:**"
+               ""])
+        (into notes-content)
+        (into [""]))
+    []))
+
+(defn header [result notes-content]
   (string/join "\n"
                (-> (header-title result)
                    (into (diff-overview result))
                    (into (run-args result))
                    (into (legend))
                    (into (stats result))
+                   (into (notes notes-content))
                    (into ["**Table of diffs:**"
                           ""
                           "toc::[]"

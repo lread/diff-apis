@@ -47,6 +47,7 @@ generating a report to asciidoc would be ideal.
 ----
 I don't need this for my purposes, but worth handling for completeness, I think.
 . consider a more unique namespace for this project
+. do a diff of rewrite-cljc clj vs cljs with no-doc excluded - should be no diffs.
 . test no diff scenario
 . would be nice
   to highlight potentially breaking changes:

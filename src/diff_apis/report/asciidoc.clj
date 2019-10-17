@@ -88,12 +88,12 @@
 
              arglists-lines
              ["|==="
-              "| attributes | arglists"
+              "| arglists | attributes "
               ""
               "a|"
-              attributes-lines
-              "a|"
               arglists-lines
+              "a|"
+              attributes-lines
               "|==="]
 
              :else
@@ -128,7 +128,7 @@
 (defn to-asciidoc [lines]
   (string/join "\n" lines))
 
-(defn as-asciidoc [result]
-  (str (header/header result)
+(defn as-asciidoc [result notes]
+  (str (header/header result notes)
        (-> (as-lines (:diff result))
            (to-asciidoc))))

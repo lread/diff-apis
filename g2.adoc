@@ -9,11 +9,16 @@
 A. `+rewrite-clj/rewrite-clj+` `+0.6.1+` `+clj+`
 B. `+lread/rewrite-cljs-playground+` `+1.0.0-alpha+` `+clj+`
 
-With run-args:
-----
-{:diff-type :projects, :opts {:include :changed-publics, :exclude-namespaces nil}, :a {:project "rewrite-clj", :version "0.6.1", :lang "clj"}, :b {:project "lread/rewrite-cljs-playground", :version "1.0.0-alpha", :lang "clj"}}
-----
+**Options**:
 
+|===
+| Option | Value
+
+l|:include
+l|:changed-publics
+l|:exclude-namespaces
+l|
+|===
 **Legend:**
 
 * [red]`*-*`[red]#pass:c[A only]#
@@ -25,7 +30,7 @@ With run-args:
 **Stats:**
 
 |===
-| Element | Have changes within | Deleted | Inserted
+| Element | Have [red]#pass:c[changes]# [green]#pass:c[within]# | [red]#pass:c[In A Only]# | [green]#pass:c[In B Only]#
 
 | arglists
 | 62
@@ -43,6 +48,22 @@ With run-args:
 | 15
 
 |===
+**Notes:**
+
+The api of the last released version of rewrite-clj was used as a reference for
+the rewrite-cljc. As such, you'll notice the apis are almost the same.
+
+There are some differences in arglists. Notably, a macro that rewrite-clj used
+left argument names as gensyms. This has been corrected in rewrite-cljc.
+
+There were some features unique to rewrite-cljs (such as paredit and some
+positional searching) which were brought over to rewrite-cljc. Also the internal
+rewrite-cljs namespaces that were renamed to avoid cljs namespace collisions
+also occur in rewrite-cljc (for example rewrite.clj.zip.editz is included and
+functionally the same as rewrite.clj.zip.edit).
+
+All other differences are considered internal refactorings.
+
 **Table of diffs:**
 
 toc::[]
@@ -59,330 +80,330 @@ toc::[]
 
 === [black]`*≠*`[black]#pass:c[append-child]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2796+` [green]`^*+*^` [green]`+zloc+` [red]`^*-*^` [red]`+G__2797+` [green]`^*+*^` [green]`+item+` [black]#pass:c[]]#
 a|
 [unstyled]
-* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2700+` [green]`^*+*^` [green]`+zloc+` [red]`^*-*^` [red]`+G__2701+` [green]`^*+*^` [green]`+item+` [black]#pass:c[]]#
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 === [black]`*≠*`[black]#pass:c[branch?]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2729+` [green]`^*+*^` [green]`+zloc+` [black]#pass:c[]]#
 a|
 [unstyled]
-* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2633+` [green]`^*+*^` [green]`+zloc+` [black]#pass:c[]]#
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 === [black]`*≠*`[black]#pass:c[children]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2732+` [green]`^*+*^` [green]`+{}+` [black]#pass:c[]]#
 a|
 [unstyled]
-* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2636+` [green]`^*+*^` [green]`+{}+` [black]#pass:c[]]#
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 === [black]`*=*`[black]#pass:c[custom-zipper]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
+a|
+[unstyled]
+* [black]`*=*` [black]#pass:c[[]# [black]`+root+` [black]#pass:c[]]#
 a|
 [unstyled]
 * *pass:c[:type]* [black]`*=*` [black]`+:var+`
 * *pass:c[:no-doc]* [black]`*=*` [black]`+true+`
-a|
-[unstyled]
-* [black]`*=*` [black]#pass:c[[]# [black]`+root+` [black]#pass:c[]]#
 |===
 
 === [black]`*=*`[black]#pass:c[custom-zipper?]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
+a|
+[unstyled]
+* [black]`*=*` [black]#pass:c[[]# [black]`+value+` [black]#pass:c[]]#
 a|
 [unstyled]
 * *pass:c[:type]* [black]`*=*` [black]`+:var+`
 * *pass:c[:no-doc]* [black]`*=*` [black]`+true+`
-a|
-[unstyled]
-* [black]`*=*` [black]#pass:c[[]# [black]`+value+` [black]#pass:c[]]#
 |===
 
 === [black]`*≠*`[black]#pass:c[down]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2742+` [green]`^*+*^` [green]`+zloc+` [black]#pass:c[]]#
 a|
 [unstyled]
-* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2646+` [green]`^*+*^` [green]`+zloc+` [black]#pass:c[]]#
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 === [black]`*≠*`[black]#pass:c[edit]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+loc+` [green]`^*+*^` [green]`+zloc+` [black]`+f+` [black]`+&+` [black]`+args+` [black]#pass:c[]]#
 a|
 [unstyled]
-* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+loc+` [green]`^*+*^` [green]`+zloc+` [black]`+f+` [black]`+&+` [black]`+args+` [black]#pass:c[]]#
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 === [black]`*≠*`[black]#pass:c[end?]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2811+` [green]`^*+*^` [green]`+zloc+` [black]#pass:c[]]#
 a|
 [unstyled]
-* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2715+` [green]`^*+*^` [green]`+zloc+` [black]#pass:c[]]#
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 === [black]`*≠*`[black]#pass:c[insert-child]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2793+` [green]`^*+*^` [green]`+zloc+` [red]`^*-*^` [red]`+G__2794+` [green]`^*+*^` [green]`+item+` [black]#pass:c[]]#
 a|
 [unstyled]
-* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2697+` [green]`^*+*^` [green]`+zloc+` [red]`^*-*^` [red]`+G__2698+` [green]`^*+*^` [green]`+item+` [black]#pass:c[]]#
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 === [black]`*≠*`[black]#pass:c[insert-left]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2781+` [green]`^*+*^` [green]`+zloc+` [red]`^*-*^` [red]`+G__2782+` [green]`^*+*^` [green]`+item+` [black]#pass:c[]]#
 a|
 [unstyled]
-* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2685+` [green]`^*+*^` [green]`+zloc+` [red]`^*-*^` [red]`+G__2686+` [green]`^*+*^` [green]`+item+` [black]#pass:c[]]#
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 === [black]`*≠*`[black]#pass:c[insert-right]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2785+` [green]`^*+*^` [green]`+zloc+` [red]`^*-*^` [red]`+G__2786+` [green]`^*+*^` [green]`+item+` [black]#pass:c[]]#
 a|
 [unstyled]
-* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2689+` [green]`^*+*^` [green]`+zloc+` [red]`^*-*^` [red]`+G__2690+` [green]`^*+*^` [green]`+item+` [black]#pass:c[]]#
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 === [black]`*≠*`[black]#pass:c[left]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2767+` [green]`^*+*^` [green]`+zloc+` [black]#pass:c[]]#
 a|
 [unstyled]
-* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2671+` [green]`^*+*^` [green]`+zloc+` [black]#pass:c[]]#
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 === [black]`*≠*`[black]#pass:c[leftmost]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2774+` [green]`^*+*^` [green]`+zloc+` [black]#pass:c[]]#
 a|
 [unstyled]
-* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2678+` [green]`^*+*^` [green]`+zloc+` [black]#pass:c[]]#
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 === [black]`*≠*`[black]#pass:c[lefts]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2740+` [green]`^*+*^` [green]`+zloc+` [black]#pass:c[]]#
 a|
 [unstyled]
-* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2644+` [green]`^*+*^` [green]`+zloc+` [black]#pass:c[]]#
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 === [black]`*≠*`[black]#pass:c[make-node]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
+a|
+[unstyled]
+* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2735+` [green]`^*+*^` [green]`+_zloc+` [red]`^*-*^` [red]`+G__2736+` [green]`^*+*^` [green]`+node+` [red]`^*-*^` [red]`+G__2737+` [green]`^*+*^` [green]`+children+` [black]#pass:c[]]#
 a|
 [unstyled]
 * *pass:c[:type]* [black]`*=*` [black]`+:var+`
 * *pass:c[:no-doc]* [black]`*=*` [black]`+true+`
-a|
-[unstyled]
-* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2639+` [green]`^*+*^` [green]`+_zloc+` [red]`^*-*^` [red]`+G__2640+` [green]`^*+*^` [green]`+node+` [red]`^*-*^` [red]`+G__2641+` [green]`^*+*^` [green]`+children+` [black]#pass:c[]]#
 |===
 
 === [black]`*≠*`[black]#pass:c[next]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2799+` [green]`^*+*^` [green]`+{}+` [black]#pass:c[]]#
 a|
 [unstyled]
-* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2703+` [green]`^*+*^` [green]`+{}+` [black]#pass:c[]]#
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 === [black]`*≠*`[black]#pass:c[node]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2726+` [green]`^*+*^` [green]`+zloc+` [black]#pass:c[]]#
 a|
 [unstyled]
-* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2630+` [green]`^*+*^` [green]`+zloc+` [black]#pass:c[]]#
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 === [black]`*≠*`[black]#pass:c[position]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+loc+` [green]`^*+*^` [green]`+zloc+` [black]#pass:c[]]#
 a|
 [unstyled]
-* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+loc+` [green]`^*+*^` [green]`+zloc+` [black]#pass:c[]]#
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[position-span]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [black]`*≠*`[black]#pass:c[prev]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2806+` [green]`^*+*^` [green]`+zloc+` [black]#pass:c[]]#
 a|
 [unstyled]
-* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2710+` [green]`^*+*^` [green]`+zloc+` [black]#pass:c[]]#
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 === [black]`*≠*`[black]#pass:c[remove]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2813+` [green]`^*+*^` [green]`+zloc+` [black]#pass:c[]]#
 a|
 [unstyled]
-* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2717+` [green]`^*+*^` [green]`+zloc+` [black]#pass:c[]]#
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 === [black]`*≠*`[black]#pass:c[replace]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2789+` [green]`^*+*^` [green]`+zloc+` [red]`^*-*^` [red]`+G__2790+` [green]`^*+*^` [green]`+node+` [black]#pass:c[]]#
 a|
 [unstyled]
-* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2693+` [green]`^*+*^` [green]`+zloc+` [red]`^*-*^` [red]`+G__2694+` [green]`^*+*^` [green]`+node+` [black]#pass:c[]]#
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 === [black]`*≠*`[black]#pass:c[right]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2757+` [green]`^*+*^` [green]`+zloc+` [black]#pass:c[]]#
 a|
 [unstyled]
-* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2661+` [green]`^*+*^` [green]`+zloc+` [black]#pass:c[]]#
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 === [black]`*≠*`[black]#pass:c[rightmost]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2764+` [green]`^*+*^` [green]`+zloc+` [black]#pass:c[]]#
 a|
 [unstyled]
-* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2668+` [green]`^*+*^` [green]`+zloc+` [black]#pass:c[]]#
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 === [black]`*≠*`[black]#pass:c[root]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2754+` [green]`^*+*^` [green]`+{}+` [black]#pass:c[]]#
 a|
 [unstyled]
-* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2658+` [green]`^*+*^` [green]`+{}+` [black]#pass:c[]]#
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 === [black]`*≠*`[black]#pass:c[up]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2751+` [green]`^*+*^` [green]`+zloc+` [black]#pass:c[]]#
 a|
 [unstyled]
-* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2655+` [green]`^*+*^` [green]`+zloc+` [black]#pass:c[]]#
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 === [black]`*=*`[black]#pass:c[zipper]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
+a|
+[unstyled]
+* [black]`*=*` [black]#pass:c[[]# [black]`+root+` [black]#pass:c[]]#
 a|
 [unstyled]
 * *pass:c[:type]* [black]`*=*` [black]`+:var+`
 * *pass:c[:no-doc]* [black]`*=*` [black]`+true+`
-a|
-[unstyled]
-* [black]`*=*` [black]#pass:c[[]# [black]`+root+` [black]#pass:c[]]#
 |===
 
 
@@ -394,27 +415,27 @@ a|
 
 === [green]`*+*`[green]#pass:c[custom-zipper?]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
+a|
+[unstyled]
+* [green]`*+*` [green]#pass:c[[]# [green]`+value+` [green]#pass:c[]]#
 a|
 [unstyled]
 * *pass:c[:type]* [green]`*+*` [green]`+:var+`
 * *pass:c[:no-doc]* [green]`*+*` [green]`+true+`
-a|
-[unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+value+` [green]#pass:c[]]#
 |===
 
 === [green]`*+*`[green]#pass:c[defn-switchable]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:macro+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+sym+` [green]`+docstring+` [green]`+params+` [green]`+&+` [green]`+body+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+sym+` [green]`+docstring+` [green]`+params+` [green]`+&+` [green]`+body+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:macro+`
 |===
 
 
@@ -426,14 +447,14 @@ a|
 
 === [green]`*+*`[green]#pass:c[remove-and-move-up]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+loc+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+loc+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 
@@ -445,86 +466,86 @@ a|
 
 === [green]`*+*`[green]#pass:c[clojure-whitespace?]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+c+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+c+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[int->str]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+n+` [green]`+base+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+n+` [green]`+base+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[max-int]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]#  [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]#  [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[meta-available?]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+data+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+data+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[min-int]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]#  [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]#  [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[simple-format]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+template+` [green]`+&+` [green]`+args+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+template+` [green]`+&+` [green]`+args+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[str->int]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+s+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+s+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 
@@ -535,136 +556,136 @@ a|
 
 === [black]`*≠*`[black]#pass:c[children]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+_+` [green]`^*+*^` [green]`+node+` [black]#pass:c[]]#
 a|
 [unstyled]
-* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+_+` [green]`^*+*^` [green]`+node+` [black]#pass:c[]]#
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 === [black]`*≠*`[black]#pass:c[coerce]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+_+` [green]`^*+*^` [green]`+form+` [black]#pass:c[]]#
 a|
 [unstyled]
-* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+_+` [green]`^*+*^` [green]`+form+` [black]#pass:c[]]#
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 === [black]`*≠*`[black]#pass:c[inner?]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+_+` [green]`^*+*^` [green]`+node+` [black]#pass:c[]]#
 a|
 [unstyled]
-* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+_+` [green]`^*+*^` [green]`+node+` [black]#pass:c[]]#
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 === [black]`*≠*`[black]#pass:c[leader-length]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+_+` [green]`^*+*^` [green]`+node+` [black]#pass:c[]]#
 a|
 [unstyled]
-* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+_+` [green]`^*+*^` [green]`+node+` [black]#pass:c[]]#
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 === [black]`*≠*`[black]#pass:c[length]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+_+` [green]`^*+*^` [green]`+node+` [black]#pass:c[]]#
 a|
 [unstyled]
-* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+_+` [green]`^*+*^` [green]`+node+` [black]#pass:c[]]#
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 === [black]`*≠*`[black]#pass:c[printable-only?]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+_+` [green]`^*+*^` [green]`+node+` [black]#pass:c[]]#
 a|
 [unstyled]
-* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+_+` [green]`^*+*^` [green]`+node+` [black]#pass:c[]]#
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 === [black]`*≠*`[black]#pass:c[replace-children]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+_+` [green]`^*+*^` [green]`+node+` [black]`+children+` [black]#pass:c[]]#
 a|
 [unstyled]
-* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+_+` [green]`^*+*^` [green]`+node+` [black]`+children+` [black]#pass:c[]]#
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 === [black]`*≠*`[black]#pass:c[sexpr]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+_+` [green]`^*+*^` [green]`+node+` [black]#pass:c[]]#
 a|
 [unstyled]
-* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+_+` [green]`^*+*^` [green]`+node+` [black]#pass:c[]]#
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 === [black]`*≠*`[black]#pass:c[string]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+_+` [green]`^*+*^` [green]`+node+` [black]#pass:c[]]#
 a|
 [unstyled]
-* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+_+` [green]`^*+*^` [green]`+node+` [black]#pass:c[]]#
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 === [black]`*≠*`[black]#pass:c[tag]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+_+` [green]`^*+*^` [green]`+node+` [black]#pass:c[]]#
 a|
 [unstyled]
-* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+_+` [green]`^*+*^` [green]`+node+` [black]#pass:c[]]#
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 === [black]`*≠*`[black]#pass:c[token-node]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
-a|
-[unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+value+` [green]#pass:c[]]#
 * [green]`*+*` [green]#pass:c[[]# [green]`+value+` [green]`+string-value+` [green]#pass:c[]]#
 * [red]`*-*` [red]#pass:c[[]# [red]`+value+` [red]`+&+` [red]`+[string-value]+` [red]#pass:c[]]#
+a|
+[unstyled]
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 
@@ -683,14 +704,14 @@ a|
 
 === [green]`*+*`[green]#pass:c[node-with-meta]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+n+` [green]`+value+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+n+` [green]`+value+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 
@@ -702,14 +723,14 @@ a|
 
 === [green]`*+*`[green]#pass:c[namespaced-map-node]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+children+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+children+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[NamespacedMapNode]#
@@ -730,79 +751,79 @@ a|
 
 === [black]`*=*`[black]#pass:c[+extent]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
+a|
+[unstyled]
+* [black]`*=*` [black]#pass:c[[]# [black]`+[row col]+` [black]`+[row-extent col-extent]+` [black]#pass:c[]]#
 a|
 [unstyled]
 * *pass:c[:type]* [black]`*=*` [black]`+:var+`
 * *pass:c[:no-doc]* [black]`*=*` [black]`+true+`
-a|
-[unstyled]
-* [black]`*=*` [black]#pass:c[[]# [black]`+[row col]+` [black]`+[row-extent col-extent]+` [black]#pass:c[]]#
 |===
 
 === [black]`*=*`[black]#pass:c[assert-sexpr-count]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
+a|
+[unstyled]
+* [black]`*=*` [black]#pass:c[[]# [black]`+nodes+` [black]`+c+` [black]#pass:c[]]#
 a|
 [unstyled]
 * *pass:c[:type]* [black]`*=*` [black]`+:var+`
 * *pass:c[:no-doc]* [black]`*=*` [black]`+true+`
-a|
-[unstyled]
-* [black]`*=*` [black]#pass:c[[]# [black]`+nodes+` [black]`+c+` [black]#pass:c[]]#
 |===
 
 === [black]`*=*`[black]#pass:c[assert-single-sexpr]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
+a|
+[unstyled]
+* [black]`*=*` [black]#pass:c[[]# [black]`+nodes+` [black]#pass:c[]]#
 a|
 [unstyled]
 * *pass:c[:type]* [black]`*=*` [black]`+:var+`
 * *pass:c[:no-doc]* [black]`*=*` [black]`+true+`
-a|
-[unstyled]
-* [black]`*=*` [black]#pass:c[[]# [black]`+nodes+` [black]#pass:c[]]#
 |===
 
 === [black]`*=*`[black]#pass:c[child-sexprs]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* [black]`*=*` [black]#pass:c[[]# [black]`+node+` [black]#pass:c[]]#
 a|
 [unstyled]
-* [black]`*=*` [black]#pass:c[[]# [black]`+node+` [black]#pass:c[]]#
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 === [black]`*=*`[black]#pass:c[concat-strings]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
+a|
+[unstyled]
+* [black]`*=*` [black]#pass:c[[]# [black]`+nodes+` [black]#pass:c[]]#
 a|
 [unstyled]
 * *pass:c[:type]* [black]`*=*` [black]`+:var+`
 * *pass:c[:no-doc]* [black]`*=*` [black]`+true+`
-a|
-[unstyled]
-* [black]`*=*` [black]#pass:c[[]# [black]`+nodes+` [black]#pass:c[]]#
 |===
 
 === [black]`*=*`[black]#pass:c[extent]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
+a|
+[unstyled]
+* [black]`*=*` [black]#pass:c[[]# [black]`+node+` [black]#pass:c[]]#
 a|
 [unstyled]
 * *pass:c[:type]* [black]`*=*` [black]`+:var+`
 * *pass:c[:no-doc]* [black]`*=*` [black]`+true+`
-a|
-[unstyled]
-* [black]`*=*` [black]#pass:c[[]# [black]`+node+` [black]#pass:c[]]#
 |===
 
 === [black]`*≠*`[black]#pass:c[InnerNode]#
@@ -853,28 +874,28 @@ a|
 
 === [black]`*≠*`[black]#pass:c[make-printable!]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
+a|
+[unstyled]
+* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+class+` [green]`^*+*^` [green]`+obj+` [black]#pass:c[]]#
 a|
 [unstyled]
 * *pass:c[:type]* [black]`*≠*` [red]`^*-*^` [red]`+:macro+` [green]`^*+*^` [green]`+:var+`
 * *pass:c[:no-doc]* [red]`*-*` [red]`+true+`
-a|
-[unstyled]
-* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+class+` [green]`^*+*^` [green]`+obj+` [black]#pass:c[]]#
 |===
 
 === [green]`*+*`[green]#pass:c[make-printable-clj!]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
+a|
+[unstyled]
+* [green]`*+*` [green]#pass:c[[]# [green]`+class+` [green]#pass:c[]]#
 a|
 [unstyled]
 * *pass:c[:type]* [green]`*+*` [green]`+:macro+`
 * *pass:c[:no-doc]* [green]`*+*` [green]`+true+`
-a|
-[unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+class+` [green]#pass:c[]]#
 |===
 
 === [black]`*≠*`[black]#pass:c[Node]#
@@ -953,53 +974,53 @@ a|
 
 === [black]`*=*`[black]#pass:c[sexprs]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* [black]`*=*` [black]#pass:c[[]# [black]`+nodes+` [black]#pass:c[]]#
 a|
 [unstyled]
-* [black]`*=*` [black]#pass:c[[]# [black]`+nodes+` [black]#pass:c[]]#
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 === [black]`*=*`[black]#pass:c[sum-lengths]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
+a|
+[unstyled]
+* [black]`*=*` [black]#pass:c[[]# [black]`+nodes+` [black]#pass:c[]]#
 a|
 [unstyled]
 * *pass:c[:type]* [black]`*=*` [black]`+:var+`
 * *pass:c[:no-doc]* [black]`*=*` [black]`+true+`
-a|
-[unstyled]
-* [black]`*=*` [black]#pass:c[[]# [black]`+nodes+` [black]#pass:c[]]#
 |===
 
 === [green]`*+*`[green]#pass:c[without-whitespace]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
+a|
+[unstyled]
+* [green]`*+*` [green]#pass:c[[]# [green]`+nodes+` [green]#pass:c[]]#
 a|
 [unstyled]
 * *pass:c[:type]* [green]`*+*` [green]`+:var+`
 * *pass:c[:no-doc]* [green]`*+*` [green]`+true+`
-a|
-[unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+nodes+` [green]#pass:c[]]#
 |===
 
 === [black]`*=*`[black]#pass:c[write-node]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
+a|
+[unstyled]
+* [black]`*=*` [black]#pass:c[[]# [black]`+writer+` [black]`+node+` [black]#pass:c[]]#
 a|
 [unstyled]
 * *pass:c[:type]* [black]`*=*` [black]`+:var+`
 * *pass:c[:no-doc]* [black]`*=*` [black]`+true+`
-a|
-[unstyled]
-* [black]`*=*` [black]#pass:c[[]# [black]`+writer+` [black]`+node+` [black]#pass:c[]]#
 |===
 
 
@@ -1011,14 +1032,14 @@ a|
 
 === [red]`*-*`[red]#pass:c[namespaced-map-node]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [red]`*-*` [red]`+:var+`
+* [red]`*-*` [red]#pass:c[[]# [red]`+children+` [red]#pass:c[]]#
 a|
 [unstyled]
-* [red]`*-*` [red]#pass:c[[]# [red]`+children+` [red]#pass:c[]]#
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 |===
 
 === [red]`*-*`[red]#pass:c[NamespacedMapNode]#
@@ -1055,14 +1076,14 @@ a|
 
 === [green]`*+*`[green]#pass:c[string-node]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+lines+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+lines+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[StringNode]#
@@ -1083,16 +1104,16 @@ a|
 
 === [black]`*≠*`[black]#pass:c[token-node]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
-a|
-[unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+value+` [green]#pass:c[]]#
 * [green]`*+*` [green]#pass:c[[]# [green]`+value+` [green]`+string-value+` [green]#pass:c[]]#
 * [red]`*-*` [red]#pass:c[[]# [red]`+value+` [red]`+&+` [red]`+[string-value]+` [red]#pass:c[]]#
+a|
+[unstyled]
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 
@@ -1103,159 +1124,159 @@ a|
 
 === [green]`*+*`[green]#pass:c[barf-backward]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[barf-forward]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[join]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[kill]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[kill-at-pos]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+pos+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+pos+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[kill-one-at-pos]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+pos+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+pos+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[move-n]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
+a|
+[unstyled]
+* [green]`*+*` [green]#pass:c[[]# [green]`+loc+` [green]`+f+` [green]`+n+` [green]#pass:c[]]#
 a|
 [unstyled]
 * *pass:c[:type]* [green]`*+*` [green]`+:var+`
 * *pass:c[:no-doc]* [green]`*+*` [green]`+true+`
-a|
-[unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+loc+` [green]`+f+` [green]`+n+` [green]#pass:c[]]#
 |===
 
 === [green]`*+*`[green]#pass:c[move-to-prev]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[raise]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[slurp-backward]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[slurp-backward-fully]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[slurp-forward]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[slurp-forward-fully]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[splice]#
@@ -1269,74 +1290,74 @@ a|
 
 === [green]`*+*`[green]#pass:c[splice-killing-backward]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[splice-killing-forward]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[split]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[split-at-pos]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+pos+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+pos+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[wrap-around]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+t+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+t+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[wrap-fully-forward-slurp]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+t+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+t+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 
@@ -1347,28 +1368,28 @@ a|
 
 === [black]`*≠*`[black]#pass:c[parse]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
+a|
+[unstyled]
+* [black]`*=*` [black]#pass:c[[]# [black]`+reader+` [black]#pass:c[]]#
 a|
 [unstyled]
 * *pass:c[:type]* [black]`*=*` [black]`+:var+`
 * *pass:c[:no-doc]* [green]`*+*` [green]`+true+`
-a|
-[unstyled]
-* [black]`*=*` [black]#pass:c[[]# [black]`+reader+` [black]#pass:c[]]#
 |===
 
 === [black]`*≠*`[black]#pass:c[parse-all]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
+a|
+[unstyled]
+* [black]`*=*` [black]#pass:c[[]# [black]`+reader+` [black]#pass:c[]]#
 a|
 [unstyled]
 * *pass:c[:type]* [black]`*=*` [black]`+:var+`
 * *pass:c[:no-doc]* [green]`*+*` [green]`+true+`
-a|
-[unstyled]
-* [black]`*=*` [black]#pass:c[[]# [black]`+reader+` [black]#pass:c[]]#
 |===
 
 
@@ -1380,14 +1401,14 @@ a|
 
 === [green]`*+*`[green]#pass:c[parse-namespaced-map]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+reader+` [green]`+read-next+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+reader+` [green]`+read-next+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 
@@ -1399,77 +1420,77 @@ a|
 
 === [red]`*-*`[red]#pass:c[defprotocol+]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [red]`*-*` [red]`+:macro+`
+* [red]`*-*` [red]#pass:c[[]# [red]`+name+` [red]`+&+` [red]`+body+` [red]#pass:c[]]#
 a|
 [unstyled]
-* [red]`*-*` [red]#pass:c[[]# [red]`+name+` [red]`+&+` [red]`+body+` [red]#pass:c[]]#
+* *pass:c[:type]* [red]`*-*` [red]`+:macro+`
 |===
 
 === [red]`*-*`[red]#pass:c[import-def]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
-a|
-[unstyled]
-* *pass:c[:type]* [red]`*-*` [red]`+:macro+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+sym+` [red]#pass:c[]]#
 * [red]`*-*` [red]#pass:c[[]# [red]`+sym+` [red]`+name+` [red]#pass:c[]]#
+a|
+[unstyled]
+* *pass:c[:type]* [red]`*-*` [red]`+:macro+`
 |===
 
 === [red]`*-*`[red]#pass:c[import-fn]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
-a|
-[unstyled]
-* *pass:c[:type]* [red]`*-*` [red]`+:macro+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+sym+` [red]#pass:c[]]#
 * [red]`*-*` [red]#pass:c[[]# [red]`+sym+` [red]`+name+` [red]#pass:c[]]#
+a|
+[unstyled]
+* *pass:c[:type]* [red]`*-*` [red]`+:macro+`
 |===
 
 === [red]`*-*`[red]#pass:c[import-macro]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
-a|
-[unstyled]
-* *pass:c[:type]* [red]`*-*` [red]`+:macro+`
 a|
 [unstyled]
 * [red]`*-*` [red]#pass:c[[]# [red]`+sym+` [red]#pass:c[]]#
 * [red]`*-*` [red]#pass:c[[]# [red]`+sym+` [red]`+name+` [red]#pass:c[]]#
+a|
+[unstyled]
+* *pass:c[:type]* [red]`*-*` [red]`+:macro+`
 |===
 
 === [red]`*-*`[red]#pass:c[import-vars]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [red]`*-*` [red]`+:macro+`
+* [red]`*-*` [red]#pass:c[[]# [red]`+&+` [red]`+syms+` [red]#pass:c[]]#
 a|
 [unstyled]
-* [red]`*-*` [red]#pass:c[[]# [red]`+&+` [red]`+syms+` [red]#pass:c[]]#
+* *pass:c[:type]* [red]`*-*` [red]`+:macro+`
 |===
 
 === [red]`*-*`[red]#pass:c[link-vars]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [red]`*-*` [red]`+:var+`
+* [red]`*-*` [red]#pass:c[[]# [red]`+src+` [red]`+dst+` [red]#pass:c[]]#
 a|
 [unstyled]
-* [red]`*-*` [red]#pass:c[[]# [red]`+src+` [red]`+dst+` [red]#pass:c[]]#
+* *pass:c[:type]* [red]`*-*` [red]`+:var+`
 |===
 
 
@@ -1481,26 +1502,26 @@ a|
 
 === [green]`*+*`[green]#pass:c[defprotocol+]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:macro+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+name+` [green]`+&+` [green]`+body+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+name+` [green]`+&+` [green]`+body+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:macro+`
 |===
 
 === [green]`*+*`[green]#pass:c[import-vars]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:macro+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+&+` [green]`+raw-syms+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+&+` [green]`+raw-syms+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:macro+`
 |===
 
 
@@ -1512,62 +1533,62 @@ a|
 
 === [green]`*+*`[green]#pass:c[defprotocol+]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:macro+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+name+` [green]`+&+` [green]`+body+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+name+` [green]`+&+` [green]`+body+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:macro+`
 |===
 
 === [green]`*+*`[green]#pass:c[import-def]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:macro+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+src-sym+` [green]`+target-name+` [green]`+target-meta+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+src-sym+` [green]`+target-name+` [green]`+target-meta+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:macro+`
 |===
 
 === [green]`*+*`[green]#pass:c[import-fn]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:macro+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+src-sym+` [green]`+target-name+` [green]`+target-meta+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+src-sym+` [green]`+target-name+` [green]`+target-meta+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:macro+`
 |===
 
 === [green]`*+*`[green]#pass:c[import-macro]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:macro+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+src-sym+` [green]`+target-name+` [green]`+target-meta+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+src-sym+` [green]`+target-name+` [green]`+target-meta+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:macro+`
 |===
 
 === [green]`*+*`[green]#pass:c[import-vars]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:macro+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+&+` [green]`+raw-syms+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+&+` [green]`+raw-syms+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:macro+`
 |===
 
 
@@ -1579,50 +1600,50 @@ a|
 
 === [green]`*+*`[green]#pass:c[new-meta]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+orig-meta+` [green]`+opts+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+orig-meta+` [green]`+opts+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[new-name]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+orig-name+` [green]`+opts+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+orig-name+` [green]`+opts+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[syms->import-data]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+syms+` [green]`+resolve-fn+` [green]`+meta-fn+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+syms+` [green]`+resolve-fn+` [green]`+meta-fn+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[unravel-syms]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+x+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+x+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 
@@ -1634,16 +1655,16 @@ a|
 
 === [black]`*≠*`[black]#pass:c[read-while]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
-a|
-[unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+reader+` [green]`+p?+` [green]#pass:c[]]#
 * [green]`*+*` [green]#pass:c[[]# [green]`+reader+` [green]`+p?+` [green]`+eof?+` [green]#pass:c[]]#
 * [red]`*-*` [red]#pass:c[[]# [red]`+reader+` [red]`+p?+` [red]`+&+` [red]`+[eof?]+` [red]#pass:c[]]#
+a|
+[unstyled]
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 
@@ -1654,332 +1675,332 @@ a|
 
 === [green]`*+*`[green]#pass:c[insert-newline-right]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
-a|
-[unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+n+` [green]#pass:c[]]#
+a|
+[unstyled]
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[remove-preserve-newline]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[insert-space-left]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
-a|
-[unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+n+` [green]#pass:c[]]#
+a|
+[unstyled]
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[insert-newline-left]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
-a|
-[unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+n+` [green]#pass:c[]]#
+a|
+[unstyled]
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[find-tag-by-pos]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+pos+` [green]`+t+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+pos+` [green]`+t+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[insert-space-right]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
-a|
-[unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+n+` [green]#pass:c[]]#
+a|
+[unstyled]
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [black]`*≠*`[black]#pass:c[right*]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2757+` [green]`^*+*^` [green]`+zloc+` [black]#pass:c[]]#
 a|
 [unstyled]
-* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2661+` [green]`^*+*^` [green]`+zloc+` [black]#pass:c[]]#
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 === [black]`*≠*`[black]#pass:c[insert-left*]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2781+` [green]`^*+*^` [green]`+zloc+` [red]`^*-*^` [red]`+G__2782+` [green]`^*+*^` [green]`+item+` [black]#pass:c[]]#
 a|
 [unstyled]
-* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2685+` [green]`^*+*^` [green]`+zloc+` [red]`^*-*^` [red]`+G__2686+` [green]`^*+*^` [green]`+item+` [black]#pass:c[]]#
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 === [black]`*≠*`[black]#pass:c[rightmost*]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2764+` [green]`^*+*^` [green]`+zloc+` [black]#pass:c[]]#
 a|
 [unstyled]
-* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2668+` [green]`^*+*^` [green]`+zloc+` [black]#pass:c[]]#
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[find-last-by-pos]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
-a|
-[unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+pos+` [green]#pass:c[]]#
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+pos+` [green]`+p?+` [green]#pass:c[]]#
+a|
+[unstyled]
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[append-child*]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+item+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+item+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [black]`*≠*`[black]#pass:c[edit*]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+loc+` [green]`^*+*^` [green]`+zloc+` [black]`+f+` [black]`+&+` [black]`+args+` [black]#pass:c[]]#
 a|
 [unstyled]
-* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+loc+` [green]`^*+*^` [green]`+zloc+` [black]`+f+` [black]`+&+` [black]`+args+` [black]#pass:c[]]#
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 === [black]`*≠*`[black]#pass:c[left*]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2767+` [green]`^*+*^` [green]`+zloc+` [black]#pass:c[]]#
 a|
 [unstyled]
-* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2671+` [green]`^*+*^` [green]`+zloc+` [black]#pass:c[]]#
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 === [black]`*≠*`[black]#pass:c[leftmost*]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2774+` [green]`^*+*^` [green]`+zloc+` [black]#pass:c[]]#
 a|
 [unstyled]
-* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2678+` [green]`^*+*^` [green]`+zloc+` [black]#pass:c[]]#
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[subzip]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [black]`*≠*`[black]#pass:c[up*]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2751+` [green]`^*+*^` [green]`+zloc+` [black]#pass:c[]]#
 a|
 [unstyled]
-* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2655+` [green]`^*+*^` [green]`+zloc+` [black]#pass:c[]]#
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 === [black]`*≠*`[black]#pass:c[replace*]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2789+` [green]`^*+*^` [green]`+zloc+` [red]`^*-*^` [red]`+G__2790+` [green]`^*+*^` [green]`+node+` [black]#pass:c[]]#
 a|
 [unstyled]
-* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2693+` [green]`^*+*^` [green]`+zloc+` [red]`^*-*^` [red]`+G__2694+` [green]`^*+*^` [green]`+node+` [black]#pass:c[]]#
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 === [black]`*≠*`[black]#pass:c[down*]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2742+` [green]`^*+*^` [green]`+zloc+` [black]#pass:c[]]#
 a|
 [unstyled]
-* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2646+` [green]`^*+*^` [green]`+zloc+` [black]#pass:c[]]#
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 === [black]`*≠*`[black]#pass:c[node]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2726+` [green]`^*+*^` [green]`+zloc+` [black]#pass:c[]]#
 a|
 [unstyled]
-* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2630+` [green]`^*+*^` [green]`+zloc+` [black]#pass:c[]]#
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 === [black]`*≠*`[black]#pass:c[remove*]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2813+` [green]`^*+*^` [green]`+zloc+` [black]#pass:c[]]#
 a|
 [unstyled]
-* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2717+` [green]`^*+*^` [green]`+zloc+` [black]#pass:c[]]#
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 === [black]`*≠*`[black]#pass:c[next*]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2799+` [green]`^*+*^` [green]`+{}+` [black]#pass:c[]]#
 a|
 [unstyled]
-* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2703+` [green]`^*+*^` [green]`+{}+` [black]#pass:c[]]#
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 === [black]`*≠*`[black]#pass:c[root]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2754+` [green]`^*+*^` [green]`+{}+` [black]#pass:c[]]#
 a|
 [unstyled]
-* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2658+` [green]`^*+*^` [green]`+{}+` [black]#pass:c[]]#
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 === [black]`*≠*`[black]#pass:c[edn]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
-a|
-[unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+node+` [black]#pass:c[]]#
 * [black]`*≠*` [black]#pass:c[[]# [black]`+node+` [red]`^*-*^` [red]`+{}+` [green]`^*+*^` [green]`+options+` [black]#pass:c[]]#
+a|
+[unstyled]
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 === [black]`*≠*`[black]#pass:c[prev*]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2806+` [green]`^*+*^` [green]`+zloc+` [black]#pass:c[]]#
 a|
 [unstyled]
-* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2710+` [green]`^*+*^` [green]`+zloc+` [black]#pass:c[]]#
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 === [black]`*≠*`[black]#pass:c[insert-right*]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2785+` [green]`^*+*^` [green]`+zloc+` [red]`^*-*^` [red]`+G__2786+` [green]`^*+*^` [green]`+item+` [black]#pass:c[]]#
 a|
 [unstyled]
-* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+G__2689+` [green]`^*+*^` [green]`+zloc+` [red]`^*-*^` [red]`+G__2690+` [green]`^*+*^` [green]`+item+` [black]#pass:c[]]#
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[position-span]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [black]`*≠*`[black]#pass:c[position]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
+* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+loc+` [green]`^*+*^` [green]`+zloc+` [black]#pass:c[]]#
 a|
 [unstyled]
-* [black]`*≠*` [black]#pass:c[[]# [red]`^*-*^` [red]`+loc+` [green]`^*+*^` [green]`+zloc+` [black]#pass:c[]]#
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 
@@ -1991,15 +2012,15 @@ a|
 
 === [black]`*≠*`[black]#pass:c[edn]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
-a|
-[unstyled]
-* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 a|
 [unstyled]
 * [black]`*=*` [black]#pass:c[[]# [black]`+node+` [black]#pass:c[]]#
 * [black]`*≠*` [black]#pass:c[[]# [black]`+node+` [red]`^*-*^` [red]`+{}+` [green]`^*+*^` [green]`+options+` [black]#pass:c[]]#
+a|
+[unstyled]
+* *pass:c[:type]* [black]`*=*` [black]`+:var+`
 |===
 
 
@@ -2011,62 +2032,62 @@ a|
 
 === [green]`*+*`[green]#pass:c[edit]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+f+` [green]`+&+` [green]`+args+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+f+` [green]`+&+` [green]`+args+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[prefix]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+s+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+s+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[replace]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+value+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+value+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[splice]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[suffix]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+s+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+s+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 
@@ -2078,27 +2099,27 @@ a|
 
 === [green]`*+*`[green]#pass:c[find-tag-by-pos]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+pos+` [green]`+t+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+pos+` [green]`+t+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[find-last-by-pos]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
-a|
-[unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+pos+` [green]#pass:c[]]#
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+pos+` [green]`+p?+` [green]#pass:c[]]#
+a|
+[unstyled]
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 
@@ -2110,155 +2131,155 @@ a|
 
 === [green]`*+*`[green]#pass:c[find]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
-a|
-[unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+p?+` [green]#pass:c[]]#
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+f+` [green]`+p?+` [green]#pass:c[]]#
+a|
+[unstyled]
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[find-depth-first]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+p?+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+p?+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[find-last-by-pos]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
-a|
-[unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+pos+` [green]#pass:c[]]#
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+pos+` [green]`+p?+` [green]#pass:c[]]#
+a|
+[unstyled]
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[find-next]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
-a|
-[unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+p?+` [green]#pass:c[]]#
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+f+` [green]`+p?+` [green]#pass:c[]]#
+a|
+[unstyled]
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[find-next-depth-first]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+p?+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+p?+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[find-next-tag]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
-a|
-[unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+t+` [green]#pass:c[]]#
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+f+` [green]`+t+` [green]#pass:c[]]#
+a|
+[unstyled]
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[find-next-token]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
-a|
-[unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+p?+` [green]#pass:c[]]#
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+f+` [green]`+p?+` [green]#pass:c[]]#
+a|
+[unstyled]
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[find-next-value]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
-a|
-[unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+v+` [green]#pass:c[]]#
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+f+` [green]`+v+` [green]#pass:c[]]#
+a|
+[unstyled]
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[find-tag]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
-a|
-[unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+t+` [green]#pass:c[]]#
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+f+` [green]`+t+` [green]#pass:c[]]#
+a|
+[unstyled]
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[find-tag-by-pos]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+pos+` [green]`+t+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+pos+` [green]`+t+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[find-token]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
-a|
-[unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+p?+` [green]#pass:c[]]#
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+f+` [green]`+p?+` [green]#pass:c[]]#
+a|
+[unstyled]
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[find-value]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
-a|
-[unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 a|
 [unstyled]
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+v+` [green]#pass:c[]]#
 * [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+f+` [green]`+v+` [green]#pass:c[]]#
+a|
+[unstyled]
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 
@@ -2270,14 +2291,14 @@ a|
 
 === [green]`*+*`[green]#pass:c[remove-preserve-newline]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 
@@ -2289,26 +2310,26 @@ a|
 
 === [green]`*+*`[green]#pass:c[remove]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[remove-preserve-newline]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 
@@ -2320,122 +2341,122 @@ a|
 
 === [green]`*+*`[green]#pass:c[assoc]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+k+` [green]`+v+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+k+` [green]`+v+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[get]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+k+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]`+k+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[list?]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[map]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+f+` [green]`+zloc+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+f+` [green]`+zloc+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[map-keys]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+f+` [green]`+zloc+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+f+` [green]`+zloc+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[map-vals]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+f+` [green]`+zloc+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+f+` [green]`+zloc+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[map?]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[seq?]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[set?]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[vector?]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 
@@ -2447,26 +2468,26 @@ a|
 
 === [green]`*+*`[green]#pass:c[comment?]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 === [green]`*+*`[green]#pass:c[whitespace-not-linebreak?]#
 |===
-| attributes | arglists
+| arglists | attributes 
 
 a|
 [unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:var+`
+* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+zloc+` [green]#pass:c[]]#
+* *pass:c[:type]* [green]`*+*` [green]`+:var+`
 |===
 
 
