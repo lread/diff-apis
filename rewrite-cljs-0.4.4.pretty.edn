@@ -1,7 +1,7 @@
 {:group-id "rewrite-cljs",
  :artifact-id "rewrite-cljs",
  :version "0.4.4",
- :codox {"clj" (),
+ :analysis {"clj" (),
          "cljs" ({:name rewrite-clj.node,
                   :doc "Facade for node related namespaces.\n",
                   :publics ({:name child-sexprs,

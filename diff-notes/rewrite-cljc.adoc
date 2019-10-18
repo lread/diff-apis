@@ -11,5 +11,4 @@ The cljs and clj sides of rewrite-cljc differences of note:
 
 TODO:
 
-- exlcude potemkin from report
 - string-node clj only?

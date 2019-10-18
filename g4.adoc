@@ -17,7 +17,7 @@ B. `+lread/rewrite-cljs-playground+` `+1.0.0-alpha+` `+clj+`
 l|:include
 l|:changed-publics
 l|:exclude-namespaces
-l|
+l|["rewrite-clj.potemkin.clojure"]
 |===
 **Legend:**
 
@@ -35,17 +35,17 @@ l|
 | arglists
 | 0
 | 1
-| 53
+| 48
 
 | publics
 | 0
 | 1
-| 42
+| 37
 
 | namespaces
 | 5
 | 0
-| 6
+| 5
 
 |===
 **Notes:**
@@ -63,7 +63,6 @@ The cljs and clj sides of rewrite-cljc differences of note:
 
 TODO:
 
-- exlcude potemkin from report
 - string-node clj only?
 
 **Table of diffs:**
@@ -160,73 +159,6 @@ a|
 a|
 [unstyled]
 * *pass:c[:type]* [green]`*+*` [green]`+:var+`
-|===
-
-
-
-== [green]`*+*` [green]#pass:c[rewrite-clj.potemkin.clojure]#
-
-[unstyled]
-* *pass:c[:no-doc]* [black]`*=*` [black]`+true+`
-
-=== [green]`*+*`[green]#pass:c[defprotocol+]#
-|===
-| arglists | attributes 
-
-a|
-[unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+name+` [green]`+&+` [green]`+body+` [green]#pass:c[]]#
-a|
-[unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:macro+`
-|===
-
-=== [green]`*+*`[green]#pass:c[import-def]#
-|===
-| arglists | attributes 
-
-a|
-[unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+src-sym+` [green]`+target-name+` [green]`+target-meta+` [green]#pass:c[]]#
-a|
-[unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:macro+`
-|===
-
-=== [green]`*+*`[green]#pass:c[import-fn]#
-|===
-| arglists | attributes 
-
-a|
-[unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+src-sym+` [green]`+target-name+` [green]`+target-meta+` [green]#pass:c[]]#
-a|
-[unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:macro+`
-|===
-
-=== [green]`*+*`[green]#pass:c[import-macro]#
-|===
-| arglists | attributes 
-
-a|
-[unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+src-sym+` [green]`+target-name+` [green]`+target-meta+` [green]#pass:c[]]#
-a|
-[unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:macro+`
-|===
-
-=== [green]`*+*`[green]#pass:c[import-vars]#
-|===
-| arglists | attributes 
-
-a|
-[unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+&+` [green]`+raw-syms+` [green]#pass:c[]]#
-a|
-[unstyled]
-* *pass:c[:type]* [green]`*+*` [green]`+:macro+`
 |===
 
 

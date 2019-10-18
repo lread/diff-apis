@@ -8,13 +8,27 @@
             [diff-apis.deep-diff-util :as dd-util]
             [diff-apis.stats :as stats]))
 
+(defn- in?
+  "true if coll contains elm"
+  [coll elm]
+  (some #(= elm %) coll))
+
 (defn- api-essentials
   "Load api for signature comparison. We only include metadata of interest, effectively excluding :doc, :file :line."
   [m lang]
   (->> (get-in m [:analysis lang])
        (walk/postwalk #(if (map? %)
-                         (select-keys % [:name :arglists :members :type :dynamic :publics :deprecated :no-doc :skip-wiki])
+                         (select-keys % [:name :arglists :members
+                                         :type :dynamic :publics
+                                         :deprecated
+                                         :no-doc :skip-wiki])
                          %))))
+
+(defn- api [{:keys [cljdoc-analysis lang] :as _source}
+            {:keys [exclude-namespaces] :as _opts}]
+  (->> (api-essentials cljdoc-analysis lang)
+       (filter #(not (in? exclude-namespaces (str (:name %)))))
+       (into ())))
 
 ;; TODO: handle regex in arglists
 (defn- load-analyzer-file [edn-filename]
@@ -97,8 +111,6 @@
        x))
    diff))
 
-
-
 (defn- case-insensitive-comparator [a b]
   (let [la (and a (string/lower-case a))
         lb (and b (string/lower-case b))]
@@ -138,24 +150,22 @@
       lower-names
       lower-arglists-arities))
 
-(defn- project-summary [{:keys [analysis lang]}]
- {:project (str (:group-id analysis) "/" (:artifact-id analysis)) :version (:version analysis) :lang lang})
+(defn- project-summary [{:keys [cljdoc-analysis lang]}]
+  (let [{:keys [group-id artifact-id version]} cljdoc-analysis]
+    {:project (str group-id "/" artifact-id) :version version :lang lang}))
 
 (defn- projects-summary [a b]
   {:a (project-summary a)
    :b (project-summary b)})
 
-
 (defn diff-edn
   "Returns deep-diff of api `a` and api `b`.
   Use opts to:
   - `:include` `:all` or just `:changed-publics`
-  TODO: implement exclude, will use it to exclude potemkin, I think
   - `:exlude-namespaces` a vector of namespaces to exclude"
   ([a b opts]
-   (let [a-api (api-essentials (:analysis a) (:lang a))
-         b-api (api-essentials (:analysis b) (:lang b))
-         result (-> (deep-diff/diff (raise-for-diff a-api) (raise-for-diff b-api))
+   (let [result (-> (deep-diff/diff (raise-for-diff (api a opts))
+                                    (raise-for-diff (api b opts)))
                     (lower-after-diff)
                     (#(if (= :changed-publics (:include opts)) (dd-util/changes-only %) %))
                     (sort-result))]
@@ -165,8 +175,8 @@
 
 (defn *diff-files
   [a b opts]
-  (diff-edn {:analysis (load-analyzer-file (:filename a)) :lang (:lang a)}
-            {:analysis (load-analyzer-file (:filename b)) :lang (:lang b)} opts))
+  (diff-edn {:cljdoc-analysis (load-analyzer-file (:filename a)) :lang (:lang a)}
+            {:cljdoc-analysis (load-analyzer-file (:filename b)) :lang (:lang b)} opts))
 
 (defn analysis-filename [coords]
   (str "./.diff-apis/.cache/"
@@ -214,5 +224,9 @@
                 {:filename "rewrite-cljc-1.0.0-alpha.pretty.edn" :lang "clj"}
                 {:include :changed-publics, :exclude-namespaces nil}))
 
-  (load-analyzer-file "rewrite-clj-0.6.1.pretty.edn")
+  (def cljdoc-analysis (load-analyzer-file "rewrite-clj-0.6.1.pretty.edn"))
+  (def t2 (api {:cljdoc-analysis cljdoc-analysis :lang "clj"} {:exclude-namespaces []}))
+
+  (type t2)
+  (= t1 t2)
   (edn/read-string (slurp "rewrite-clj-0.6.1.pretty.edn")))

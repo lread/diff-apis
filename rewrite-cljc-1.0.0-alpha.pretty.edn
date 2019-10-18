@@ -1,7 +1,7 @@
 {:group-id "lread",
  :artifact-id "rewrite-cljs-playground",
  :version "1.0.0-alpha",
- :codox {"clj" ({:doc "APIs to navigate and update Clojure/ClojureScript/EDN source code.\n\nStart with the [[rewrite-clj.parser]] or [[rewrite-clj.zip]] to ingest your source code,\nthen use the [[rewrite-clj.zip]] to navigate and/or change it. [[rewrite-clj.node]]\nwill help you to work with nodes in the zipper tree.\n\n[[rewrite-clj.paredit]] first appeared in the ClojureScript only version of\nrewrite-clj and supports structured editing of the zipper tree.",
+ :analysis {"clj" ({:doc "APIs to navigate and update Clojure/ClojureScript/EDN source code.\n\nStart with the [[rewrite-clj.parser]] or [[rewrite-clj.zip]] to ingest your source code,\nthen use the [[rewrite-clj.zip]] to navigate and/or change it. [[rewrite-clj.node]]\nwill help you to work with nodes in the zipper tree.\n\n[[rewrite-clj.paredit]] first appeared in the ClojureScript only version of\nrewrite-clj and supports structured editing of the zipper tree.",
                  :name rewrite-clj,
                  :publics ()}
                 {:doc "Functional hierarchical zipper, with navigation, editing,\nand enumeration.  See Huet.\nModified to optionally support row col position tracking.",

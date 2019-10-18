@@ -1,7 +1,7 @@
 {:group-id "rewrite-clj",
  :artifact-id "rewrite-clj",
  :version "0.6.1",
- :codox {"clj" ({:doc "Functional hierarchical zipper, with navigation, editing,\nand enumeration.  See Huet",
+ :analysis {"clj" ({:doc "Functional hierarchical zipper, with navigation, editing,\nand enumeration.  See Huet",
                  :author "Rich Hickey",
                  :name rewrite-clj.custom-zipper.core,
                  :publics ({:name append-child,
