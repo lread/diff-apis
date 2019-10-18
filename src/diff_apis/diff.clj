@@ -228,5 +228,4 @@
   (def t2 (api {:cljdoc-analysis cljdoc-analysis :lang "clj"} {:exclude-namespaces []}))
 
   (type t2)
-  (= t1 t2)
   (edn/read-string (slurp "rewrite-clj-0.6.1.pretty.edn")))
