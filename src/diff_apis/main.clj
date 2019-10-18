@@ -5,17 +5,21 @@
             [diff-apis.report :as report]))
 
 (defn diff-api-projects-cmd
-  [{:keys [project1 version1 language1 project2 version2 language2 report-format include exclude-namespace notes]}]
+  [{:keys [project1 version1 language1
+           project2 version2 language2
+           report-format include exclude-namespace exclude-with notes]}]
   (-> (diff/diff-projects {:project project1 :version version1 :lang language1}
                           {:project project2 :version version2 :lang language2}
-                          {:include include :exclude-namespaces exclude-namespace})
+                          {:include include :exclude-namespaces exclude-namespace :exclude-with exclude-with})
       (report/report report-format notes)))
 
 (defn diff-api-files-cmd
-  [{:keys [filename1 language1 filename2 language2 report-format include exclude-namespace notes]}]
+  [{:keys [filename1 language1
+           filename2 language2
+           report-format include exclude-namespace exclude-with notes]}]
   (-> (diff/diff-files {:filename filename1 :lang language1}
                        {:filename filename2 :lang language2}
-                       {:include include :exclude-namespaces exclude-namespace})
+                       {:include include :exclude-namespaces exclude-namespace :exclude-with exclude-with})
       (report/report report-format notes)))
 
 (spec/def ::language #{"clj" "cljs"})
@@ -25,7 +29,7 @@
 ;; I don't want to make these global options to allow for future commands that may not care about these
 (def api-diff-options
   [{:option  "include"
-    :as      "Either :all or just :changed-publics defaults to :change-publics"
+    :as      "Either :all or just :changed-publics defaults to :changed-publics"
     :type    :keyword
     :spec    ::include
     :default :changed-publics}
@@ -33,6 +37,10 @@
     :as       "Fully qualified namespace to exclude from diff. Repeat for multiple"
     :multiple true
     :type     :string}
+   {:option   "exclude-with"
+    :as       "Exclude namespaces and publics with metadata key present"
+    :type     :keyword
+    :multiple true}
    {:option  "report-format"
     :as      "Either :asciidoc or :deep-diff, defaults to :deep-diff"
     :type    :keyword

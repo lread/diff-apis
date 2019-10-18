@@ -54,10 +54,11 @@
 
 
 (defn has-key? [m k]
-  (and (map? m)
-       (or (contains? m k)
-           (contains? m (deep-diff/->Deletion k))
-           (contains? m (deep-diff/->Insertion k)))))
+  (let [m (and (not (mismatch? m)) (unwrap-elem m))]
+    (and (map? m)
+         (or (contains? m k)
+             (contains? m (deep-diff/->Deletion k))
+             (contains? m (deep-diff/->Insertion k))))))
 
 (defn find
   "Returns k v pair matching key `k` in map `m` with matching for unary diffs. Returned k, when wrapped, will remain wrapped."
@@ -150,5 +151,14 @@
 
   (calc-diff-type nil {:a 1})
 
+  (def t (list (deep-diff/->Deletion {:name 'parse-file-all
+                                      :arglists '([f])
+                                      :type :var})))
+
+  (coll? t)
+  (has-key? (first t) :name)
+  (get (first t) :name)
+  (map? (first t))
+  (unwrap-elem (first t))
   (first {:a 1})
   )

@@ -9,3 +9,4 @@ set -eou pipefail
 ./g2.sh
 ./g3.sh
 ./g4.sh
+./g4-nodoc.sh

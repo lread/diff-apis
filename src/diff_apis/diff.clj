@@ -13,6 +13,9 @@
   [coll elm]
   (some #(= elm %) coll))
 
+(defn- contains-any-key? [m ks]
+  (seq (select-keys m ks)))
+
 (defn- api-essentials
   "Load api for signature comparison. We only include metadata of interest, effectively excluding :doc, :file :line."
   [m lang]
@@ -25,9 +28,14 @@
                          %))))
 
 (defn- api [{:keys [cljdoc-analysis lang] :as _source}
-            {:keys [exclude-namespaces] :as _opts}]
+            {:keys [exclude-namespaces exclude-with] :as _opts}]
   (->> (api-essentials cljdoc-analysis lang)
        (filter #(not (in? exclude-namespaces (str (:name %)))))
+       (remove #(contains-any-key? % exclude-with))
+       (map (fn [ns]
+              (update ns :publics
+                      (fn [vars]
+                        (into () (remove #(contains-any-key? % exclude-with) vars))))))
        (into ())))
 
 ;; TODO: handle regex in arglists
