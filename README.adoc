@@ -46,6 +46,7 @@ generating a report to asciidoc would be ideal.
             comment-re      #"^\#"}
 ----
 I don't need this for my purposes, but worth handling for completeness, I think.
+. consider adding some tests that verify sort order
 . consider a more unique namespace for this project
 . test no diff scenario
 . would be nice
