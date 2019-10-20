@@ -6,25 +6,24 @@
 
 (defn diff-api-projects-cmd
   [{:keys [project1 version1 language1
-           project2 version2 language2
-           report-format include exclude-namespace exclude-with notes]}]
+           project2 version2 language2] :as opts}]
   (-> (diff/diff-projects {:project project1 :version version1 :lang language1}
                           {:project project2 :version version2 :lang language2}
-                          {:include include :exclude-namespaces exclude-namespace :exclude-with exclude-with})
-      (report/report report-format notes)))
+                          (select-keys opts [:include :exclude-namespaces :exclude-with :arglists-by]))
+      (report/report (select-keys opts [:report-format :notes]))))
 
 (defn diff-api-files-cmd
   [{:keys [filename1 language1
-           filename2 language2
-           report-format include exclude-namespace exclude-with notes]}]
+           filename2 language2] :as opts}]
   (-> (diff/diff-files {:filename filename1 :lang language1}
                        {:filename filename2 :lang language2}
-                       {:include include :exclude-namespaces exclude-namespace :exclude-with exclude-with})
-      (report/report report-format notes)))
+                       (select-keys opts [:include :exclude-namespaces :exclude-with :arglists-by]))
+      (report/report (select-keys opts [:report-format :notes]))))
 
 (spec/def ::language #{"clj" "cljs"})
 (spec/def ::include #{:all :changed-publics})
 (spec/def ::report-format #{:asciidoc :deep-diff})
+(spec/def ::arglists-by #{:arity-only :param-names})
 
 ;; I don't want to make these global options to allow for future commands that may not care about these
 (def api-diff-options
@@ -41,6 +40,11 @@
     :as       "Exclude namespaces and publics with metadata key present"
     :type     :keyword
     :multiple true}
+   {:option   "arglists-by"
+    :as       "Compare arglists by :arity-only or :parameter-names. When :arity-only is chosen, parameter names from project 1 will be shown. Defaults to :param-names"
+    :type     :keyword
+    :spec     ::arglists-by
+    :default  :param-names}
    {:option  "report-format"
     :as      "Either :asciidoc or :deep-diff, defaults to :deep-diff"
     :type    :keyword

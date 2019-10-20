@@ -171,15 +171,21 @@
   {:a (project-summary a)
    :b (project-summary b)})
 
+(defn- revert-mismatches [result]
+  (walk/postwalk #(if (dd-util/mismatch? %) (:- %) %) result))
+
 (defn diff-edn
   "Returns deep-diff of api `a` and api `b`.
   Use opts to:
   - `:include` `:all` or just `:changed-publics`
-  - `:exlude-namespaces` a vector of namespaces to exclude"
+  - `:exlude-namespaces` a vector of namespaces to exclude
+  - `:arglists-by` `:param-names` or `:arity-only` if latter, param names from a will be returned."
   ([a b opts]
    (let [result (-> (deep-diff/diff (raise-for-diff (api a opts))
                                     (raise-for-diff (api b opts)))
                     (lower-after-diff)
+                    ;; mismatches only occur in arglists, if we are comparing by arity only revert them
+                    (#(if (= :arity-only (:arglists-by opts)) (revert-mismatches %) %))
                     (#(if (= :changed-publics (:include opts)) (dd-util/changes-only %) %))
                     (sort-result))]
      {:diff result

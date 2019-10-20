@@ -99,10 +99,11 @@ clojure -m diff-apis.main \
 * `--exclude-namespace` Fully qualified namespace to exclude, repeat option for multiple
 * `--exclude-with` exclude api elements that have keyword, normally used to
   exclude items with :no-doc, repeat for multiple
+* `--arglists-by` compare arglists by `:arity-only` or `:param-names`. When `:arity-only` is chosen and
+  parameter names differ, project 1 parameter names will be shown. Defaults to `:param-names`.
 * `--report-format` Either `:asciidoc` or `:deep-diff`, defaults to `:deep-diff`
-** `:deep-diff` a nice ANSI colorized diff of apis in edn.  I use this for quick checks and debugging
-** `:asccidoc` an asciidoc version of api diffs. Tries to look ok-ish on github and good on cljdoc.
-   I will include these in rewrite-cljc historical docs.
+** `:deep-diff` a nice ANSI colorized diff of apis in edn. Handy for quick checks and debugging
+** `:asciidoc` an asciidoc version of api diffs. Tries to look ok-ish on github and good on cljdoc.
 * `--notes` Include to manually typed notes from given file in asciidoc report.
   Use asciidoc formatting. Ignored for other report types.
 
@@ -111,13 +112,14 @@ Example using options:
 [source,shell]
 ----
 clojure -m diff-apis.main projects \
-        lread/rewrite-cljs-playground 1.0.0-alpha cljs \
-        lread/rewrite-cljs-playground 1.0.0-alpha clj \
-        --exclude-namespace rewrite-clj.potemkin.clojure \
+        rewrite-clj 0.4.13 clj \
+        rewrite-clj 0.6.1 clj \
+        --exclude-namespace rewrite-clj.custom-zipper.core \
         --exclude-with :no-doc \
         --exclude-with :skip-wiki \
         --report-format :asciidoc \
-        --notes diff-notes/rewrite-cljc-nodoc.adoc > g4-nodoc.adoc
+        --arglists-by :arity-only \
+        > example-diff-report.adoc
 ----
 
 == Strategy
