@@ -158,9 +158,14 @@
       lower-names
       lower-arglists-arities))
 
+(defn- project-short-form [group-id artifact-id]
+  (if (= group-id artifact-id)
+    group-id
+    (str group-id "/" artifact-id)))
+
 (defn- project-summary [{:keys [cljdoc-analysis lang]}]
   (let [{:keys [group-id artifact-id version]} cljdoc-analysis]
-    {:project (str group-id "/" artifact-id) :version version :lang lang}))
+    {:project (project-short-form group-id artifact-id) :version version :lang lang}))
 
 (defn- projects-summary [a b]
   {:a (project-summary a)
