@@ -26,12 +26,14 @@
 (defn- run-args [{:keys [run-args]}]
   (-> (into ["**Options**:"
              ""
+             "[cols=\"1,3\"]"
              "|==="
              "| Option | Value"
              ""])
       (into (flatten (map (fn [[k v]]
                             [[(str "l|" k)]
-                             [(str "l|" v)]])
+                             [(str "l|" (binding [clojure.pprint/*print-right-margin* 40]
+                                          (with-out-str (clojure.pprint/pprint v))))]])
                           (:opts run-args))))
       (into [ "|==="])))
 
