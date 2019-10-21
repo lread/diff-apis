@@ -1,24 +1,32 @@
 (ns diff-apis.main
   (:require [cli-matic.core :as climatic]
             [clojure.spec.alpha :as spec]
+            [clojure.set :as cset]
             [diff-apis.diff :as diff]
             [diff-apis.report :as report]))
 
+(defn- diff-opts [args]
+  (-> (select-keys args [:include :exclude-namespace :exclude-with :arglists-by])
+      (cset/rename-keys {:exclude-namespace :exclude-namespaces})))
+
+(defn- report-opts [args]
+  (select-keys args [:report-format :notes]))
+
 (defn diff-api-projects-cmd
   [{:keys [project1 version1 language1
-           project2 version2 language2] :as opts}]
+           project2 version2 language2] :as args}]
   (-> (diff/diff-projects {:project project1 :version version1 :lang language1}
                           {:project project2 :version version2 :lang language2}
-                          (select-keys opts [:include :exclude-namespace :exclude-with :arglists-by]))
-      (report/report (select-keys opts [:report-format :notes]))))
+                          (diff-opts args))
+      (report/report (report-opts args))))
 
 (defn diff-api-files-cmd
   [{:keys [filename1 language1
-           filename2 language2] :as opts}]
+           filename2 language2] :as args}]
   (-> (diff/diff-files {:filename filename1 :lang language1}
                        {:filename filename2 :lang language2}
-                       (select-keys opts [:include :exclude-namespace :exclude-with :arglists-by]))
-      (report/report (select-keys opts [:report-format :notes]))))
+                       (diff-opts args))
+      (report/report (report-opts args))))
 
 (spec/def ::language #{"clj" "cljs"})
 (spec/def ::include #{:all :changed-publics})
