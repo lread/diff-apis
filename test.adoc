@@ -18,6 +18,10 @@ B. `+rewrite-clj+` `+0.6.1+` `+clj+`
 l|:include
 l|:changed-publics
 
+l|:exclude-namespace
+l|["rewrite-clj.custom-zipper.core"
+ "rewrite-clj.custom-zipper.core2"]
+
 l|:exclude-with
 l|[:no-doc :skip-wiki]
 

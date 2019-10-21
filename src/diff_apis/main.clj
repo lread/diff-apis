@@ -9,7 +9,7 @@
            project2 version2 language2] :as opts}]
   (-> (diff/diff-projects {:project project1 :version version1 :lang language1}
                           {:project project2 :version version2 :lang language2}
-                          (select-keys opts [:include :exclude-namespaces :exclude-with :arglists-by]))
+                          (select-keys opts [:include :exclude-namespace :exclude-with :arglists-by]))
       (report/report (select-keys opts [:report-format :notes]))))
 
 (defn diff-api-files-cmd
@@ -17,7 +17,7 @@
            filename2 language2] :as opts}]
   (-> (diff/diff-files {:filename filename1 :lang language1}
                        {:filename filename2 :lang language2}
-                       (select-keys opts [:include :exclude-namespaces :exclude-with :arglists-by]))
+                       (select-keys opts [:include :exclude-namespace :exclude-with :arglists-by]))
       (report/report (select-keys opts [:report-format :notes]))))
 
 (spec/def ::language #{"clj" "cljs"})
