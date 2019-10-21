@@ -15,18 +15,18 @@ B. `+rewrite-clj+` `+0.6.1+` `+clj+`
 |===
 | Option | Value
 
-l|:include
-l|:changed-publics
-
-l|:exclude-with
-l|[:no-doc :skip-wiki]
-
 l|:arglists-by
 l|:arity-only
 
 l|:exclude-namespaces
 l|["rewrite-clj.custom-zipper.core"
  "rewrite-clj.custom-zipper.core2"]
+
+l|:exclude-with
+l|[:no-doc :skip-wiki]
+
+l|:include
+l|:changed-publics
 
 |===
 **Legend:**

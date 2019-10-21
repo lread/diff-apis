@@ -43,7 +43,7 @@
                             [[(str "l|" k)]
                              [(str "l|" (binding [clojure.pprint/*print-right-margin* 40]
                                           (with-out-str (clojure.pprint/pprint v))))]])
-                          (:opts run-args))))
+                          (into (sorted-map) (:opts run-args)))))
       (into [ "|==="])))
 
 (defn- legend []
