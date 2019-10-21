@@ -60,17 +60,17 @@
 (defn count-diffs
   "Returns vector of maps of counts of `:deleted` `:inserted` `:changed` and `:equal` for `:types`: `:arglists` `:publics` `:namespaces`"
   [diff]
-  [(merge {:type :arglists}
-          (diff-counter #(and (vector? (zip/node %))
-                              (let [grandparent (nth (unwrapped-lineage %) 2 nil)]
-                                (and (map-entry? grandparent) (= :arglists (key grandparent)))))
+  [(merge {:type :namespaces}
+          (diff-counter #(and (map? (zip/node %))
+                              (= 2 (count (unwrapped-lineage %))))
                         diff))
    (merge {:type :publics}
           (diff-counter #(and (map? (zip/node %))
                               (let [grandparent (nth (unwrapped-lineage %) 2 nil)]
                                 (and (map-entry? grandparent) (= :publics (key grandparent)))))
                         diff))
-   (merge {:type :namespaces}
-          (diff-counter #(and (map? (zip/node %))
-                              (= 2 (count (unwrapped-lineage %))))
+   (merge {:type :arglists}
+          (diff-counter #(and (vector? (zip/node %))
+                              (let [grandparent (nth (unwrapped-lineage %) 2 nil)]
+                                (and (map-entry? grandparent) (= :arglists (key grandparent)))))
                         diff))])

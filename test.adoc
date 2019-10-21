@@ -42,20 +42,20 @@ l|:changed-publics
 |===
 | Element | Have [red]#pass:c[changes]# [green]#pass:c[within]# | [red]#pass:c[In A Only]# | [green]#pass:c[In B Only]#
 
-| arglists
+| namespaces
+| 3
 | 0
-| 8
-| 18
+| 0
 
 | publics
 | 9
 | 0
 | 9
 
-| namespaces
-| 3
+| arglists
 | 0
-| 0
+| 8
+| 18
 
 |===
 **Table of diffs:**
