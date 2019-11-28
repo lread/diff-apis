@@ -174,16 +174,46 @@
 (defn- revert-mismatches [result]
   (walk/postwalk #(if (dd-util/mismatch? %) (:- %) %) result))
 
+(defn- tweak-namespace-for-comparison [api {:keys [replace-b-namespace]}]
+  (let [ns-search-replace replace-b-namespace]
+    (if (not ns-search-replace)
+      api
+      (let [[search replace] (string/split ns-search-replace #"\/")
+            search-re (re-pattern search)]
+        (into ()
+              (map (fn [ns]
+                     (with-meta
+                         (update ns :name #(symbol (string/replace % search-re replace)))
+                         {:orig-name (:name ns)}))
+                   api))))))
+
+(defn- include-untweaked-name [diff-result tweaked-api-b]
+  (map (fn [diffed-ns]
+         (let [ns-name (dd-util/get diffed-ns :name)
+               orig-name (some-> (filter #(= ns-name (:name %)) tweaked-api-b)
+                                 first
+                                 meta
+                                 :orig-name)]
+           (if (or (nil? orig-name) (= ns-name orig-name))
+             diffed-ns
+             (dd-util/assoc diffed-ns :orig-b-name orig-name))))
+       diff-result))
+
 (defn diff-edn
   "Returns deep-diff of api `a` and api `b`.
   Use opts to:
   - `:include` `:all` or just `:changed-publics`
   - `:exlude-namespaces` a vector of namespaces to exclude
-  - `:arglists-by` `:param-names` or `:arity-only` if latter, param names from a will be returned."
+  - `:arglists-by` `:param-names` or `:arity-only` if latter, param names from a will be returned.
+  - `:replace-b-namespace` - specify search/replace for namespace b name - for example ^rewrite-cljc/rewrite-clj"
   ([a b opts]
-   (let [result (-> (deep-diff/diff (raise-for-diff (api a opts))
-                                    (raise-for-diff (api b opts)))
+   (let [api-a (api a opts)
+         api-b (api b opts)
+         tweaked-api-b (tweak-namespace-for-comparison api-b opts)
+         result (-> (deep-diff/diff (raise-for-diff api-a)
+                                    (raise-for-diff tweaked-api-b))
                     (lower-after-diff)
+                    (include-untweaked-name tweaked-api-b)
                     ;; mismatches only occur in arglists, if we are comparing by arity only revert them
                     (#(if (= :arity-only (:arglists-by opts)) (revert-mismatches %) %))
                     (#(if (= :changed-publics (:include opts)) (dd-util/changes-only %) %))
@@ -242,6 +272,12 @@
     (diff-files {:filename "rewrite-cljc-1.0.0-alpha.pretty.edn" :lang "cljs"}
                 {:filename "rewrite-cljc-1.0.0-alpha.pretty.edn" :lang "clj"}
                 {:include :changed-publics, :exclude-namespaces nil}))
+
+  (def d
+    (diff-files {:filename "rewrite-clj-0.6.1.pretty.edn", :lang "clj"}
+                {:filename "rewrite-cljc-1.0.0-alpha.pretty.edn" :lang "clj"}
+                {:include :changed-publics, :exclude-namespaces nil
+                 :replace-b-namespace-for-compare "^rewrite-cljc/rewrite-clj"}))
 
   (def cljdoc-analysis (load-analyzer-file "rewrite-clj-0.6.1.pretty.edn"))
   (def t2 (api {:cljdoc-analysis cljdoc-analysis :lang "clj"} {:exclude-namespaces []}))

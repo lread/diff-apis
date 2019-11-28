@@ -1,5 +1,5 @@
 (ns ^:no-doc diff-apis.deep-diff-util
-  (:refer-clojure :exclude [get find update])
+  (:refer-clojure :exclude [get find update assoc])
   (:require [lambdaisland.deep-diff.diff :as deep-diff]))
 
 (defn inserted? [x]
@@ -85,7 +85,6 @@
   (if-let [[_rk rv] (find m k)]
     (unwrap-elem rv)))
 
-
 (defn update
   "Diff aware update. Handles wrapped keys and wrapped values. Preserves diff wrapper on m/key if present."
   [m k f]
@@ -95,6 +94,24 @@
     (if (= m rm)
       nrm
       (move-diff m nrm))))
+
+(defn assoc
+  "Diff aware assoc. Handles wrapped keys and wrapped values. Preserves diff wrapper on m/key if present."
+  [m k v]
+  (let [rm (unwrap-elem m)
+        [rk _rv] (find rm k)
+        nrm (if rk
+              (clojure.core/assoc rm rk v)
+              (clojure.core/assoc rm k v))]
+    (if (= m rm)
+      nrm
+      (move-diff m nrm))))
+
+(comment
+  (assoc {:name "fil"} :ibby "dally")
+  (assoc (deep-diff/->Deletion {:name "fil"}) :name "booly")
+  (assoc {(deep-diff/->Deletion :name) "fil"} :name "snork"))
+
 
 (defn- diff-type [x]
   (when (diff? x)

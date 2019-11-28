@@ -105,14 +105,23 @@
               "|==="]))
          ""]))))
 
+(defn- ns-name-heading [ns-diff-type ns]
+  (str "== "
+       (render/change-prefix ns-diff-type) " "
+       (render/change-text ns-diff-type
+                           (let [a-name (dd-util/get ns :name)
+                                 orig-b-name (dd-util/get ns :orig-b-name)]
+                             (case ns-diff-type
+                               :+  (or orig-b-name a-name)
+                               :-  a-name
+                               :=  a-name
+                               (str a-name (when orig-b-name (str " ✽ " orig-b-name))))))))
 
 (defn namespaces [namespaces]
   (let [nses-diff-type (dd-util/calc-diff-type nil namespaces)]
     (for [ns namespaces]
       (let [ns-difftype (dd-util/calc-diff-type nses-diff-type ns)]
-        [(str "== "
-              (render/change-prefix ns-difftype) " "
-              (render/change-text ns-difftype (dd-util/get ns :name)))
+        [(ns-name-heading ns-difftype ns)
          ""
          (attributes nil ns)
          ""

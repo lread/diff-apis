@@ -35,7 +35,8 @@ I'd like to include these comparisons in the rewrite-cljc documentation, so
 generating a report to asciidoc would be ideal.
 
 == TODOS
-
+. make sure to handle case where namespaces are entirely different. 
+  ex rewrite-clj with rewrite-cljc (don't think I considered this originally)
 . handle arglists regex case, eg https://github.com/cljdoc/cljdoc/issues/143, and example:
 +
 ----
@@ -53,7 +54,6 @@ I don't need this for my purposes, but worth handling for completeness, I think.
   to highlight potentially breaking changes:
 .. deleted things
 .. changed things
-. implement :exclude-namespaces
 . flesh out some more unit tests for diffings and asciidoc rendering but sleep
   on approach first, something simpler is in order.
 . clean up
@@ -104,8 +104,11 @@ clojure -m diff-apis.main \
 * `--report-format` Either `:asciidoc` or `:deep-diff`, defaults to `:deep-diff`
 ** `:deep-diff` a nice ANSI colorized diff of apis in edn. Handy for quick checks and debugging
 ** `:asciidoc` an asciidoc version of api diffs. Tries to look ok-ish on github and good on cljdoc.
-* `--notes` Include to manually typed notes from given file in asciidoc report.
+* `--notes` Include manually typed notes from given file in asciidoc report.
   Use asciidoc formatting. Ignored for other report types.
+* `--replace-b-namespace` Specify search/replace for b namespace name for comparisons.
+** for example: `'^rewrite-cljc/rewrite-clj'`
+** `:orig-b-name` will appear in namespaces in diff result
 
 Example using options:
 

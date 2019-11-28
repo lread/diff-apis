@@ -1,9 +1,10 @@
 {:paths ["src" "resources"]
  :deps {cljdoc/cljdoc-analyzer {:git/url "https://github.com/cljdoc/cljdoc-analyzer"
                                 :sha "81b233c5101faa654412a0583f4b13635dca5991"}
-        cli-matic {:mvn/version "0.3.8"}
+        cli-matic {:mvn/version "0.3.11"}
+        expound {:mvn/version "0.8.0"}
         lambdaisland/deep-diff {:git/url "https://github.com/lread/deep-diff"
-                                :sha "7ea7bcac08a5d4a1dc4b4a6cf999ad481a424d29"}}
+                                :sha "ba1056570879d2ce4deff191b19c1b59a7e01739"}}
  :aliases
  {:test {:extra-deps {lambdaisland/kaocha {:mvn/version "0.0-554"}
                       lambdaisland/kaocha-junit-xml {:mvn/version "0.0-70"}}
