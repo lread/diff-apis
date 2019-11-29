@@ -12,7 +12,7 @@
       (cset/rename-keys {:exclude-namespace :exclude-namespaces})))
 
 (defn- report-opts [args]
-  (select-keys args [:report-format :notes]))
+  (select-keys args [:report-format :report-filename :notes]))
 
 (defn diff-api-projects-cmd
   [{:keys [project-a version-a language-a
@@ -65,11 +65,6 @@
     :type     :keyword
     :spec     ::arglists-by
     :default  :param-names}
-   {:option  "report-format"
-    :as      "Either :asciidoc or :deep-diff, defaults to :deep-diff"
-    :type    :keyword
-    :spec    ::report-format
-    :default :deep-diff}
    {:option  "notes"
     :as      "Filename containing notes to include in :asciidoc report"
     :type    :slurplines}
@@ -79,7 +74,15 @@
                           "- :orig-b-name will appear for namespaces in diff result")
     :type    :string
     :spec    ::search-replace
-    :default nil}])
+    :default nil}
+   {:option  "report-format"
+    :as      "Either :asciidoc or :deep-diff, defaults to :deep-diff"
+    :type    :keyword
+    :spec    ::report-format
+    :default :deep-diff}
+   {:option  "report-filename"
+    :as      "Filename to write report to, if absent report will be written to sdtout"
+    :type    :string}])
 
 (defn- project-option [qualifier short]
   {:option  (str "project-" qualifier)

@@ -4,7 +4,7 @@
         cli-matic {:mvn/version "0.3.11"}
         expound {:mvn/version "0.8.0"}
         lambdaisland/deep-diff {:git/url "https://github.com/lread/deep-diff"
-                                :sha "ba1056570879d2ce4deff191b19c1b59a7e01739"}}
+                                :sha "10fa36742819b7e4cf3143c92f270ffb617f2101"}}
  :aliases
  {:test {:extra-deps {lambdaisland/kaocha {:mvn/version "0.0-554"}
                       lambdaisland/kaocha-junit-xml {:mvn/version "0.0-70"}}
