@@ -11,7 +11,6 @@
     (spit (or report-filename *out*) r)))
 
 (defn report [diff {:keys [report-format] :as opts}]
-  (println "-->" opts)
   (case report-format
     :deep-diff (deep-diff-report diff opts)
     :asciidoc (asciidoc-report diff opts)
