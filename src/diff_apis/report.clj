@@ -1,6 +1,5 @@
 (ns diff-apis.report
-  (:require [clojure.java.io :as io]
-            [lambdaisland.deep-diff :as deep-diff]
+  (:require [lambdaisland.deep-diff :as deep-diff]
             [diff-apis.report.asciidoc :as asciidoc]))
 
 (defn- deep-diff-report [diff {:keys [report-filename]}]
