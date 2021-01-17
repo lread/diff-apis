@@ -1,9 +1,9 @@
 {:paths ["src" "resources"]
- :deps {cljdoc/cljdoc-analyzer {:git/url "https://github.com/cljdoc/cljdoc-analyzer"
+ :deps {cljdoc/cljdoc-analyzer {:git/url "https://github.com/cljdoc/cljdoc-analyzer.git"
                                 :sha "ceac51f9214d72a614775775a80e7ace9782e3c9"}
         cli-matic/cli-matic {:mvn/version "0.4.3"}
         expound/expound {:mvn/version "0.8.7"}
-        lambdaisland/deep-diff {:git/url "https://github.com/lread/deep-diff"
+        lambdaisland/deep-diff {:git/url "https://github.com/lread/deep-diff.git"
                                 :sha "10fa36742819b7e4cf3143c92f270ffb617f2101"}}
  :aliases
  {:test {:extra-deps {lambdaisland/kaocha {:mvn/version "1.0.732"}
