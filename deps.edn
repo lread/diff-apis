@@ -3,8 +3,9 @@
                                 :sha "ceac51f9214d72a614775775a80e7ace9782e3c9"}
         cli-matic/cli-matic {:mvn/version "0.4.3"}
         expound/expound {:mvn/version "0.8.7"}
-        lambdaisland/deep-diff {:git/url "https://github.com/lread/deep-diff.git"
-                                :sha "10fa36742819b7e4cf3143c92f270ffb617f2101"}}
+        lread/deep-diff {:git/url "https://github.com/lread/deep-diff.git"
+                         ;; lread-explore-colors branch
+                         :sha "6948a61ba72998019ca67959cf4d19416ca29790"}}
  :aliases
  {:test {:extra-deps {lambdaisland/kaocha {:mvn/version "1.0.732"}
                       lambdaisland/kaocha-junit-xml {:mvn/version "0.0.76"}}
