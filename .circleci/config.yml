@@ -10,6 +10,11 @@ jobs:
     steps:
       - checkout
 
+      - run:
+          name: Get rid of erroneous git config
+          command: |
+              rm -rf ~/.gitconfig
+
       - restore_cache:
           keys:
             - v1-dependencies-{{checksum "deps.edn"}}-
@@ -17,7 +22,7 @@ jobs:
 
       - run:
           name: Dump tool versions
-          command: clojure -e '(println (System/getProperty "java.runtime.name") (System/getProperty "java.runtime.version") "\nClojure" (clojure-version))'
+          command: clojure -M -e '(println (System/getProperty "java.runtime.name") (System/getProperty "java.runtime.version") "\nClojure" (clojure-version))'
 
       - run:
           name: Bring down the deps
