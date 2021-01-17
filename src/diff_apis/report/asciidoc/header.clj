@@ -1,5 +1,6 @@
 (ns diff-apis.report.asciidoc.header
-  (:require [clojure.string :as string]
+  (:require [clojure.pprint :as pprint]
+            [clojure.string :as string]
             [diff-apis.report.asciidoc.render :as render]))
 
 (defn- project-as-code [p]
@@ -41,8 +42,8 @@
              ""])
       (into (flatten (map (fn [[k v]]
                             [[(str "l|" k)]
-                             [(str "l|" (binding [clojure.pprint/*print-right-margin* 40]
-                                          (with-out-str (clojure.pprint/pprint v))))]])
+                             [(str "l|" (binding [pprint/*print-right-margin* 40]
+                                          (with-out-str (pprint/pprint v))))]])
                           (into (sorted-map) (:opts run-args)))))
       (into [ "|==="])))
 

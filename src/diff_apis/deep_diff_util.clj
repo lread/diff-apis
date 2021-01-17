@@ -82,7 +82,7 @@
 (defn get
   "Return value in `m` for `k` unwrapping any diffs."
   [m k]
-  (if-let [[_rk rv] (find m k)]
+  (when-let [[_rk rv] (find m k)]
     (unwrap-elem rv)))
 
 (defn update

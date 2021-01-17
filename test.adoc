@@ -257,7 +257,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+G__2781+` [green]`+G__2782+` [green]#pass:c[]]#
+* [green]`*+*` [green]#pass:c[[]# [green]`+G__2821+` [green]`+G__2822+` [green]#pass:c[]]#
 a|
 [unstyled]
 * *pass:c[:type]* [green]`*+*` [green]`+:var+`
@@ -269,7 +269,7 @@ a|
 
 a|
 [unstyled]
-* [green]`*+*` [green]#pass:c[[]# [green]`+G__2785+` [green]`+G__2786+` [green]#pass:c[]]#
+* [green]`*+*` [green]#pass:c[[]# [green]`+G__2825+` [green]`+G__2826+` [green]#pass:c[]]#
 a|
 [unstyled]
 * *pass:c[:type]* [green]`*+*` [green]`+:var+`
@@ -342,6 +342,5 @@ a|
 * *pass:c[:type]* [black]`*=*` [black]`+:var+`
 * *pass:c[:deprecated]* [green]`*+*` [green]`+0.5.0+`
 |===
-
 
 

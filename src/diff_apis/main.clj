@@ -38,11 +38,6 @@
 (spec/def ::search-replace #(or (nil? %) (re-matches #"[^\/]+\/[^\/]*" %)))
 (expound/defmsg ::search-replace "when provided, must specify search/replace where search can be a java regex")
 
-(defn- option-help [& lines]
-  (apply str (interpose (str "\n" (apply str (repeat 49 " ")))
-                        lines)))
-
-
 ;; I don't want to make these global options to allow for future commands that may not care about these
 (def api-diff-options
   [{:option  "include"
@@ -51,7 +46,8 @@
     :spec    ::include
     :default :changed-publics}
    {:option   "exclude-namespace"
-    :as       "Fully qualified namespace to exclude from diff. Repeat for multiple"
+    :as       ["Fully qualified namespace to exclude from diff. Repeat for multiple"
+               "- exclusions happen on original namespace names."]
     :multiple true
     :type     :string}
    {:option   "exclude-with"
@@ -59,9 +55,9 @@
     :type     :keyword
     :multiple true}
    {:option   "arglists-by"
-    :as       (option-help "Compare arglists by :arity-only or :param-names."
-                           "- when :arity-only is chosen, parameter names from project a will be shown."
-                           "- defaults to :param-names")
+    :as       ["Compare arglists by :arity-only or :param-names."
+               "- when :arity-only is chosen, parameter names from project a will be shown."
+               "- defaults to :param-names"]
     :type     :keyword
     :spec     ::arglists-by
     :default  :param-names}
@@ -69,9 +65,9 @@
     :as      "Filename containing notes to include in :asciidoc report"
     :type    :slurplines}
    {:option  "replace-b-namespace"
-    :as      (option-help "Specify search/replace for b namespace name for comparisons."
-                          "- for example: '^rewrite-cljc/rewrite-clj'"
-                          "- :orig-b-name will appear for namespaces in diff result")
+    :as      ["Specify search/replace for b namespace name for comparisons."
+              "- for example: '^rewrite-cljc/rewrite-clj'"
+              "- :orig-b-name will appear for namespaces in diff result"]
     :type    :string
     :spec    ::search-replace
     :default nil}

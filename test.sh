@@ -1,5 +1,5 @@
 #/usr/bin/env bash
-clojure -m diff-apis.main projects \
+clojure -M -m diff-apis.main projects \
         rewrite-clj 0.4.13 clj \
         rewrite-clj 0.6.1 clj \
         --exclude-namespace rewrite-clj.custom-zipper.core \

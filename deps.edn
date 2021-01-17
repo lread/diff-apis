@@ -1,15 +1,15 @@
 {:paths ["src" "resources"]
  :deps {cljdoc/cljdoc-analyzer {:git/url "https://github.com/cljdoc/cljdoc-analyzer"
-                                :sha "81b233c5101faa654412a0583f4b13635dca5991"}
-        cli-matic {:mvn/version "0.3.11"}
-        expound {:mvn/version "0.8.0"}
+                                :sha "ceac51f9214d72a614775775a80e7ace9782e3c9"}
+        cli-matic/cli-matic {:mvn/version "0.4.3"}
+        expound/expound {:mvn/version "0.8.7"}
         lambdaisland/deep-diff {:git/url "https://github.com/lread/deep-diff"
                                 :sha "10fa36742819b7e4cf3143c92f270ffb617f2101"}}
  :aliases
- {:test {:extra-deps {lambdaisland/kaocha {:mvn/version "0.0-554"}
-                      lambdaisland/kaocha-junit-xml {:mvn/version "0.0-70"}}
+ {:test {:extra-deps {lambdaisland/kaocha {:mvn/version "1.0.732"}
+                      lambdaisland/kaocha-junit-xml {:mvn/version "0.0.76"}}
          :main-opts ["-m" "kaocha.runner"]}
 
   :clj-kondo
-  {:extra-deps {clj-kondo {:mvn/version "2019.10.11-alpha"}}
+  {:extra-deps {clj-kondo/clj-kondo {:mvn/version "2020.12.12"}}
    :main-opts ["-m" "clj-kondo.main"]}}}

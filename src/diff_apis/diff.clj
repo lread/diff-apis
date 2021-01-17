@@ -268,12 +268,12 @@
                 {:filename "rewrite-cljs-0.4.4.pretty.edn", :lang "cljs"}
                 {:include :changed-publics, :exclude-namespaces nil}))
 
-  (def d
+  #_(def d
     (diff-files {:filename "rewrite-cljc-1.0.0-alpha.pretty.edn" :lang "cljs"}
                 {:filename "rewrite-cljc-1.0.0-alpha.pretty.edn" :lang "clj"}
                 {:include :changed-publics, :exclude-namespaces nil}))
 
-  (def d
+  #_(def d
     (diff-files {:filename "rewrite-clj-0.6.1.pretty.edn", :lang "clj"}
                 {:filename "rewrite-cljc-1.0.0-alpha.pretty.edn" :lang "clj"}
                 {:include :changed-publics, :exclude-namespaces nil
